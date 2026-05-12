@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-background: #151313;
+  --color-surface: #151313;
+  --color-surface-dim: #151313;
+  --color-surface-bright: #3c3838;
+  --color-surface-container-lowest: #100e0e;
+  --color-surface-container-low: #1d1b1b;
+  --color-surface-container: #221f1f;
+  --color-surface-container-high: #2c2929;
+  --color-surface-container-highest: #373434;
+  --color-on-surface: #e8e1e1;
+  --color-on-surface-variant: #d2c3c4;
+  --color-outline: #9b8e8e;
+  --color-outline-variant: #4f4445;
+  --color-primary: #fffeff;
+  --color-on-primary: #3f2b2e;
+  --color-primary-fixed: #fbdbde;
+  --color-primary-fixed-dim: #debfc2;
+  --color-on-primary-fixed: #281719;
+  
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  
+  --spacing-margin-page: 80px;
+  --spacing-section-gap: 160px;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface antialiased;
+  }
+}
+
+.font-monumental-lg {
+  @apply font-sans font-light tracking-[-0.04em];
+  font-size: clamp(56px, 8vw, 120px);
+  line-height: 1.1;
+}
+
+.font-headline-md {
+  @apply font-sans font-light tracking-[-0.02em];
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: 1.2;
+}
+
+.font-interface-reg {
+  @apply font-sans font-normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.font-action-med {
+  @apply font-sans font-medium tracking-[0.05em] uppercase;
+  font-size: 14px;
+}
+
+.font-metadata-light {
+  @apply font-sans font-light tracking-[0.02em];
+  font-size: 12px;
+}
+
+.px-margin-page {
+  @apply px-6 md:px-20;
+}
+
+.mb-section-gap {
+  @apply mb-20 md:mb-[160px];
+}
+
+.mt-section-gap {
+  @apply mt-20 md:mt-[160px];
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
