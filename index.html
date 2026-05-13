@@ -6,107 +6,19 @@
     <title>Luova | Creative Job Board</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg: #ffffff;
-            --text: #000000;
-            --gray: #f4f4f4;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 60px 20px;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        header {
-            max-width: 1100px;
-            margin: 0 auto 80px auto;
-        }
-
-        h1 {
-            font-size: clamp(4rem, 15vw, 10rem);
-            font-weight: 900;
-            line-height: 0.8;
-            margin: 0;
-            letter-spacing: -0.05em;
-            text-transform: uppercase;
-        }
-
-        .subtitle {
-            margin-top: 20px;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-weight: 700;
-        }
-
-        #job-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .job-row {
-            display: grid;
-            grid-template-columns: 80px 1fr 1fr 150px;
-            align-items: center;
-            padding: 30px 0;
-            border-bottom: 2px solid #000;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.2s ease;
-        }
-
-        .job-row:hover {
-            background-color: var(--gray);
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        .logo-box img {
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-            filter: grayscale(100%);
-        }
-
-        .job-main h2 {
-            margin: 0;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .job-main p {
-            margin: 5px 0 0 0;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            opacity: 0.5;
-        }
-
-        .highlights {
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            text-align: right;
-            padding-right: 40px;
-        }
-
-        .apply-arrow {
-            text-align: right;
-            font-size: 1.5rem;
-            font-weight: 900;
-        }
-
-        @media (max-width: 768px) {
-            .job-row {
-                grid-template-columns: 60px 1fr 50px;
-            }
-            .highlights { display: none; }
-            h1 { font-size: 5rem; }
-        }
+        :root { --bg: #ffffff; --text: #000000; --gray: #f4f4f4; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 60px 20px; }
+        header { max-width: 1100px; margin: 0 auto 80px auto; }
+        h1 { font-size: clamp(4rem, 15vw, 10rem); font-weight: 900; line-height: 0.8; margin: 0; letter-spacing: -0.05em; text-transform: uppercase; }
+        .subtitle { margin-top: 20px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; }
+        #job-container { max-width: 1100px; margin: 0 auto; border-top: 2px solid #000; }
+        .job-row { display: grid; grid-template-columns: 80px 1fr 1fr 50px; align-items: center; padding: 30px 0; border-bottom: 2px solid #000; text-decoration: none; color: inherit; transition: 0.2s; }
+        .job-row:hover { background: var(--gray); padding-left: 15px; padding-right: 15px; }
+        .logo-box img { width: 50px; height: 50px; object-fit: contain; }
+        .job-main h2 { margin: 0; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; }
+        .job-main p { margin: 5px 0 0 0; font-size: 0.9rem; text-transform: uppercase; opacity: 0.5; }
+        .highlights { font-size: 0.9rem; font-weight: 700; text-transform: uppercase; text-align: right; padding-right: 40px; }
+        @media (max-width: 768px) { .job-row { grid-template-columns: 60px 1fr 50px; } .highlights { display: none; } }
     </style>
 </head>
 <body>
@@ -116,9 +28,7 @@
     <div class="subtitle">Creative Opportunities / No. 01</div>
 </header>
 
-<div id="job-container">
-    <!-- Jobs fetch from Google Sheet -->
-</div>
+<div id="job-container">Loading jobs...</div>
 
 <script>
     const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTgQ56w58aNx1I8iF-VpUfpvBTANake0ZbTP9tvWWeJmrYGf6602Mhhgw2Nz8IxR3WpGMYEX3WAMalf/pub?gid=0&single=true&output=csv';
@@ -127,36 +37,40 @@
         try {
             const response = await fetch(csvUrl);
             const data = await response.text();
-            const rows = data.split('\n').slice(1);
+            const lines = data.split(/\r?\n/);
             const container = document.getElementById('job-container');
             container.innerHTML = '';
 
-            rows.forEach(row => {
-                const cols = row.split(',');
-                if (cols.length < 4) return;
-
-                const [title, company, image, highlight, link] = cols;
+            for (let i = 1; i < lines.length; i++) {
+                if (!lines[i].trim()) continue;
+                
+                // Advanced split to handle commas inside links
+                const cols = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+                
+                const title = (cols[0] || "New Role").replace(/"/g, '');
+                const company = (cols[1] || "Studio").replace(/"/g, '');
+                const image = (cols[2] || "").replace(/"/g, '').trim();
+                const highlight = (cols[3] || "").replace(/"/g, '');
+                const link = (cols[4] || "#").replace(/"/g, '').trim();
 
                 container.innerHTML += `
-                    <a href="${link.trim()}" class="job-row" target="_blank">
+                    <a href="${link}" class="job-row" target="_blank">
                         <div class="logo-box">
-                            <img src="${image.trim()}" onerror="this.src='https://via.placeholder.com/50?text='">
+                            <img src="${image}" onerror="this.src='https://via.placeholder.com/50?text=LOGO'">
                         </div>
                         <div class="job-main">
-                            <h2>${title.trim()}</h2>
-                            <p>${company.trim()}</p>
+                            <h2>${title}</h2>
+                            <p>${company}</p>
                         </div>
-                        <div class="highlights">${highlight.trim()}</div>
-                        <div class="apply-arrow">→</div>
-                    </a>
-                `;
-            });
+                        <div class="highlights">${highlight}</div>
+                        <div style="text-align:right; font-weight:900;">→</div>
+                    </a>`;
+            }
         } catch (e) {
-            console.error("Load failed", e);
+            document.getElementById('job-container').innerHTML = "Error loading jobs.";
         }
     }
     fetchJobs();
 </script>
-
 </body>
 </html>
