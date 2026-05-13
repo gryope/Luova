@@ -11,14 +11,14 @@
         header { max-width: 1100px; margin: 0 auto 80px auto; }
         h1 { font-size: clamp(4rem, 15vw, 10rem); font-weight: 900; line-height: 0.8; margin: 0; letter-spacing: -0.05em; text-transform: uppercase; }
         .subtitle { margin-top: 20px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; }
-        #job-container { max-width: 1100px; margin: 0 auto; border-top: 2px solid #000; }
-        .job-row { display: grid; grid-template-columns: 80px 1fr 1fr 50px; align-items: center; padding: 30px 0; border-bottom: 2px solid #000; text-decoration: none; color: inherit; transition: 0.2s; }
+        #job-container { max-width: 1100px; margin: 0 auto; border-top: 4px solid #000; }
+        .job-row { display: grid; grid-template-columns: 80px 1fr 1fr 50px; align-items: center; padding: 40px 0; border-bottom: 2px solid #000; text-decoration: none; color: inherit; transition: 0.2s; }
         .job-row:hover { background: var(--gray); padding-left: 15px; padding-right: 15px; }
-        .logo-box img { width: 50px; height: 50px; object-fit: contain; }
-        .job-main h2 { margin: 0; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; }
-        .job-main p { margin: 5px 0 0 0; font-size: 0.9rem; text-transform: uppercase; opacity: 0.5; }
-        .highlights { font-size: 0.9rem; font-weight: 700; text-transform: uppercase; text-align: right; padding-right: 40px; }
-        @media (max-width: 768px) { .job-row { grid-template-columns: 60px 1fr 50px; } .highlights { display: none; } }
+        .logo-box img { width: 60px; height: 60px; object-fit: contain; }
+        .job-main h2 { margin: 0; font-size: 1.8rem; font-weight: 700; text-transform: uppercase; }
+        .job-main p { margin: 5px 0 0 0; font-size: 1rem; text-transform: uppercase; opacity: 0.5; }
+        .highlights { font-size: 1rem; font-weight: 700; text-transform: uppercase; text-align: right; padding-right: 40px; }
+        @media (max-width: 768px) { .job-row { grid-template-columns: 70px 1fr 40px; } .highlights { display: none; } h1 { font-size: 5rem; } }
     </style>
 </head>
 <body>
@@ -28,7 +28,7 @@
     <div class="subtitle">Creative Opportunities / No. 01</div>
 </header>
 
-<div id="job-container">Loading jobs...</div>
+<div id="job-container">Fetching opportunities...</div>
 
 <script>
     const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTgQ56w58aNx1I8iF-VpUfpvBTANake0ZbTP9tvWWeJmrYGf6602Mhhgw2Nz8IxR3WpGMYEX3WAMalf/pub?gid=0&single=true&output=csv';
@@ -43,8 +43,6 @@
 
             for (let i = 1; i < lines.length; i++) {
                 if (!lines[i].trim()) continue;
-                
-                // Advanced split to handle commas inside links
                 const cols = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
                 
                 const title = (cols[0] || "New Role").replace(/"/g, '');
@@ -56,14 +54,14 @@
                 container.innerHTML += `
                     <a href="${link}" class="job-row" target="_blank">
                         <div class="logo-box">
-                            <img src="${image}" onerror="this.src='https://via.placeholder.com/50?text=LOGO'">
+                            <img src="${image}" onerror="this.src='https://via.placeholder.com/60?text=LOGO'">
                         </div>
                         <div class="job-main">
                             <h2>${title}</h2>
                             <p>${company}</p>
                         </div>
                         <div class="highlights">${highlight}</div>
-                        <div style="text-align:right; font-weight:900;">→</div>
+                        <div style="text-align:right; font-size: 2rem; font-weight:900;">→</div>
                     </a>`;
             }
         } catch (e) {
