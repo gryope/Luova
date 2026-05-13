@@ -3,60 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luova | Job Board</title>
+    <title>Luova | Creative Job Board</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; padding: 40px; background: #fff; color: #000; }
-        header { margin-bottom: 50px; border-bottom: 5px solid #000; padding-bottom: 20px; }
-        h1 { font-size: 4rem; margin: 0; text-transform: uppercase; letter-spacing: -3px; }
-        .job-list { display: flex; flex-direction: column; gap: 15px; }
-        .job-card { border: 2px solid #000; padding: 20px; display: flex; align-items: center; justify-content: space-between; }
-        .info-group { display: flex; align-items: center; gap: 20px; }
-        .logo { width: 60px; height: 60px; object-fit: contain; border: 1px solid #eee; }
-        .text h2 { margin: 0; font-size: 1.2rem; }
-        .text p { margin: 0; opacity: 0.6; }
-        .tag { background: #000; color: #fff; padding: 5px 10px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
-        .btn { border: 2px solid #000; padding: 10px 20px; text-decoration: none; color: #000; font-weight: bold; font-size: 0.8rem; }
-        .btn:hover { background: #000; color: #fff; }
+        :root {
+            --bg: #ffffff;
+            --text: #000000;
+            --gray: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 60px 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            max-width: 1100px;
+            margin: 0 auto 80px auto;
+        }
+
+        h1 {
+            font-size: clamp(4rem, 15vw, 10rem);
+            font-weight: 900;
+            line-height: 0.8;
+            margin: 0;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+        }
+
+        #job-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .job-row {
+            display: grid;
+            grid-template-columns: 80px 1fr 1fr 150px;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 2px solid #000;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .job-row:hover {
+            background-color: var(--gray);
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .logo-box img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            filter: grayscale(100%);
+        }
+
+        .job-main h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .job-main p {
+            margin: 5px 0 0 0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            opacity: 0.5;
+        }
+
+        .highlights {
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .apply-arrow {
+            text-align: right;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        @media (max-width: 768px) {
+            .job-row {
+                grid-template-columns: 60px 1fr 50px;
+            }
+            .highlights { display: none; }
+            h1 { font-size: 5rem; }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>LUOVA.</h1>
+    <h1>LUOVA</h1>
+    <div class="subtitle">Creative Opportunities / No. 01</div>
 </header>
 
-<div id="jobs" class="job-list">Loading jobs...</div>
+<div id="job-container">
+    <!-- Jobs fetch from Google Sheet -->
+</div>
 
 <script>
-    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTgQ56w58aNx1I8iF-VpUfpvBTANake0ZbTP9tvWWeJmrYGf6602Mhhgw2Nz8IxR3WpGMYEX3WAMalf/pub?gid=0&single=true&output=csv';
+    const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTgQ56w58aNx1I8iF-VpUfpvBTANake0ZbTP9tvWWeJmrYGf6602Mhhgw2Nz8IxR3WpGMYEX3WAMalf/pub?gid=0&single=true&output=csv';
 
-    async function loadJobs() {
-        const response = await fetch(sheetUrl);
-        const csv = await response.text();
-        const rows = csv.split('\n').slice(1);
-        const container = document.getElementById('jobs');
-        container.innerHTML = '';
+    async function fetchJobs() {
+        try {
+            const response = await fetch(csvUrl);
+            const data = await response.text();
+            const rows = data.split('\n').slice(1);
+            const container = document.getElementById('job-container');
+            container.innerHTML = '';
 
-        rows.forEach(row => {
-            const [title, company, image, highlight, link] = row.split(',');
-            if (!title) return;
+            rows.forEach(row => {
+                const cols = row.split(',');
+                if (cols.length < 4) return;
 
-            container.innerHTML += `
-                <div class="job-card">
-                    <div class="info-group">
-                        <img src="${image}" class="logo" onerror="this.src='https://via.placeholder.com/60?text=LOGO'">
-                        <div class="text">
-                            <h2>${title}</h2>
-                            <p>${company}</p>
+                const [title, company, image, highlight, link] = cols;
+
+                container.innerHTML += `
+                    <a href="${link.trim()}" class="job-row" target="_blank">
+                        <div class="logo-box">
+                            <img src="${image.trim()}" onerror="this.src='https://via.placeholder.com/50?text='">
                         </div>
-                    </div>
-                    <div class="tag">${highlight}</div>
-                    <a href="${link}" class="btn" target="_blank">APPLY</a>
-                </div>
-            `;
-        });
+                        <div class="job-main">
+                            <h2>${title.trim()}</h2>
+                            <p>${company.trim()}</p>
+                        </div>
+                        <div class="highlights">${highlight.trim()}</div>
+                        <div class="apply-arrow">→</div>
+                    </a>
+                `;
+            });
+        } catch (e) {
+            console.error("Load failed", e);
+        }
     }
-    loadJobs();
+    fetchJobs();
 </script>
 
 </body>
