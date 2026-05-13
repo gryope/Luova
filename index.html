@@ -1,12 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luova</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luova | Job Board</title>
+    <style>
+        body { font-family: sans-serif; padding: 40px; background: #fff; color: #000; }
+        header { margin-bottom: 50px; border-bottom: 5px solid #000; padding-bottom: 20px; }
+        h1 { font-size: 4rem; margin: 0; text-transform: uppercase; letter-spacing: -3px; }
+        .job-list { display: flex; flex-direction: column; gap: 15px; }
+        .job-card { border: 2px solid #000; padding: 20px; display: flex; align-items: center; justify-content: space-between; }
+        .info-group { display: flex; align-items: center; gap: 20px; }
+        .logo { width: 60px; height: 60px; object-fit: contain; border: 1px solid #eee; }
+        .text h2 { margin: 0; font-size: 1.2rem; }
+        .text p { margin: 0; opacity: 0.6; }
+        .tag { background: #000; color: #fff; padding: 5px 10px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
+        .btn { border: 2px solid #000; padding: 10px 20px; text-decoration: none; color: #000; font-weight: bold; font-size: 0.8rem; }
+        .btn:hover { background: #000; color: #fff; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>LUOVA.</h1>
+</header>
+
+<div id="jobs" class="job-list">Loading jobs...</div>
+
+<script>
+    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTgQ56w58aNx1I8iF-VpUfpvBTANake0ZbTP9tvWWeJmrYGf6602Mhhgw2Nz8IxR3WpGMYEX3WAMalf/pub?gid=0&single=true&output=csv';
+
+    async function loadJobs() {
+        const response = await fetch(sheetUrl);
+        const csv = await response.text();
+        const rows = csv.split('\n').slice(1);
+        const container = document.getElementById('jobs');
+        container.innerHTML = '';
+
+        rows.forEach(row => {
+            const [title, company, image, highlight, link] = row.split(',');
+            if (!title) return;
+
+            container.innerHTML += `
+                <div class="job-card">
+                    <div class="info-group">
+                        <img src="${image}" class="logo" onerror="this.src='https://via.placeholder.com/60?text=LOGO'">
+                        <div class="text">
+                            <h2>${title}</h2>
+                            <p>${company}</p>
+                        </div>
+                    </div>
+                    <div class="tag">${highlight}</div>
+                    <a href="${link}" class="btn" target="_blank">APPLY</a>
+                </div>
+            `;
+        });
+    }
+    loadJobs();
+</script>
+
+</body>
 </html>
