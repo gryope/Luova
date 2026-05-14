@@ -94,7 +94,7 @@ function App() {
 
           <a
             href={job.url}
-            target=\"_blank\"
+            target="_blank"
             style={{
               display: 'inline-block',
               marginTop: '20px',
