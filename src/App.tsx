@@ -13,7 +13,7 @@ function App() {
       const text = await response.text()
 
       const rows = text
-        .split('\\n')
+        .split('\n')
         .slice(1)
         .filter((row) => row.trim() !== '')
 
@@ -95,6 +95,7 @@ function App() {
           <a
             href={job.url}
             target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: 'inline-block',
               marginTop: '20px',
