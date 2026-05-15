@@ -16,6 +16,7 @@ description?: string;
 requirements?: string[];
 role?: string[];
 url?: string;
+date?: string;
 }
 
 
