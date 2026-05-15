@@ -17,6 +17,135 @@ interface Job {
   role?: string[];
 }
 
+const ALL_JOBS: Job[] = [
+  // Page 1
+  {
+    title: "Senior Product Designer",
+    company: "Wolt",
+    location: "Helsinki",
+    type: "Full-time",
+    description: "Wolt is a technology company known for our food delivery platform. As a Senior Product Designer, you will be responsible for shaping the future of our consumer experience across multiple platforms.",
+    role: [
+      "Partner with product managers and engineers to define and solve complex user problems.",
+      "Lead the design process from discovery through delivery, including research, wireframing, prototyping, and high-fidelity UI design.",
+      "Contribute to and maintain our design system, ensuring consistency and quality across all touchpoints.",
+      "Mentor and provide guidance to junior designers, fostering a culture of excellence and continuous learning."
+    ],
+    requirements: [
+      "5+ years of experience in product design, with a strong portfolio showcasing end-to-end user experiences.",
+      "Expertise in Figma and other industry-standard design tools.",
+      "Strong understanding of user-centered design principles and methodologies.",
+      "Excellent communication and collaboration skills, with the ability to influence cross-functional teams."
+    ]
+  },
+  {
+    title: "Art Director",
+    company: "Acne Studios",
+    location: "Paris",
+    type: "Contract",
+    description: "Join the legendary Stockholm-based fashion house in their Paris studio. We are looking for an Art Director to lead seasonal campaigns and digital storytelling.",
+    role: [
+      "Conceptualize and execute art direction for global fashion campaigns.",
+      "Oversee photography, film, and digital content creation.",
+      "Collaborate with the creative director to refine the brand's visual identity.",
+      "Manage a team of designers and creatives to ensure brand consistency."
+    ],
+    requirements: [
+      "Proven experience as an Art Director within the fashion or luxury sector.",
+      "A visionary portfolio demonstrating a unique aesthetic and conceptual depth.",
+      "Strong leadership skills and the ability to inspire a creative team.",
+      "Fluent in French and English."
+    ]
+  },
+  {
+    title: "Lead UX Researcher",
+    company: "Polestar",
+    location: "Gothenburg",
+    type: "Full-time",
+  },
+  {
+    title: "Creative Technologist",
+    company: "Space10",
+    location: "Copenhagen",
+    type: "Full-time",
+  },
+  // Page 2
+  {
+    title: "Principal Motion Designer",
+    company: "Buck",
+    location: "Amsterdam",
+    type: "Full-time",
+    description: "BUCK is a talent-driven, global creative company. We're looking for a Principal Motion Designer to push the boundaries of animation and storytelling.",
+    role: [
+      "Lead high-profile motion projects from concept through final rendering.",
+      "Collaborate with directors and designers to create world-class animations.",
+      "Develop new techniques and workflows for motion design.",
+      "Provide creative feedback and technical mentorship to the motion team."
+    ],
+    requirements: [
+      "8+ years of experience in high-end motion design and animation.",
+      "Mastery of After Effects, C4D, and other relevant software.",
+      "A portfolio of breathtaking work for global brands.",
+      "A deep understanding of timing, rhythm, and narrative structure."
+    ]
+  },
+  {
+    title: "Design Systems Architect",
+    company: "Airbnb",
+    location: "Remote (EU)",
+    type: "Full-time",
+  },
+  {
+    title: "Brand Creative Lead",
+    company: "Spotify",
+    location: "Stockholm",
+    type: "Full-time",
+  },
+  {
+    title: "Senior Interaction Developer",
+    company: "Active Theory",
+    location: "London",
+    type: "Contract",
+  },
+  // Page 3
+  {
+    title: "Head of Design",
+    company: "Linear",
+    location: "Remote",
+    type: "Full-time",
+    description: "Linear is building the next generation of software development tools. We are looking for a Head of Design to lead our design vision and team.",
+    role: [
+      "Define the long-term design strategy and vision for Linear.",
+      "Build and lead a world-class team of product and brand designers.",
+      "Ensure the highest level of craft and quality across all design output.",
+      "Collaborate with the founders to shape the product roadmap."
+    ],
+    requirements: [
+      "Experience leading design at a high-growth, design-led technology company.",
+      "A history of building and managing high-performing design teams.",
+      "Exceptional product sense and a deep appreciation for craft.",
+      "Excellent communication and organizational skills."
+    ]
+  },
+  {
+    title: "Experiential Designer",
+    company: "Local Projects",
+    location: "New York",
+    type: "Full-time",
+  },
+  {
+    title: "UI Engineer",
+    company: "Vercel",
+    location: "Remote",
+    type: "Full-time",
+  },
+  {
+    title: "Creative Director",
+    company: "Pentagram",
+    location: "London",
+    type: "Partner",
+  },
+];
 
 interface Company {
   name: string;
@@ -650,40 +779,9 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const JOBS_PER_PAGE = 4;
 
-const [jobs, setJobs] = useState<Job[]>([])
+  const totalPages = Math.ceil(ALL_JOBS.length / JOBS_PER_PAGE);
+  const visibleJobs = ALL_JOBS.slice((currentPage - 1) * JOBS_PER_PAGE, currentPage * JOBS_PER_PAGE);
 
-useEffect(() => {
-  async function loadJobs() {
-    const response = await fetch(
-      'https://docs.google.com/spreadsheets/d/e/2PACX-1vTgQ56w58aNx1I8iF-VpUfpvBTANake0ZbTP9tvWWeJmrYGf6602Mhhgw2Nz8IxR3WpGMYEX3WAMalf/pub?gid=0&single=true&output=csv'
-    )
-
-    const text = await response.text()
-
-    const rows = text
-      .split('\n')
-      .slice(1)
-      .filter((row) => row.trim() !== '')
-
-    const formattedJobs: Job[] = rows.map((row) => {
-      const columns = row.split(',')
-
-      return {
-        title: columns[0] || '',
-        company: columns[1] || '',
-        location: columns[2] || '',
-        type: columns[3] || '',
-      }
-    })
-
-    setJobs(formattedJobs)
-  }
-
-  loadJobs()
-}, [])
-
-  const totalPages = Math.ceil(jobs.length / JOBS_PER_PAGE);
-const visibleJobs = jobs.slice((currentPage - 1) * JOBS_PER_PAGE, currentPage * JOBS_PER_PAGE);
   const handleHome = () => {
     setSelectedJob(null);
     setSelectedCompany(null);
