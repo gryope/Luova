@@ -32,16 +32,14 @@ interface Company {
 
 const COMPANIES: Company[] = [
   {
-    name: "AIVEN",
-    location: "HELSINKI, FI",
+    name: "Avain",
+    location: "Finland, FI",
     description: "Aiven is your AI-ready Open Source Data Platform.",
-    fullDescription: Aiven is your AI-ready Open Source Data Platform.
-
-"Aiven is an AI-ready open source data platform company, helping organizations gain more value from their data. Aiven’s cloud platform combines open choice services to stream, store, and serve data, simply, securely, and rapidly across major cloud providers to power innovation. Aiven is trusted by thousands of customers to create next-generation applications confidently and quickly. Aiven is headquartered in Helsinki and has hubs in Amsterdam, Berlin, Paris, London, Singapore, Sydney, Auckland, Austin and Toronto.",
-    mission: "To define the future of luxury through a relentless pursuit of 'Ambition to Create Novel Expressions'.",
-     image: "/Luova/images/companies/Data1.jpg",
-    tags: ["data open source", "Software",],
-    website: "www.aiven.io/"
+    fullDescription: "Aiven is an AI-ready open source data platform company, helping organizations gain more value from their data. Aiven’s cloud platform combines open choice services to stream, store, and serve data, simply, securely, and rapidly across major cloud providers to power innovation. Aiven is trusted by thousands of customers to create next-generation applications confidently and quickly.Aiven is headquartered in Helsinki and has hubs in Amsterdam, Berlin, Paris, London, Singapore, Sydney, Auckland, Austin and Toronto.",
+    image: "/Luova/images/companies/Data1.jpg",
+    tags: ["Databases", "Software"],
+    website: "polestar.com"
+    website: "aiven.io/"
   },
   {
     name: "POLESTAR",
