@@ -420,7 +420,11 @@ function CompanyDetail({
   onSelectJob: (job: Job) => void;
 }) {
 
-  const companyJobs = jobs.filter(job => job.company.toLowerCase().includes(company.name.split(' ')[0].toLowerCase()));
+const companyJobs = jobs.filter(
+  job =>
+    job.company.toLowerCase().trim() ===
+    company.name.toLowerCase().trim()
+);
 
   return (
     <motion.div 
