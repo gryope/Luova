@@ -690,17 +690,17 @@ const formattedJobs: Job[] = rows.map((row: any) => {
           const columns = row.c;
 
           return {
-            title: columns[0]?.v || "",
-            company: columns[1]?.v || "",
-            location: columns[2]?.v || "",
-            type: columns[3]?.v || "",
-            description: columns[4]?.v || "",
-            requirements: columns[5]?.v
-              ? columns[5].v.split(";").map((r: string) => r.trim())
-              : [],
-            url: columns[6]?.v || "",
-date: columns[7]?.v || "",
-          };
+  title: columns[0]?.v || "",
+  company: columns[1]?.v || "",
+  location: columns[2]?.v || "",
+  type: columns[3]?.v || "",
+  description: columns[4]?.v || "",
+  requirements: columns[5]?.v
+    ? columns[5].v.split(";").map((r: string) => r.trim())
+    : [],
+  url: columns[6]?.v || "",
+  date: columns[7]?.v || "",
+};
         });
 
         setJobs(formattedJobs);
