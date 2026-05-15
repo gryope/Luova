@@ -17,7 +17,7 @@ requirements?: string[];
 role?: string[];
 url?: string;
 }
-
+{/* Hero Section */}
 
 
 interface Company {
