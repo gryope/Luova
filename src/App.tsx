@@ -616,7 +616,7 @@ className="w-full py-5 rounded-full bg-primary-fixed text-on-primary-fixed font-
 Apply Now
 </a>
             <p className="font-metadata-light text-on-surface-variant text-center leading-relaxed">
-              Applications are reviewed on a rolling basis. <br/> Estimated response time: 5-7 days.
+              Redirecting to official company application page. <br/> Estimated response time: 5-7 days.
             </p>
           </div>
         </aside>
