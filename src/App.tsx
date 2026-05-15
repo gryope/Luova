@@ -37,7 +37,7 @@ const COMPANIES: Company[] = [
     description: "Stockholm-based fashion house operating at the intersection of luxury, photography, and contemporary art.",
     fullDescription: "Acne Studios is a multidisciplinary luxury fashion house based in Stockholm, Sweden. Founded in 1996 by Creative Director Jonny Johansson, the house is characterized by a unique aesthetic that blends high-fashion with a gritty, contemporary edge. Their work spans across ready-to-wear, magazines, furniture, books, and exhibitions.",
     mission: "To define the future of luxury through a relentless pursuit of 'Ambition to Create Novel Expressions'.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA1_aAZvQWv0yyaGrPY0qk3ME3-FqtVu0hbxSl3xsfckQup0kKwa6OhLEfXaZXTreNAYb31wvp_gDQAYq64r6pdCgJeaVZCN31drOP87V91p3LieeMqSOl0G7HctflgUBn00KPMzgDry9VIiyoLlzeaxCgecKHKA12YtlN7x95lsYAOa5Kp71XQGpP5HevOMBMBnr4jpKzCRrp6PMJVItWbUJRf4FuKfmCVun-d9jqXtbOdXsQJVmNEGYUy6ew-D7zQ_X6ALVamnvc",
+     image: "/Luova/images/companies/Data1.jpg",
     tags: ["Branding", "Digital", "MOTION"],
     website: "acnestudios.com"
   },
@@ -57,7 +57,7 @@ const COMPANIES: Company[] = [
     description: "Research and design lab exploring sustainable living and circular design through technology and community-driven projects.",
     fullDescription: "SPACE10 was a research and design lab on a mission to create a better everyday life for people and the planet. Based in Copenhagen, the lab explored how to make our lives more sustainable, healthy, and affordable through cross-disciplinary collaborations that sat at the intersection of design, technology, and social trends.",
     mission: "To enable a more sustainable and equitable future through collaborative research.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuALTxrGFAzF97fvfhCmNqcNzZBFU6buzxJfF_os8y4ImU1ScVtdvtBFXTZI-NjL1O_H-59LNRVPhtMx7q1i6JoOJpcAe-hMUR7l0wNyWJU0GLyAviEWGQR_dGO2QjLgR9jNL2ImKkDKnkIz_fAiBIv-KU0E0eW8IHzMJJ0bVDhrJNCnE7Oo09MnEFs3IW9jknCAnyi2PLNxJD4UpVUG75n4UEI1dZWxHKasQ-GMHeqDW-H9gg3rtD-CzYmoJQXgHEdvh9jqNzpH9AU",
+ image: "/Luova/images/companies/Data2.jpg",
     tags: ["Product Design", "AI", "Technology"],
     website: "space10.com"
   },
