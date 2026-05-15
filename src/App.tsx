@@ -422,9 +422,8 @@ function CompanyDetail({
 
 const companyJobs = jobs.filter(
   job =>
-    job.company?.toLowerCase().includes(
-      company.name.split(" ")[0].toLowerCase()
-    )
+    job.company?.trim().toLowerCase() ===
+    company.name.trim().toLowerCase()
 );
 
   return (
