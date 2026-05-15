@@ -419,7 +419,7 @@ function CompanyDetail({
   jobs: Job[];
   onBack: () => void;
   onSelectJob: (job: Job) => void;
-});
+}) {
 
   const companyJobs = jobs.filter(job => job.company.toLowerCase().includes(company.name.split(' ')[0].toLowerCase()));
 
@@ -658,16 +658,12 @@ function Footer() {
 
 export default function App() {
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
-const [jobs, setJobs] = useState<Job[]>([]);
-export default function App() {
-  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
   const [jobs, setJobs] = useState<Job[]>([]);
-
   useEffect(() => {
     const fetchJobs = async () => {
       try {
         const response = await fetch(
-          ""https://docs.google.com/spreadsheets/d/1ihmxZQJ8evOI60KqQQjvwUz-IegeF6Hbv3OhUmHvhyM/gviz/tq?tqx=out:json"
+          "https://docs.google.com/spreadsheets/d/1ihmxZQJ8evOI60KqQQjvwUz-IegeF6Hbv3OhUmHvhyM/gviz/tq?tqx=out:json"
         );
 
         const text = await response.text();
@@ -704,10 +700,8 @@ export default function App() {
     fetchJobs();
   }, []);
 
-  const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
-  const [isAboutVisible, setIsAboutVisible] = useState(false);
-  const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
-  const [isAboutVisible, setIsAboutVisible] = useState(false);
+ const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
+const [isAboutVisible, setIsAboutVisible] = useState(false);
   const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const JOBS_PER_PAGE = 4;
