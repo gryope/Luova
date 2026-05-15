@@ -675,7 +675,7 @@ export default function App() {
           text.substring(47).slice(0, -2)
         );
 
-        const rows = json.table.rows;
+       const rows = json.table.rows.slice(1);
 
 const formattedJobs: Job[] = rows.map((row: any) => {
           const columns = row.c;
