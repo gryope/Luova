@@ -188,8 +188,16 @@ function JobRow({ job, onSelect }: { job: Job, onSelect: (job: Job) => void }) {
         <div className="flex items-center gap-4 font-metadata-light text-on-surface-variant uppercase tracking-widest">
           <div className="flex items-center gap-2 normal-case">
             <span className="text-on-surface capitalize">{job.company}</span>
-            <span className="w-1 h-1 rounded-full bg-outline-variant/50"></span>
-            <span className="capitalize">{job.location}</span>
+
+<span className="w-1 h-1 rounded-full bg-outline-variant/50"></span>
+
+<span className="capitalize">{job.location}</span>
+
+<span className="w-1 h-1 rounded-full bg-outline-variant/50"></span>
+
+<span className="capitalize opacity-60">
+  {job.date}
+</span>
           </div>
           <span className="hidden md:inline-block px-3 py-1 rounded-full bg-secondary-container/30 text-[10px] font-bold">
             {job.type}
@@ -691,6 +699,7 @@ const formattedJobs: Job[] = rows.map((row: any) => {
               ? columns[5].v.split(";").map((r: string) => r.trim())
               : [],
             url: columns[6]?.v || "",
+date: columns[7]?.v || "",
           };
         });
 
