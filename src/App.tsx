@@ -32,7 +32,7 @@ interface Company {
 
 const COMPANIES: Company[] = [
   {
-    name: "Avein",
+    name: "Aiven",
     location: "Finland, FI",
     description: "Aiven is your AI-ready Open Source Data Platform.",
     fullDescription: "Aiven is an AI-ready open source data platform company, helping organizations gain more value from their data. Aiven’s cloud platform combines open choice services to stream, store, and serve data, simply, securely, and rapidly across major cloud providers to power innovation. Aiven is trusted by thousands of customers to create next-generation applications confidently and quickly.Aiven is headquartered in Helsinki and has hubs in Amsterdam, Berlin, Paris, London, Singapore, Sydney, Auckland, Austin and Toronto.",
@@ -675,7 +675,7 @@ export default function App() {
           text.substring(47).slice(0, -2)
         );
 
-        const rows = json.table.rows.slice(1);
+        const rows = json.table.rows;
 
 const formattedJobs: Job[] = rows.map((row: any) => {
           const columns = row.c;
