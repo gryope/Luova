@@ -47,7 +47,7 @@ const COMPANIES: Company[] = [
     description: "Electric performance car brand focused on minimalist design, sustainable technology, and architectural retail experiences.",
     fullDescription: "Polestar is an electric performance car brand determined to improve the society we live in by focusing on uncompromised design and technology. They utilize design as a tool for progress, creating vehicles that are as beautiful as they are sustainable, often showcased in minimalist 'Spaces' that feel like high-end art galleries.",
     mission: "To accelerate the shift to sustainable mobility through design-led innovation.",
-    image:"/Luova/images/companies/polestar.png",
+    image:"/Luova/images/companies/Polestar.PNG",
     tags: ["Campaigns", "Motion", "Interactive"],
     website: "polestar.com"
   },
