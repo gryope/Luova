@@ -723,49 +723,63 @@ const formattedJobs: Job[] = rows.map((row: any) => {
  const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
 const [selectedHiringCompany, setSelectedHiringCompany] = useState<string | null>(null);
 const [isAboutVisible, setIsAboutVisible] = useState(false);
-  const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const JOBS_PER_PAGE = 4;
+const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
+const [currentPage, setCurrentPage] = useState(1);
 
-const totalPages = Math.ceil(filteredJobs.length / JOBS_PER_PAGE);
-  const filteredJobs = selectedHiringCompany
-  ? jobs.filter(job =>
-      job.company?.toLowerCase() === selectedHiringCompany.toLowerCase()
+const JOBS_PER_PAGE = 4;
+
+const filteredJobs = selectedHiringCompany
+  ? jobs.filter(
+      (job) =>
+        job.company?.trim().toLowerCase() ===
+        selectedHiringCompany.trim().toLowerCase()
     )
   : jobs;
+
+const totalPages = Math.ceil(
+  filteredJobs.length / JOBS_PER_PAGE
+);
 
 const visibleJobs = filteredJobs.slice(
   (currentPage - 1) * JOBS_PER_PAGE,
   currentPage * JOBS_PER_PAGE
 );
-setSelectedHiringCompany(null);
+
+const handleHome = () => {
+  setSelectedHiringCompany(null);
   setSelectedJob(null);
-    setSelectedCompany(null);
-    setIsAboutVisible(false);
-    setIsFeaturedVisible(false);
-    setCurrentPage(1);
-  };
+  setSelectedCompany(null);
+  setIsAboutVisible(false);
+  setIsFeaturedVisible(false);
+  setCurrentPage(1);
+};
 
-  const handleAbout = () => {
-    setSelectedJob(null);
-    setSelectedCompany(null);
-    setIsFeaturedVisible(false);
-    setIsAboutVisible(true);
-  };
+const handleAbout = () => {
+  setSelectedJob(null);
+  setSelectedCompany(null);
+  setIsFeaturedVisible(false);
+  setIsAboutVisible(true);
+};
 
-  const handleFeatured = () => {
-    setSelectedJob(null);
-    setSelectedCompany(null);
-    setIsAboutVisible(false);
-    setIsFeaturedVisible(true);
-  };
+const handleFeatured = () => {
+  setSelectedJob(null);
+  setSelectedCompany(null);
+  setIsAboutVisible(false);
+  setIsFeaturedVisible(true);
+};
 
-  // Determine active page for header
-  let activePage: 'featured' | 'opportunities' | 'about' = 'opportunities';
-  if (isAboutVisible) activePage = 'about';
-  else if (isFeaturedVisible || selectedCompany) activePage = 'featured';
+let activePage: 'featured' | 'opportunities' | 'about' = 'opportunities';
 
-  const showDock = !selectedJob && !selectedCompany && !isAboutVisible;
+if (isAboutVisible) {
+  activePage = 'about';
+} else if (isFeaturedVisible || selectedCompany) {
+  activePage = 'featured';
+}
+
+const showDock =
+  !selectedJob &&
+  !selectedCompany &&
+  !isAboutVisible;
 
   return (
     <div className="min-h-screen flex flex-col font-sans">
