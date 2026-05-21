@@ -701,7 +701,7 @@ const formattedJobs: Job[] = rows.map((row: any) => {
     ? columns[5].v.split(";").map((r: string) => r.trim())
     : [],
   url: columns[6]?.v || "",
-  date: columns[7]?.v || "",
+  date: columns[7]?.f || "",
 };
         });
 
