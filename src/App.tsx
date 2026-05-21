@@ -684,7 +684,9 @@ export default function App() {
           text.substring(47).slice(0, -2)
         );
 
-       const rows = json.table.rows.slice(1);
+       const rows = json.table.rows.filter(
+  (row: any) => row.c[0]?.v !== "Title"
+);
 
 const formattedJobs: Job[] = rows.map((row: any) => {
           const columns = row.c;
