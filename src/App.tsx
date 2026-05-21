@@ -31,7 +31,7 @@ interface Company {
   website: string;
 }
 
-const COMPANIES: Company[] = [
+const FEATURED_COMPANIES: Company[] = [
   {
     name: "Aiven",
     location: "Finland, FI",
@@ -62,6 +62,11 @@ const COMPANIES: Company[] = [
     tags: ["Product Design", "AI", "Technology"],
     website: "space10.com"
   },
+];
+const HIRING_COMPANIES: Company[] = [
+  FEATURED_COMPANIES[0],
+  FEATURED_COMPANIES[1],
+  FEATURED_COMPANIES[2],
 ];
 
 interface HeaderProps {
@@ -303,8 +308,8 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
         </div>
 
         <div className="flex flex-col border-t border-outline-variant/30">
-          {COMPANIES.map((company) => (
-            <motion.div
+{FEATURED_COMPANIES.map((company) => (
+  <motion.div
               key={company.name}
               onClick={() => onSelectCompany(company)}
               className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer hover:bg-surface-container/40 md:hover:px-8 transition-all duration-500 hover:my-2 hover:rounded-2xl"
@@ -847,7 +852,7 @@ const [isAboutVisible, setIsAboutVisible] = useState(false);
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-8">
-              {COMPANIES.map((company) => (
+              {HIRING_COMPANIES.map((company) => (
                 <CompanyCard 
                   key={company.name} 
                   company={company} 
