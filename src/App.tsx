@@ -721,32 +721,24 @@ const formattedJobs: Job[] = rows.map((row: any) => {
   }, []);
 
  const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
-const [selectedHiringCompany, setSelectedHiringCompany] = useState<string | null>(null);
 const [isAboutVisible, setIsAboutVisible] = useState(false);
 const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
 const [currentPage, setCurrentPage] = useState(1);
 
 const JOBS_PER_PAGE = 4;
-
-const filteredJobs = selectedHiringCompany
-  ? jobs.filter(
-      (job) =>
-        job.company?.trim().toLowerCase() ===
-        selectedHiringCompany.trim().toLowerCase()
-    )
-  : jobs;
-
 const totalPages = Math.ceil(
-  filteredJobs.length / JOBS_PER_PAGE
+  jobs.length / JOBS_PER_PAGE
 );
 
-const visibleJobs = filteredJobs.slice(
+
+
+
+const visibleJobs = jobs.slice(
   (currentPage - 1) * JOBS_PER_PAGE,
   currentPage * JOBS_PER_PAGE
 );
 
 const handleHome = () => {
-  setSelectedHiringCompany(null);
   setSelectedJob(null);
   setSelectedCompany(null);
   setIsAboutVisible(false);
@@ -879,10 +871,7 @@ const showDock =
                 <CompanyCard 
   key={company.name} 
   company={company} 
-  onSelect={() => {
-    setSelectedHiringCompany(company.name);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }} 
+  onSelect={setSelectedCompany} 
 />
               ))}
             </div>
