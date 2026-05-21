@@ -64,9 +64,27 @@ const FEATURED_COMPANIES: Company[] = [
   },
 ];
 const HIRING_COMPANIES: Company[] = [
-  FEATURED_COMPANIES[0],
-  FEATURED_COMPANIES[1],
-  FEATURED_COMPANIES[2],
+  {
+    name: "Aiven",
+    location: "Finland, FI",
+    description: "Aiven is your AI-ready Open Source Data Platform.",
+    fullDescription: "Aiven is an AI-ready open source data platform company helping organizations gain more value from data.",
+    image: "/Luova/images/companies/Data1.jpg",
+    mission: "To simplify cloud infrastructure for developers worldwide.",
+    tags: ["Databases", "Software"],
+    website: "aiven.io/"
+  },
+
+  {
+    name: "POLESTAR",
+    location: "GOTHENBURG, SE",
+    description: "Electric performance car brand focused on minimalist design.",
+    fullDescription: "Polestar develops electric performance vehicles through Scandinavian design and sustainable innovation.",
+    image: "/Luova/images/companies/polestar.png",
+    mission: "To accelerate the shift to sustainable mobility.",
+    tags: ["Campaigns", "Motion"],
+    website: "polestar.com"
+  }
 ];
 
 interface HeaderProps {
