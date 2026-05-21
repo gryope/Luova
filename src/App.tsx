@@ -751,14 +751,20 @@ setSelectedFeaturedCompany(null);
 
 const handleAbout = () => {
   setSelectedJob(null);
-  setSelectedCompany(null);
+
+  setSelectedHiringCompany(null);
+  setSelectedFeaturedCompany(null);
+
   setIsFeaturedVisible(false);
   setIsAboutVisible(true);
 };
 
 const handleFeatured = () => {
   setSelectedJob(null);
-  setSelectedCompany(null);
+
+  setSelectedHiringCompany(null);
+  setSelectedFeaturedCompany(null);
+
   setIsAboutVisible(false);
   setIsFeaturedVisible(true);
 };
@@ -777,7 +783,8 @@ if (isAboutVisible) {
 
 const showDock =
   !selectedJob &&
-  !selectedCompany &&
+  !selectedHiringCompany &&
+  !selectedFeaturedCompany &&
   !isAboutVisible;
 
   return (
