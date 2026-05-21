@@ -804,6 +804,7 @@ const showDock =
       ) : selectedJob ? (
         <JobDetail job={selectedJob} onBack={() => setSelectedJob(null)} />
       ) : selectedHiringCompany ? (
+ ) : selectedHiringCompany ? (
   <CompanyDetail
     company={selectedHiringCompany}
     jobs={jobs}
@@ -811,7 +812,6 @@ const showDock =
     onSelectJob={setSelectedJob}
   />
 ) : selectedFeaturedCompany ? (
- ) : selectedFeaturedCompany ? (
   <CompanyDetail
     company={selectedFeaturedCompany}
     jobs={jobs}
