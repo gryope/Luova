@@ -802,9 +802,11 @@ const showDock =
           }} 
         />
       ) : selectedJob ? (
-        <JobDetail job={selectedJob} onBack={() => setSelectedJob(null)} />
-      ) : selectedHiringCompany ? (
- ) : selectedHiringCompany ? (
+  <JobDetail
+    job={selectedJob}
+    onBack={() => setSelectedJob(null)}
+  />
+) : selectedHiringCompany ? (
   <CompanyDetail
     company={selectedHiringCompany}
     jobs={jobs}
