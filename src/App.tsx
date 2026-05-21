@@ -33,6 +33,16 @@ interface Company {
 
 const FEATURED_COMPANIES: Company[] = [
   {
+  name: "TEENAGE ENGINEERING",
+  location: "STOCKHOLM, SE",
+  description: "Swedish electronics and audio design company.",
+  fullDescription: "TE is known for industrial design and experimental hardware.",
+  image: "/Luova/images/companies/teenage.jpg",
+  mission: "To rethink electronic products through design.",
+  tags: ["Industrial Design", "Audio"],
+  website: "teenage.engineering"
+}
+  {
     name: "Aiven",
     location: "Finland, FI",
     description: "Aiven is your AI-ready Open Source Data Platform.",
