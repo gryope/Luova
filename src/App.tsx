@@ -720,7 +720,9 @@ const formattedJobs: Job[] = rows.map((row: any) => {
     fetchJobs();
   }, []);
 
- const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
+const [selectedFeaturedCompany, setSelectedFeaturedCompany] = useState<Company | null>(null);
+
+const [selectedHiringCompany, setSelectedHiringCompany] = useState<Company | null>(null);
 const [isAboutVisible, setIsAboutVisible] = useState(false);
 const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
 const [currentPage, setCurrentPage] = useState(1);
@@ -740,7 +742,8 @@ const visibleJobs = jobs.slice(
 
 const handleHome = () => {
   setSelectedJob(null);
-  setSelectedCompany(null);
+  setSelectedHiringCompany(null);
+setSelectedFeaturedCompany(null);
   setIsAboutVisible(false);
   setIsFeaturedVisible(false);
   setCurrentPage(1);
@@ -764,7 +767,11 @@ let activePage: 'featured' | 'opportunities' | 'about' = 'opportunities';
 
 if (isAboutVisible) {
   activePage = 'about';
-} else if (isFeaturedVisible || selectedCompany) {
+} else if (
+  isFeaturedVisible ||
+  selectedFeaturedCompany ||
+  selectedHiringCompany
+) {
   activePage = 'featured';
 }
 
@@ -783,19 +790,26 @@ const showDock =
         <FeaturedPage 
           onBack={() => setIsFeaturedVisible(false)} 
           onSelectCompany={(c) => {
-            setSelectedCompany(c);
+            setSelectedFeaturedCompany(c);
             setIsFeaturedVisible(false);
           }} 
         />
       ) : selectedJob ? (
         <JobDetail job={selectedJob} onBack={() => setSelectedJob(null)} />
-      ) : selectedCompany ? (
-       <CompanyDetail 
-  company={selectedCompany} 
-  jobs={jobs}
-  onBack={() => setSelectedCompany(null)} 
-  onSelectJob={setSelectedJob} 
-/>
+      ) : selectedHiringCompany ? (
+  <CompanyDetail
+    company={selectedHiringCompany}
+    jobs={jobs}
+    onBack={() => setSelectedHiringCompany(null)}
+    onSelectJob={setSelectedJob}
+  />
+) : selectedFeaturedCompany ? (
+  <CompanyDetail
+    company={selectedFeaturedCompany}
+    jobs={jobs}
+    onBack={() => setSelectedFeaturedCompany(null)}
+    onSelectJob={setSelectedJob}
+  />
       ) : (
         <main className="flex-grow pt-32 md:pt-48 pb-16 md:pb-32">
           {/* Hero Section */}
@@ -871,8 +885,8 @@ const showDock =
                 <CompanyCard 
   key={company.name} 
   company={company} 
-  onSelect={setSelectedCompany} 
-/>
+onSelect={setSelectedHiringCompany}
+                  />
               ))}
             </div>
           </section>
