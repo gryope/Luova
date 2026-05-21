@@ -41,7 +41,7 @@ const FEATURED_COMPANIES: Company[] = [
   mission: "To rethink electronic products through design.",
   tags: ["Industrial Design", "Audio"],
   website: "teenage.engineering"
-}
+},
   {
     name: "Aiven",
     location: "Finland, FI",
