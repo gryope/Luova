@@ -804,7 +804,7 @@ if (isAboutVisible) {
 } else if (
   isFeaturedVisible ||
   selectedFeaturedCompany
-)
+) {
   activePage = 'featured';
 }
 
