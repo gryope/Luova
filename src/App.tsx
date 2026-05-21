@@ -811,13 +811,14 @@ const showDock =
     onSelectJob={setSelectedJob}
   />
 ) : selectedFeaturedCompany ? (
+ ) : selectedFeaturedCompany ? (
   <CompanyDetail
     company={selectedFeaturedCompany}
     jobs={jobs}
     onBack={() => setSelectedFeaturedCompany(null)}
     onSelectJob={setSelectedJob}
   />
-      ) : (
+) : (
         <main className="flex-grow pt-32 md:pt-48 pb-16 md:pb-32">
           {/* Hero Section */}
           <section className="px-margin-page relative mb-12 md:mb-20">
