@@ -361,9 +361,12 @@ className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest 
                 </p>
                 <div className="flex flex-wrap gap-2 mt-8">
                   {company.tags.map(tag => (
-                    <span key={tag} 
-className="text-[10px] px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors"                      {tag}
-                    </span>
+                    <span
+  key={tag}
+  className="text-[10px] px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors"
+>
+  {tag}
+</span>
                   ))}
                 </div>
               </div>
