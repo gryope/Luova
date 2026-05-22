@@ -352,7 +352,7 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
 className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed hover:px-8 hover:rounded-2xl"              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="md:w-1/3 aspect-video md:aspect-square overflow-hidden rounded-2xl bg-surface-container">>
+              <div className="md:w-1/3 aspect-video md:aspect-square overflow-hidden rounded-2xl bg-surface-container">
                 <img src={company.image} alt={company.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" referrerPolicy="no-referrer" />
               </div>
               <div className="md:w-2/3 flex flex-col justify-center">
@@ -363,7 +363,7 @@ className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border
                 <div className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest mb-6 border-b border-outline-variant/20 pb-4 inline-block self-start group-hover:text-black/70 transition-colors">
                   {company.location}
                 </div>
-                <p className="font-interface-reg text-on-surface-variant text-xl leading-relaxed max-w-2xl group-hover:text-black/80 transition-colors"">
+                <p className="font-interface-reg text-on-surface-variant text-xl leading-relaxed max-w-2xl group-hover:text-black/80 transition-colors">
                   {company.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mt-8">
