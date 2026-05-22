@@ -354,7 +354,7 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div cclassName="md:w-[28%] aspect-[16/10] overflow-hidden rounded-2xl bg-surface-container shrink-0">
+              <div className="w-full md:w-[22%] aspect-[4/3] overflow-hidden rounded-2xl bg-surface-container shrink-0 max-h-[220px]">
                 <img src={company.image} alt={company.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" referrerPolicy="no-referrer" />
               </div>
               <div className="md:w-2/3 flex flex-col justify-center">
