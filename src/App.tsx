@@ -338,7 +338,7 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
         <div className="flex flex-col border-t border-outline-variant/30">
 {FEATURED_COMPANIES.map((company) => (
   <motion.div
-              <motion.div
+              
   key={company.name}
   onClick={() => onSelectCompany(company)}
   className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer md:hover:px-8 transition-all duration-500 hover:my-2 hover:rounded-2xl hover:bg-primary-fixed hover:text-black"
