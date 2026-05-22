@@ -353,18 +353,16 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
               <div className="md:w-2/3 flex flex-col justify-center">
                 <div className="flex justify-between items-start mb-4">
                   <h2 className="font-monumental-lg !text-[48px] md:!text-[64px] leading-tight text-primary-fixed group-hover:text-primary transition-colors">{company.name}</h2>
-                  <ArrowRight className="text-primary-fixed opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
-                </div>
-                <div className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest mb-6 border-b border-outline-variant/20 pb-4 inline-block self-start">
-                  {company.location}
+<ArrowRight className="text-primary-fixed opacity-0 group-hover:opacity-100 group-hover:translate-x-2 group-hover:text-black transition-all" />                </div>
+className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest mb-6 border-b border-outline-variant/20 pb-4 inline-block self-start group-hover:text-black/70 transition-colors"                  {company.location}
                 </div>
                 <p className="font-interface-reg text-on-surface-variant text-xl leading-relaxed max-w-2xl">
                   {company.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mt-8">
                   {company.tags.map(tag => (
-                    <span key={tag} className="text-[10px] px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30">
-                      {tag}
+                    <span key={tag} 
+className="text-[10px] px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors"                      {tag}
                     </span>
                   ))}
                 </div>
