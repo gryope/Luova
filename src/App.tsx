@@ -349,12 +349,12 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
 {FEATURED_COMPANIES.map((company) => (
   <motion.div
               key={company.name}
-              onClclassName="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer md:hover:px-8 transition-all duration-500 hover:my-2 hover:rounded-2xl hover:bg-primary-fixed"
+              onClclassName="group flex flex-col md:flex-row gap-6 md:gap-10 py-8 border-b border-outline-variant/30 cursor-pointer md:hover:px-8 transition-all duration-500 hover:my-2 hover:rounded-2xl hover:bg-primary-fixed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="md:w-1/3 aspect-video md:aspect-square overflow-hidden rounded-2xl bg-surface-container">
+              <div cclassName="md:w-[28%] aspect-[16/10] overflow-hidden rounded-2xl bg-surface-container shrink-0">
                 <img src={company.image} alt={company.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" referrerPolicy="no-referrer" />
               </div>
               <div className="md:w-2/3 flex flex-col justify-center">
