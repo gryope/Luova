@@ -360,8 +360,13 @@ function FeaturedPage({
     <p className="py-12 font-interface-reg text-on-surface-variant opacity-40 italic">
       No active listings for this archive at current time.
     </p>
-  )}
-</div>
+      )}
+  </div>
+      </section>
+    </motion.div>
+  );
+}
+
 function AboutPage({ onBack }: { onBack: () => void }) {
   useEffect(() => {
     window.scrollTo(0, 0);
