@@ -360,11 +360,11 @@ function FeaturedPage({
     <p className="py-12 font-interface-reg text-on-surface-variant opacity-40 italic">
       No active listings for this archive at current time.
     </p>
-      )}
-  </div>
-      </section>
-    </motion.div>
-  );
+              ))}
+      </div>
+    </section>
+  </motion.div>
+);
 }
 
 function AboutPage({ onBack }: { onBack: () => void }) {
