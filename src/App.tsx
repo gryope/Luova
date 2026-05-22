@@ -381,9 +381,9 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
           </span>
         ))}
     </div>
-  </div>
-</section>
-    </motion.div>
+     </div>
+    </section>
+  </motion.div>
   );
 }
 
