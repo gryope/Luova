@@ -849,11 +849,9 @@ const showDock =
     onSelectJob={setSelectedJob}
   />
 ) : selectedFeaturedCompany ? (
-  <CompanyDetail
+  <FeaturedCompanyPage
     company={selectedFeaturedCompany}
-    jobs={jobs}
     onBack={() => setSelectedFeaturedCompany(null)}
-    onSelectJob={setSelectedJob}
   />
 ) : (
         <main className="flex-grow pt-32 md:pt-48 pb-16 md:pb-32">
