@@ -591,21 +591,15 @@ const companyJobs = jobs.filter(
               key={tag}
               className="text-[10px] px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors"
             >
-              {tag}
+               {tag}
             </span>
-          ))}
-        </div>
+        ))}
       </div>
-    </motion.div>
-  ))}
-</div>
-            </section>
-    </motion.div>
-  );
+    </div>
+  </section>
+</motion.div>
+);
 }
-
-function JobDetail({ job, onBack }: { job: Job, onBack: () => void }) {
-  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
