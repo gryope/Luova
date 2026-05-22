@@ -380,7 +380,6 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
             {tag}
           </span>
         ))}
-     ))}
     </div>
   </div>
 </section>
