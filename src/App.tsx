@@ -300,47 +300,54 @@ function CompanyCard({ company, onSelect }: { company: Company, onSelect: (compa
   );
 }
 
-function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelectCompany: (company: Company) => void }) {
+function FeaturedPage({
+  onBack,
+  onSelectCompany
+}: {
+  onBack: () => void;
+  onSelectCompany: (company: Company) => void;
+}) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-  <motion.div
-    className="flex flex-col"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-  >
-    <section className="px-margin-page pt-32 md:pt-48 pb-20">
-      <button
-        onClick={onBack}
-        className="flex items-center gap-2 text-on-surface-variant font-metadata-light uppercase tracking-widest hover:text-primary transition-colors mb-20 group"
-      >
-        <ArrowLeft
-          size={16}
-          className="group-hover:-translate-x-1 transition-transform"
-        />
-        Back to Index
-      </button>
-
-      <div className="max-w-4xl mb-24">
-        <motion.h1
-          className="font-monumental-lg text-primary-fixed mb-8 leading-none"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+    <motion.div
+      className="flex flex-col"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <section className="px-margin-page pt-32 md:pt-48 pb-20">
+        <button
+          onClick={onBack}
+          className="flex items-center gap-2 text-on-surface-variant font-metadata-light uppercase tracking-widest hover:text-primary transition-colors mb-20 group"
         >
-          FEATURED <br />CO.
-        </motion.h1>
+          <ArrowLeft
+            size={16}
+            className="group-hover:-translate-x-1 transition-transform"
+          />
+          Back to Index
+        </button>
 
-        <p className="font-interface-reg text-on-surface-variant text-xl md:text-2xl leading-relaxed">
-          A curated selection of the industry's most influential studios,
-          agencies, and brands.
-        </p>
-      </div>
+        <div className="max-w-4xl mb-24">
+          <motion.h1
+            className="font-monumental-lg text-primary-fixed mb-8 leading-none"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            FEATURED <br />CO.
+          </motion.h1>
 
-      <div className="flex flex-col border-t border-outline-variant/30">
+          <p className="font-interface-reg text-on-surface-variant text-xl md:text-2xl leading-relaxed">
+            A curated selection of the industry's most influential studios,
+            agencies, and brands.
+          </p>
+        </div>
+
+        <div className="flex flex-col border-t border-outline-variant/30">
+          <div className="flex flex-col border-t border-outline-variant/30">
   {companyJobs.length > 0 ? (
     companyJobs.map((job, index) => (
       <JobRow
@@ -355,7 +362,6 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
     </p>
   )}
 </div>
-
 function AboutPage({ onBack }: { onBack: () => void }) {
   useEffect(() => {
     window.scrollTo(0, 0);
