@@ -349,7 +349,8 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
         <div className="flex flex-col border-t border-outline-variant/30">
 {FEATURED_COMPANIES.map((company) => (
   <motion.div
-              key={company.name}
+  key={company.name}
+  onClick={() => onSelectCompany(company)}
 className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed hover:px-8 hover:rounded-2xl"              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
