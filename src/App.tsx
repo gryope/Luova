@@ -598,6 +598,7 @@ const companyJobs = jobs.filter(
                {tag}
             </span>
         ))}
+              </div>
       </div>
     </div>
   </section>
