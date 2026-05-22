@@ -803,7 +803,8 @@ if (isAboutVisible) {
   activePage = 'about';
 } else if (
   isFeaturedVisible ||
-  selectedFeaturedCompany
+  selectedFeaturedCompany ||
+  selectedHiringCompany
 ) {
   activePage = 'featured';
 }
