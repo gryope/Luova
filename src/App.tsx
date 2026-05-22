@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion, AnimatePresence } from "motion/react";
+imx{ motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, ArrowRight, Menu, X, Instagram, Linkedin, Share2, Bookmark } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -323,14 +323,14 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
 
         <div className="max-w-4xl mb-24">
           <motion.h1 
-            className="font-monumental-lg text-primary-fixed mb-8 leading-none"
+            className="font-monumental-lg !text-[48px] md:!text-[64px] leading-tight text-primary-fixed group-hover:text-black transition-colors"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             FEATURED <br/>CO.
           </motion.h1>
-          <p className="font-interface-reg text-on-surface-variant text-xl md:text-2xl leading-relaxed">
+          <p className="font-interface-reg text-on-surface-variant text-xl leading-relaxed max-w-2xl group-hover:text-black/70 transition-colors">
             A curated selection of the industry's most influential studios, agencies, and brands. These are the teams defining the visual landscape of our time.
           </p>
         </div>
@@ -338,9 +338,12 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
         <div className="flex flex-col border-t border-outline-variant/30">
 {FEATURED_COMPANIES.map((company) => (
   <motion.div
-              key={company.name}
-              onClclassName="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer md:hover:px-8 transition-all duration-500 hover:my-2 hover:rounded-2xl hover:bg-primary-fixed"
-              initial={{ opacity: 0, y: 20 }}
+              <motion.div
+  key={company.name}
+  onClick={() => onSelectCompany(company)}
+  className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer md:hover:px-8 transition-all duration-500 hover:my-2 hover:rounded-2xl hover:bg-primary-fixed hover:text-black"
+  className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer md:hover:px-8 transition-all duration-500 hover:my-2 hover:rounded-2xl hover:bg-primary-fixed hover:text-black"
+            initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
