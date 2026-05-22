@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-imx{ motion, AnimatePresence } from "motion/react";
+import{ motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, ArrowRight, Menu, X, Instagram, Linkedin, Share2, Bookmark } from "lucide-react";
 import { useState, useEffect } from "react";
 
