@@ -544,19 +544,56 @@ const companyJobs = jobs.filter(
           <div className="lg:col-span-6 space-y-12">
             <h3 className="font-action-med text-primary-fixed mb-8">Current Opportunities ({companyJobs.length})</h3>
             <div className="flex flex-col border-t border-outline-variant/30">
-              {companyJobs.length > 0 ? (
-                companyJobs.map((job, index) => (
-                  <JobRow key={index} job={job} onSelect={onSelectJob} />
-                ))
-              ) : (
-                <p className="py-12 font-interface-reg text-on-surface-variant opacity-40 italic">
-                  No active listings for this archive at current time.
-                </p>
-              )}
-            </div>
-          </div>
+  {FEATURED_COMPANIES.map((company) => (
+    <motion.div
+      key={company.name}
+      onClick={() => onSelectCompany(company)}
+      className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed hover:rounded-2xl hover:px-8 hover:my-2"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
+      <div className="md:w-1/3 aspect-video md:aspect-square overflow-hidden rounded-2xl bg-surface-container">
+        <img
+          src={company.image}
+          alt={company.name}
+          className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+
+      <div className="md:w-2/3 flex flex-col justify-center">
+        <div className="flex justify-between items-start mb-4">
+          <h2 className="font-monumental-lg !text-[48px] md:!text-[64px] leading-tight text-primary-fixed group-hover:text-black transition-colors">
+            {company.name}
+          </h2>
+
+          <ArrowRight className="text-primary-fixed opacity-0 group-hover:opacity-100 group-hover:translate-x-2 group-hover:text-black transition-all" />
         </div>
-      </section>
+
+        <div className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest mb-6 border-b border-outline-variant/20 pb-4 inline-block self-start group-hover:text-black/70 transition-colors">
+          {company.location}
+        </div>
+
+        <p className="font-interface-reg text-on-surface-variant text-xl leading-relaxed max-w-2xl group-hover:text-black/70 transition-colors">
+          {company.description}
+        </p>
+
+        <div className="flex flex-wrap gap-2 mt-8">
+          {company.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-[10px] px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
+            </section>
     </motion.div>
   );
 }
