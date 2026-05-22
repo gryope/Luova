@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import{ motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, ArrowRight, Menu, X, Instagram, Linkedin, Share2, Bookmark } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -209,7 +209,7 @@ function JobRow({ job, onSelect }: { job: Job, onSelect: (job: Job) => void }) {
   return (
     <motion.div
       onClick={() => onSelect(job)}
-      className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer md:hover:px-8 transition-all duration-500 hover:my-2 hover:rounded-2xl hover:bg-primary-fixed active:bg-primary-fixed"
+      className="group flex flex-col md:flex-row justify-between md:items-baseline py-8 md:py-12 border-b border-outline-variant/30 transition-all duration-500 hover:bg-surface-container/40 md:hover:px-8 hover:rounded-2xl hover:my-2 cursor-pointer"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -300,101 +300,78 @@ function CompanyCard({ company, onSelect }: { company: Company, onSelect: (compa
   );
 }
 
-function FeaturedPage({
-  onBack,
-  onSelectCompany
-}: {
-  onBack: () => void;
-  onSelectCompany: (company: Company) => void;
-}) {
+function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelectCompany: (company: Company) => void }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <motion.div
+    <motion.div 
       className="flex flex-col"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
       <section className="px-margin-page pt-32 md:pt-48 pb-20">
-        <button
+        <button 
           onClick={onBack}
           className="flex items-center gap-2 text-on-surface-variant font-metadata-light uppercase tracking-widest hover:text-primary transition-colors mb-20 group"
         >
-          <ArrowLeft
-            size={16}
-            className="group-hover:-translate-x-1 transition-transform"
-          />
+          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
           Back to Index
         </button>
 
         <div className="max-w-4xl mb-24">
-          <motion.h1
+          <motion.h1 
             className="font-monumental-lg text-primary-fixed mb-8 leading-none"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            FEATURED <br />CO.
+            FEATURED <br/>CO.
           </motion.h1>
-
           <p className="font-interface-reg text-on-surface-variant text-xl md:text-2xl leading-relaxed">
-            A curated selection of the industry's most influential studios,
-            agencies, and brands.
+            A curated selection of the industry's most influential studios, agencies, and brands. These are the teams defining the visual landscape of our time.
           </p>
         </div>
 
         <div className="flex flex-col border-t border-outline-variant/30">
-  {FEATURED_COMPANIES.map((company) => (
-    <motion.div
-      key={company.name}
-      onClick={() => onSelectCompany(company)}
-      className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed hover:px-8 hover:rounded-2xl hover:my-2"
-    >
-      <div className="md:w-1/3 aspect-video md:aspect-square overflow-hidden rounded-2xl bg-surface-container">
-        <img
-          src={company.image}
-          alt={company.name}
-          className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-        />
-      </div>
-
-      <div className="md:w-2/3 flex flex-col justify-center">
-        <div className="flex justify-between items-start mb-4">
-          <h2 className="font-monumental-lg !text-[48px] md:!text-[64px] leading-tight text-primary-fixed group-hover:text-black transition-colors">
-            {company.name}
-          </h2>
-
-          <ArrowRight className="text-primary-fixed opacity-0 group-hover:opacity-100 group-hover:translate-x-2 group-hover:text-black transition-all" />
-        </div>
-
-        <div className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest mb-6 border-b border-outline-variant/20 pb-4 inline-block self-start group-hover:text-black/70 transition-colors">
-          {company.location}
-        </div>
-
-        <p className="font-interface-reg text-on-surface-variant text-xl leading-relaxed max-w-2xl group-hover:text-black/70 transition-colors">
-          {company.description}
-        </p>
-
-        <div className="flex flex-wrap gap-2 mt-8">
-          {company.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-[10px] px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors"
+{FEATURED_COMPANIES.map((company) => (
+  <motion.div
+              key={company.name}
+              onClclassName="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer md:hover:px-8 transition-all duration-500 hover:my-2 hover:rounded-2xl hover:bg-primary-fixed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >
-              {tag}
-            </span>
+              <div className="md:w-1/3 aspect-video md:aspect-square overflow-hidden rounded-2xl bg-surface-container">
+                <img src={company.image} alt={company.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" referrerPolicy="no-referrer" />
+              </div>
+              <div className="md:w-2/3 flex flex-col justify-center">
+                <div className="flex justify-between items-start mb-4">
+                  <h2 className="font-monumental-lg !text-[48px] md:!text-[64px] leading-tight text-primary-fixed group-hover:text-primary transition-colors">{company.name}</h2>
+                  <ArrowRight className="text-primary-fixed opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
+                </div>
+                <div className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest mb-6 border-b border-outline-variant/20 pb-4 inline-block self-start">
+                  {company.location}
+                </div>
+                <p className="font-interface-reg text-on-surface-variant text-xl leading-relaxed max-w-2xl">
+                  {company.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-8">
+                  {company.tags.map(tag => (
+                    <span key={tag} className="text-[10px] px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </section>
     </motion.div>
-  ))}
-</div>
-    </section>
-  </motion.div>
-);
+  );
 }
 
 function AboutPage({ onBack }: { onBack: () => void }) {
@@ -554,57 +531,25 @@ const companyJobs = jobs.filter(
           <div className="lg:col-span-6 space-y-12">
             <h3 className="font-action-med text-primary-fixed mb-8">Current Opportunities ({companyJobs.length})</h3>
             <div className="flex flex-col border-t border-outline-variant/30">
-  {FEATURED_COMPANIES.map((company) => (
-    <motion.div
-      key={company.name}
-      onClick={() => onSelectCompany(company)}
-      className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed hover:rounded-2xl hover:px-8 hover:my-2"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-    >
-      <div className="md:w-1/3 aspect-video md:aspect-square overflow-hidden rounded-2xl bg-surface-container">
-        <img
-          src={company.image}
-          alt={company.name}
-          className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-          referrerPolicy="no-referrer"
-        />
-      </div>
-
-      <div className="md:w-2/3 flex flex-col justify-center">
-        <div className="flex justify-between items-start mb-4">
-          <h2 className="font-monumental-lg !text-[48px] md:!text-[64px] leading-tight text-primary-fixed group-hover:text-black transition-colors">
-            {company.name}
-          </h2>
-
-          <ArrowRight className="text-primary-fixed opacity-0 group-hover:opacity-100 group-hover:translate-x-2 group-hover:text-black transition-all" />
+              {companyJobs.length > 0 ? (
+                companyJobs.map((job, index) => (
+                  <JobRow key={index} job={job} onSelect={onSelectJob} />
+                ))
+              ) : (
+                <p className="py-12 font-interface-reg text-on-surface-variant opacity-40 italic">
+                  No active listings for this archive at current time.
+                </p>
+              )}
+            </div>
+          </div>
         </div>
-
-        <div className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest mb-6 border-b border-outline-variant/20 pb-4 inline-block self-start group-hover:text-black/70 transition-colors">
-          {company.location}
-        </div>
-
-        <p className="font-interface-reg text-on-surface-variant text-xl leading-relaxed max-w-2xl group-hover:text-black/70 transition-colors">
-          {company.description}
-        </p>
-
-        <div className="flex flex-wrap gap-2 mt-8">
-          {company.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-[10px] px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors"
-            >
-               {tag}
-            </span>
-        ))}
-              </div>
-      </div>
-    </div>
-  </section>
-</motion.div>
-);
+      </section>
+    </motion.div>
+  );
 }
+
+function JobDetail({ job, onBack }: { job: Job, onBack: () => void }) {
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
