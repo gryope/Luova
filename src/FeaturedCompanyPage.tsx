@@ -40,21 +40,60 @@ export default function FeaturedCompanyPage({ company }: any) {
               </p>
 
               <p className="text-[24px] opacity-70">
-                {company.category}
+                {company.tags.join(" / ")}
               </p>
             </div>
 
-            <div className="space-y-8 max-w-xl">
+            <div className="space-y-10 max-w-xl">
 
-              <p className="text-[24px] leading-relaxed">
-                {company.intro}
-              </p>
+  <p className="text-[24px] leading-relaxed">
+    {company.description}
+  </p>
 
-              <p className="text-[22px] leading-relaxed opacity-80">
-                {company.description}
-              </p>
+  <p className="text-[22px] leading-relaxed opacity-80">
+    {company.fullDescription}
+  </p>
 
-            </div>
+  <div className="space-y-10 pt-12 border-t border-black/10">
+
+    <div>
+      <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-3">
+        CATEGORY
+      </p>
+
+      <p className="text-[20px] leading-relaxed">
+        {company.tags.join(" / ")}
+      </p>
+    </div>
+
+    <div>
+      <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-3">
+        MISSION
+      </p>
+
+      <p className="text-[20px] leading-relaxed opacity-80">
+        {company.mission}
+      </p>
+    </div>
+
+    <div>
+      <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-3">
+        OFFICIAL WEBSITE
+      </p>
+
+      <a
+        href={`https://${company.website}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[20px] underline underline-offset-4"
+      >
+        {company.website}
+      </a>
+    </div>
+
+  </div>
+
+</div>
 
           </div>
 
