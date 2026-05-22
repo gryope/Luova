@@ -349,17 +349,17 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
 {FEATURED_COMPANIES.map((company) => (
   <motion.div
               key={company.name}
-              onClclassName="group flex flex-col md:flex-row gap-5 md:gap-8 py-8 border-b border-outline-variant/30 cursor-pointer md:hover:px-8 transition-all duration-500 hover:my-2 hover:rounded-2xl hover:bg-primary-fixed"
+              onClclassName="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer md:hover:px-8 transition-all duration-500 hover:my-2 hover:rounded-2xl hover:bg-primary-fixed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="w-full md:w-[22%] aspect-[4/3] overflow-hidden rounded-2xl bg-surface-container shrink-0 max-h-[220px]">
+              <div className="md:w-1/3 aspect-video md:aspect-square overflow-hidden rounded-2xl bg-surface-container">
                 <img src={company.image} alt={company.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" referrerPolicy="no-referrer" />
               </div>
               <div className="md:w-2/3 flex flex-col justify-center">
                 <div className="flex justify-between items-start mb-4">
-                  <h2 className="font-monumental-lg !text-[40px] md:!text-[56px] leading-tight text-primary-fixed group-hover:text-primary transition-colors">{company.name}</h2>
+                  <h2 className="font-monumental-lg !text-[48px] md:!text-[64px] leading-tight text-primary-fixed group-hover:text-primary transition-colors">{company.name}</h2>
                   <ArrowRight className="text-primary-fixed opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
                 </div>
                 <div className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest mb-6 border-b border-outline-variant/20 pb-4 inline-block self-start">
