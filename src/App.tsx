@@ -94,7 +94,18 @@ const HIRING_COMPANIES: Company[] = [
     mission: "To accelerate the shift to sustainable mobility.",
     tags: ["Campaigns", "Motion"],
     website: "polestar.com"
-  }
+  },
+  
+  {
+  name: "SPACE 10",
+  location: "COPENHAGEN, NO",
+  description: "Research and design lab exploring sustainable living and circular design through technology and community-driven projects.",
+  fullDescription: "SPACE10 was a research and design lab on a mission to create a better everyday life for people and the planet.",
+  image: "/Luova/images/companies/Data2.jpg",
+  mission: "To enable a more sustainable and equitable future through collaborative research.",
+  tags: ["Product Design", "AI", "Technology"],
+  website: "space10.com"
+}
 ];
 
 interface HeaderProps {
