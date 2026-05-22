@@ -306,86 +306,93 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
   }, []);
 
   return (
-    <motion.div 
-      className="flex flex-col"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <section className="px-margin-page pt-32 md:pt-48 pb-20">
-        <button 
-          onClick={onBack}
-          className="flex items-center gap-2 text-on-surface-variant font-metadata-light uppercase tracking-widest hover:text-primary transition-colors mb-20 group"
-        >
-          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-          Back to Index
-        </button>
-
-        <div className="max-w-4xl mb-24">
-          <motion.h1 
-            className="font-monumental-lg !text-[48px] md:!text-[64px] leading-tight text-primary-fixed group-hover:text-black transition-colors"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            FEATURED <br/>CO.
-          </motion.h1>
-          <p className="font-interface-reg text-on-surface-variant text-xl leading-relaxed max-w-2xl group-hover:text-black/70 transition-colors">
-            A curated selection of the industry's most influential studios, agencies, and brands. These are the teams defining the visual landscape of our time.
-          </p>
-        </div>
-
-        <div className="flex flex-col border-t border-outline-variant/30">
-{FEATURED_COMPANIES.map((company) => (
   <motion.div
-    key={company.name}
-    onClick={() => onSelectCompany(company)}
-    className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed hover:rounded-2xl hover:px-8 hover:my-2"
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
+    className="flex flex-col"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
   >
-    <div className="md:w-1/3 aspect-video md:aspect-square overflow-hidden rounded-2xl bg-surface-container">
-      <img
-        src={company.image}
-        alt={company.name}
-        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-        referrerPolicy="no-referrer"
-      />
-    </div>
+    <section className="px-margin-page pt-32 md:pt-48 pb-20">
+      <button
+        onClick={onBack}
+        className="flex items-center gap-2 text-on-surface-variant font-metadata-light uppercase tracking-widest hover:text-primary transition-colors mb-20 group"
+      >
+        <ArrowLeft
+          size={16}
+          className="group-hover:-translate-x-1 transition-transform"
+        />
+        Back to Index
+      </button>
 
-    <div className="md:w-2/3 flex flex-col justify-center">
-      <div className="flex justify-between items-start mb-4">
-        <h2 className="font-monumental-lg !text-[48px] md:!text-[64px] leading-tight text-primary-fixed group-hover:text-black transition-colors">
-          {company.name}
-        </h2>
+      <div className="max-w-4xl mb-24">
+        <motion.h1
+          className="font-monumental-lg text-primary-fixed mb-8 leading-none"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          FEATURED <br />CO.
+        </motion.h1>
 
-        <ArrowRight className="text-primary-fixed opacity-0 group-hover:opacity-100 group-hover:translate-x-2 group-hover:text-black transition-all" />
+        <p className="font-interface-reg text-on-surface-variant text-xl md:text-2xl leading-relaxed">
+          A curated selection of the industry's most influential studios,
+          agencies, and brands.
+        </p>
       </div>
 
-      <div className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest mb-6 border-b border-outline-variant/20 pb-4 inline-block self-start group-hover:text-black/70 transition-colors">
-        {company.location}
-      </div>
-
-      <p className="font-interface-reg text-on-surface-variant text-xl leading-relaxed max-w-2xl group-hover:text-black/70 transition-colors">
-        {company.description}
-      </p>
-
-      <div className="flex flex-wrap gap-2 mt-8">
-        {company.tags.map((tag) => (
-          <span
-            key={tag}
-            className="text-[10px] px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors"
+      <div className="flex flex-col border-t border-outline-variant/30">
+        {FEATURED_COMPANIES.map((company) => (
+          <motion.div
+            key={company.name}
+            onClick={() => onSelectCompany(company)}
+            className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed hover:px-8 hover:rounded-2xl hover:my-2"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
           >
-            {tag}
-          </span>
-        ))}
-          </div>
-  </section>
-  </motion.div>
-  );
-}
+            <div className="md:w-1/3 aspect-video md:aspect-square overflow-hidden rounded-2xl bg-surface-container">
+              <img
+                src={company.image}
+                alt={company.name}
+                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                referrerPolicy="no-referrer"
+              />
+            </div>
 
+            <div className="md:w-2/3 flex flex-col justify-center">
+              <div className="flex justify-between items-start mb-4">
+                <h2 className="font-monumental-lg !text-[48px] md:!text-[64px] leading-tight text-primary-fixed group-hover:text-black transition-colors">
+                  {company.name}
+                </h2>
+
+                <ArrowRight className="text-primary-fixed opacity-0 group-hover:opacity-100 group-hover:translate-x-2 group-hover:text-black transition-all" />
+              </div>
+
+              <div className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest mb-6 border-b border-outline-variant/20 pb-4 inline-block self-start group-hover:text-black/70 transition-colors">
+                {company.location}
+              </div>
+
+              <p className="font-interface-reg text-on-surface-variant text-xl leading-relaxed max-w-2xl group-hover:text-black/70 transition-colors">
+                {company.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mt-8">
+                {company.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[10px] px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  </motion.div>
+);
 function AboutPage({ onBack }: { onBack: () => void }) {
   useEffect(() => {
     window.scrollTo(0, 0);
