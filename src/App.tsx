@@ -368,8 +368,6 @@ className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest 
       {tag}
     </span>
   ))}
-</div>
-                </div>
               </div>
             </motion.div>
           ))}
