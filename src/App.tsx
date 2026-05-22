@@ -322,7 +322,7 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <section className="px-margin-page pt-32 md:pt-48 pb-20">
+      <section className="px-margin-page pt-44 md:pt-64 pb-20">
         <button 
           onClick={onBack}
           className="flex items-center gap-2 text-on-surface-variant font-metadata-light uppercase tracking-widest hover:text-primary transition-colors mb-20 group"
