@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function FeaturedCompanyPage({ company }: any) {
+export default function FeaturedCompanyPage({ company, onBack }: any) {
   return (
     <motion.div
       className="min-h-screen bg-[#f3dfe3] text-black"
@@ -12,10 +12,33 @@ export default function FeaturedCompanyPage({ company }: any) {
       {/* HERO */}
       <section className="px-8 md:px-12 pt-40 pb-24">
 
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        {/* TOP NAV */}
+        <div className="flex items-center justify-between mb-16">
+
+          <button
+            onClick={onBack}
+            className="uppercase tracking-[0.2em] text-[11px] opacity-60 hover:opacity-100 transition-opacity"
+          >
+            ← All Featured
+          </button>
+
+          <div className="flex items-center gap-8 uppercase tracking-[0.2em] text-[11px]">
+            <button className="opacity-40 hover:opacity-100 transition-opacity">
+              Prev
+            </button>
+
+            <button className="hover:opacity-60 transition-opacity">
+              Next
+            </button>
+          </div>
+
+        </div>
+
+        {/* HERO GRID */}
+        <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-12 md:gap-16 items-start">
 
           {/* IMAGE */}
-          <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-black/5">
+          <div className="aspect-[4/3] overflow-hidden rounded-[28px] bg-black/5">
             <img
               src={company.image}
               alt={company.name}
@@ -24,76 +47,121 @@ export default function FeaturedCompanyPage({ company }: any) {
           </div>
 
           {/* CONTENT */}
-          <div className="flex flex-col">
+          <div className="pt-2">
 
-            <p className="uppercase tracking-[0.2em] text-[11px] mb-6 opacity-60">
-              {company.name}
-            </p>
-
-            <h1 className="font-monumental-lg text-[72px] leading-none mb-8">
+            <h1 className="font-monumental-lg text-[64px] md:text-[92px] leading-none mb-10">
               {company.name}
             </h1>
 
-            <div className="space-y-1 mb-12">
+            <div className="mb-14">
               <p className="text-[28px] leading-tight">
                 {company.location}
               </p>
 
-              <p className="text-[24px] opacity-70">
+              <p className="text-[24px] opacity-70 mt-1">
                 {company.tags.join(" / ")}
               </p>
             </div>
 
-            <div className="space-y-10 max-w-xl">
+            <div className="space-y-10 max-w-[680px]">
 
-  <p className="text-[24px] leading-relaxed">
-    {company.description}
-  </p>
+              <p className="text-[26px] leading-[1.45]">
+                {company.description}
+              </p>
 
-  <p className="text-[22px] leading-relaxed opacity-80">
-    {company.fullDescription}
-  </p>
+              <p className="text-[22px] leading-[1.7] opacity-80">
+                {company.fullDescription}
+              </p>
 
-  <div className="space-y-10 pt-12 border-t border-black/10">
+            </div>
 
-    <div>
-      <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-3">
-        CATEGORY
-      </p>
+          </div>
 
-      <p className="text-[20px] leading-relaxed">
-        {company.tags.join(" / ")}
-      </p>
-    </div>
+        </div>
 
-    <div>
-      <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-3">
-        MISSION
-      </p>
+      </section>
 
-      <p className="text-[20px] leading-relaxed opacity-80">
-        {company.mission}
-      </p>
-    </div>
+      {/* EDITORIAL SECTION */}
+      <section className="px-8 md:px-12 pb-24">
 
-    <div>
-      <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-3">
-        OFFICIAL WEBSITE
-      </p>
+        <div className="border-t border-black/10 pt-16">
 
-      <a
-        href={`https://${company.website}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-[20px] underline underline-offset-4"
-      >
-        {company.website}
-      </a>
-    </div>
+          <div className="grid md:grid-cols-[0.42fr_0.58fr] gap-20">
 
-  </div>
+            {/* LEFT METADATA */}
+            <div className="space-y-10">
 
-</div>
+              <div>
+                <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-3">
+                  Headquarters
+                </p>
+
+                <p className="text-[22px]">
+                  {company.location}
+                </p>
+              </div>
+
+              <div>
+                <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-3">
+                  Category
+                </p>
+
+                <p className="text-[22px] leading-relaxed">
+                  {company.tags.join(" / ")}
+                </p>
+              </div>
+
+              <div>
+                <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-3">
+                  Mission
+                </p>
+
+                <p className="text-[20px] leading-relaxed opacity-80">
+                  {company.mission}
+                </p>
+              </div>
+
+              <div>
+                <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-3">
+                  Official Website
+                </p>
+
+                <a
+                  href={`https://${company.website}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[20px] underline underline-offset-4"
+                >
+                  {company.website}
+                </a>
+              </div>
+
+            </div>
+
+            {/* WHY IT MATTERS */}
+            <div className="border-l border-black/10 pl-12">
+
+              <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-8">
+                Why It Matters
+              </p>
+
+              <div className="space-y-10">
+
+                <p className="text-[42px] leading-[1.25] font-light">
+                  IXI represents a quieter direction for consumer technology:
+                  products designed to integrate naturally into everyday life
+                  rather than compete for attention.
+                </p>
+
+                <p className="text-[24px] leading-[1.75] opacity-80 max-w-[900px]">
+                  The company reflects a broader Nordic movement toward calmer,
+                  more ambient forms of computing where hardware becomes less
+                  performative and more seamlessly integrated into human behaviour.
+                </p>
+
+              </div>
+
+            </div>
 
           </div>
 
