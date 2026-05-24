@@ -35,10 +35,10 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
         </div>
 
         {/* HERO GRID */}
-        <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-12 md:gap-16 items-start">
+        <div className="grid md:grid-cols-[0.75fr_1.25fr] gap-12 md:gap-16 items-start">
 
           {/* IMAGE */}
-          <div className="aspect-[5/4] overflow-hidden rounded-[28px] bg-black/5">
+          <div className="aspect-[4/3] max-w-[620px] overflow-hidden rounded-[28px] bg-black/5">
             <img
               src={company.image}
               alt={company.name}
@@ -47,9 +47,9 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
           </div>
 
           {/* CONTENT */}
-          <div className="pt-2">
+        <div className="pt-6 md:pt-10">
 
-            <h1 className="font-monumental-lg text-[64px] md:text-[92px] leading-none mb-10">
+            <h1 className="font-monumental-lg text-[56px] md:text-[72px] leading-none mb-10">
               {company.name}
             </h1>
 
@@ -79,7 +79,7 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
                 {company.description}
               </p>
 
-              <p className="text-[22px] leading-[1.7] opacity-80">
+              <p className="text-[20px] leading-[1.9] max-w-[720px] opacity-80">
                 {company.fullDescription}
               </p>
 
