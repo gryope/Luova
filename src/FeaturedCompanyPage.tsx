@@ -35,11 +35,11 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
         </div>
 
         {/* HERO GRID */}
-        <div className="grid md:grid-cols-[0.75fr_1.25fr] gap-12 md:gap-16 items-start">
+        <div className="grid md:grid-cols-[0.6fr_1.4fr] gap-12 md:gap-16 items-start">
 
           {/* IMAGE */}
-          <div className="aspect-[4/3] max-w-[620px] overflow-hidden rounded-[28px] bg-black/5">
-            <img
+<div className="aspect-[4/3] max-w-[620px] overflow-hidden rounded-[28px] bg-black/5">
+  <img
               src={company.image}
               alt={company.name}
               className="w-full h-full object-cover"
@@ -47,9 +47,9 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
           </div>
 
           {/* CONTENT */}
-        <div className="pt-6 md:pt-10">
+        <div className="pt-10 md:pt-16">
 
-            <h1 className="font-monumental-lg text-[56px] md:text-[72px] leading-none mb-10">
+            <h1 className="font-monumental-lg text-[52px] md:text-[84px] leading-none mb-10">
               {company.name}
             </h1>
 
@@ -75,11 +75,11 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
 
             <div className="space-y-10 max-w-[680px]">
 
-              <p className="text-[22px] md:text-[24px] leading-[1.6]">
+              <p className="text-[18px] md:text-[24px] leading-[1.75] max-w-[720px]">
                 {company.description}
               </p>
 
-              <p className="text-[20px] leading-[1.9] max-w-[720px] opacity-80">
+              <p className="text-[17px] md:text-[20px] leading-[2] max-w-[760px] opacity-75 opacity-80">
                 {company.fullDescription}
               </p>
 
@@ -106,7 +106,7 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
                   Headquarters
                 </p>
 
-                <p className="text-[22px]">
+                <p className="text-[18px]">
                   {company.location}
                 </p>
               </div>
@@ -116,7 +116,7 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
                   Category
                 </p>
 
-                <p className="text-[22px] leading-relaxed">
+                <p className="text-[18px] leading-relaxed">
                   {company.tags.join(" / ")}
                 </p>
               </div>
@@ -126,7 +126,7 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
                   Mission
                 </p>
 
-                <p className="text-[20px] leading-relaxed opacity-80">
+                <p className="text-[17px] leading-relaxed opacity-80">
                   {company.mission}
                 </p>
               </div>
@@ -155,9 +155,9 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
                 Why It Matters
               </p>
 
-              <div className="space-y-10">
+              <div className="space-y-10 max-w-[900px]">
 
-                <p className="text-[42px] leading-[1.25] font-light">
+                <p className="text-[36px] md:text-[44px] leading-[1.35] font-light">
                   IXI represents a quieter direction for consumer technology:
                   products designed to integrate naturally into everyday life
                   rather than compete for attention.
