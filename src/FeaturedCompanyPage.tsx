@@ -38,7 +38,7 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
         <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-12 md:gap-16 items-start">
 
           {/* IMAGE */}
-          <div className="aspect-[4/3] overflow-hidden rounded-[28px] bg-black/5">
+          <div className="aspect-[5/4] overflow-hidden rounded-[28px] bg-black/5">
             <img
               src={company.image}
               alt={company.name}
@@ -53,19 +53,29 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
               {company.name}
             </h1>
 
-            <div className="mb-14">
-              <p className="text-[28px] leading-tight">
-                {company.location}
-              </p>
+            <div className="mb-16">
 
-              <p className="text-[24px] opacity-70 mt-1">
-                {company.tags.join(" / ")}
-              </p>
-            </div>
+  <p className="uppercase tracking-[0.22em] text-[11px] opacity-50 mb-6">
+    Featured Archive
+  </p>
+
+  <div className="space-y-2">
+
+    <p className="text-[30px] leading-tight">
+      {company.location}
+    </p>
+
+    <p className="text-[18px] opacity-60 leading-relaxed max-w-md">
+      {company.tags.join(" / ")}
+    </p>
+
+  </div>
+
+</div>
 
             <div className="space-y-10 max-w-[680px]">
 
-              <p className="text-[26px] leading-[1.45]">
+              <p className="text-[22px] md:text-[24px] leading-[1.6]">
                 {company.description}
               </p>
 
