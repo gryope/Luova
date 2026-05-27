@@ -62,17 +62,15 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
 
 </div>
 
-            <div className="space-y-10 max-w-[680px]">
+            <div className="max-w-[920px]">
 
-              <p className="text-[18px] md:text-[24px] leading-[1.75] max-w-[720px]">
-                {company.description}
-              </p>
+  <p className="text-[38px] md:text-[72px] leading-[0.98] tracking-[-0.05em] max-w-[920px]">
+    Autofocus eyewear that adapts
+    <br />
+    in real time to how we see.
+  </p>
 
-              <p className="text-[17px] md:text-[20px] leading-[2] max-w-[760px] opacity-75 opacity-80">
-                {company.fullDescription}
-              </p>
-
-            </div>
+</div>
 
           </div>
 
