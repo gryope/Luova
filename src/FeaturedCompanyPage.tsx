@@ -1,171 +1,190 @@
-import { motion } from "framer-motion";
-
-export default function FeaturedCompanyPage({ company, onBack }: any) {
+export default function LuovaIXIPage() {
   return (
-    <motion.div
-      className="min-h-screen bg-[#0b0b0c] text-black"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-
-      {/* HERO */}
-      <section className="bg-[#f3dfe3] rounded-bl-[72px] px-8 md:px-14 pt-24 pb-28">
-
-        {/* TOP NAV */}
-        <div className="flex items-center justify-between mb-16">
-
-          <button
-            onClick={onBack}
-            className="uppercase tracking-[0.2em] text-[11px] opacity-60 hover:opacity-100 transition-opacity"
-          >
-            ← All Featured
-          </button>
-
-          <div className="flex items-center gap-8 uppercase tracking-[0.2em] text-[11px]">
-            <button className="opacity-40 hover:opacity-100 transition-opacity">
-              Prev
+    <main className="min-h-screen bg-[#060606] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black">
+      <div className="relative">
+        <section className="relative mr-[-2vw] rounded-bl-[30px] bg-[#e7c3cb] text-black pt-10 pb-20 px-10 md:px-16 lg:px-20 min-h-[760px]">
+          <div className="flex items-center justify-between text-[11px] tracking-[0.22em] uppercase opacity-80">
+            <button className="hover:opacity-100 transition-opacity">
+              ← All Featured
             </button>
 
-            <button className="hover:opacity-60 transition-opacity">
-              Next
-            </button>
-          </div>
-
-        </div>
-
-        {/* HERO GRID */}
-<div className="max-w-[1200px]">
-          
-
-          {/* CONTENT */}
-<div className="pt-2">
-            <h1 className="font-monumental-lg text-[88px] md:text-[180px] tracking-[-0.08em] leading-[0.88] mb-14">
-  {company.name}
-</h1>
-
-            <div className="mb-20">
-
-  <p className="uppercase tracking-[0.22em] text-[11px] opacity-40 mb-8">
-    CURATION / HARDWARE / 2026
-  </p>
-
-  <div className="w-[110px] md:w-[140px] opacity-90">
-
-    <img
-      src={company.image}
-      alt={company.name}
-      className="w-full h-auto object-contain"
-    />
-
-  </div>
-
-</div>
-
-            <div className="max-w-[920px]">
-
-  <p className="text-[38px] md:text-[72px] leading-[0.98] tracking-[-0.05em] max-w-[920px]">
-    Autofocus eyewear that adapts
-    <br />
-    in real time to how we see.
-  </p>
-
-</div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* EDITORIAL SECTION */}
-      <section className="px-8 md:px-12 pb-24">
-
-        <div className="border-t border-black/10 pt-16">
-
-          <div className="grid md:grid-cols-[0.42fr_0.58fr] gap-20">
-
-            {/* LEFT METADATA */}
-            <div className="space-y-10">
-
-              <div>
-                <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-3">
-                  Headquarters
-                </p>
-
-                <p className="text-[18px]">
-                  {company.location}
-                </p>
-              </div>
-
-              <div>
-                <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-3">
-                  Category
-                </p>
-
-                <p className="text-[18px] leading-relaxed">
-                  {company.tags.join(" / ")}
-                </p>
-              </div>
-
-              <div>
-                <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-3">
-                  Mission
-                </p>
-
-                <p className="text-[17px] leading-relaxed opacity-80">
-                  {company.mission}
-                </p>
-              </div>
-
-              <div>
-                <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-3">
-                  Official Website
-                </p>
-
-                <a
-                  href={`https://${company.website}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[20px] underline underline-offset-4"
-                >
-                  {company.website}
-                </a>
-              </div>
-
+            <div className="flex gap-8">
+              <button className="hover:opacity-100 transition-opacity">Prev</button>
+              <button className="hover:opacity-100 transition-opacity">Next</button>
             </div>
+          </div>
 
-            {/* WHY IT MATTERS */}
-            <div className="border-l border-black/10 pl-12">
+          <div className="mt-20 max-w-[640px]">
+            <p className="text-[11px] tracking-[0.24em] uppercase opacity-70">
+              Curation / Hardware / 2026
+            </p>
 
-              <p className="uppercase tracking-[0.2em] text-[11px] opacity-50 mb-8">
-                Why It Matters
+            <h1 className="mt-10 text-[120px] leading-none tracking-[-0.08em] font-light">
+              IXI
+            </h1>
+
+            <h2 className="mt-10 text-[54px] leading-[1.08] tracking-[-0.045em] font-normal max-w-[620px]">
+              Autofocus eyewear that adapts in real time to how we see.
+            </h2>
+          </div>
+
+          <div className="absolute bottom-20 left-10 right-10 md:left-16 md:right-16 lg:left-20 lg:right-20 border-t border-black/10 pt-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-12">
+              {[
+                {
+                  label: 'Founded',
+                  value: '2026',
+                },
+                {
+                  label: 'Location',
+                  value: 'Espoo, Finland',
+                },
+                {
+                  label: 'Team Size',
+                  value: '11–50',
+                },
+                {
+                  label: 'Status',
+                  value: '• Early stage',
+                },
+              ].map((item) => (
+                <div key={item.label}>
+                  <p className="text-[10px] tracking-[0.24em] uppercase opacity-45">
+                    {item.label}
+                  </p>
+
+                  <p className="mt-5 text-[26px] tracking-[-0.03em] leading-none font-normal">
+                    {item.value}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section className="relative max-w-[1440px] mx-auto px-10 md:px-16 lg:px-20 pt-20 pb-28">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_0.8fr] gap-20 lg:gap-28">
+          <div>
+            <div className="max-w-[520px]">
+              <p className="text-[38px] leading-[1.48] tracking-[-0.045em] text-[#f1ede7] font-light">
+                Founded by veterans from Varjo, IXI explores a quieter direction for consumer technology: adaptive eyewear designed to integrate naturally into everyday life rather than compete for attention.
               </p>
 
-              <div className="space-y-10 max-w-[900px]">
-
-                <p className="text-[36px] md:text-[44px] leading-[1.35] font-light">
-                  IXI represents a quieter direction for consumer technology:
-                  products designed to integrate naturally into everyday life
-                  rather than compete for attention.
+              <div className="mt-16 space-y-12 text-[20px] leading-[1.95] tracking-[-0.02em] text-[#b8b2aa]">
+                <p>
+                  By combining precision optics, industrial design and ambient computing principles, the company is building technology that feels almost invisible, responding to human behaviour instead of demanding constant focus.
                 </p>
 
-                <p className="text-[24px] leading-[1.75] opacity-80 max-w-[900px]">
-                  The company reflects a broader Nordic movement toward calmer,
-                  more ambient forms of computing where hardware becomes less
-                  performative and more seamlessly integrated into human behaviour.
+                <p>
+                  The broader philosophy behind IXI removes spectacle from the experience entirely. The product is designed to disappear into use: soft interfaces, restrained form language and seamless interaction replacing the visual noise commonly associated with consumer hardware.
                 </p>
-
               </div>
-
             </div>
 
+            <div className="mt-20 max-w-[470px] overflow-hidden rounded-[18px] border border-white/5 bg-white/[0.02]">
+              <div className="aspect-[1.12/1] bg-[linear-gradient(180deg,#202020_0%,#090909_100%)]" />
+
+              <div className="flex items-center justify-between px-5 py-4 border-t border-white/5">
+                <p className="text-[11px] tracking-[0.22em] uppercase text-[#f0ece6]">
+                  Carbon Composite Detail
+                </p>
+
+                <button className="text-white/60 hover:text-white transition-colors text-lg">
+                  ⊕
+                </button>
+              </div>
+            </div>
           </div>
 
+          <div className="max-w-[620px] lg:ml-auto w-full">
+            <div className="overflow-hidden rounded-[20px] border border-white/5 bg-[#090909]">
+              <div className="px-6 pt-5">
+                <p className="text-[10px] tracking-[0.24em] uppercase text-white/70">
+                  Fig 01. Product Elevation
+                </p>
+              </div>
+
+              <div className="aspect-[1.12/1] bg-[radial-gradient(circle_at_center,#1a1a1a_0%,#070707_70%)]" />
+            </div>
+
+            <div className="mt-5 rounded-[20px] border border-white/5 bg-white/[0.025] px-7 py-7 backdrop-blur-sm">
+              <div className="flex items-start gap-5">
+                <div className="text-[#e7c3cb] text-xl mt-1">⌲</div>
+
+                <div className="flex-1">
+                  <p className="text-[10px] tracking-[0.24em] uppercase text-white/55">
+                    Added to Luova
+                  </p>
+
+                  <p className="mt-4 text-[44px] tracking-[-0.05em] leading-none text-[#f2eee8]">
+                    November 2026
+                  </p>
+
+                  <div className="mt-8 border-t border-white/5 pt-6 flex items-center justify-between">
+                    <a
+                      href="#"
+                      className="text-[32px] tracking-[-0.04em] text-[#f2eee8] hover:opacity-80 transition-opacity"
+                    >
+                      ixi.com
+                    </a>
+
+                    <span className="text-[#e7c3cb] text-2xl">↗</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-5 rounded-[20px] border border-white/5 bg-white/[0.025] px-7 py-8 backdrop-blur-sm">
+              <p className="text-[10px] tracking-[0.24em] uppercase text-white/55">
+                Known For
+              </p>
+
+              <div className="mt-8 space-y-7 text-[22px] tracking-[-0.03em] text-[#efeae4]">
+                {[
+                  'Post-Varjo hardware team',
+                  'Precision optics',
+                  'Ambient computing direction',
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-5">
+                    <span className="text-[#e7c3cb]">—</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
+        <div className="mt-24 flex items-center justify-center gap-8 text-[10px] tracking-[0.24em] uppercase text-white/35">
+          <span>Social:</span>
+          <a href="#" className="text-white/80 hover:text-white transition-colors">
+            Instagram
+          </a>
+          <a href="#" className="text-white/80 hover:text-white transition-colors">
+            LinkedIn
+          </a>
+        </div>
       </section>
 
-    </motion.div>
+      <footer className="border-t border-white/[0.04] px-10 md:px-16 lg:px-20 py-8 text-[10px] tracking-[0.22em] uppercase text-white/45">
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+          <div className="text-[#f2eee8] text-[28px] tracking-[-0.06em] normal-case">
+            LUOVA
+          </div>
+
+          <div className="text-center">
+            © 2026 Luova Helsinki &nbsp; | &nbsp; Independent Archive for Creative Industry
+          </div>
+
+          <div className="flex gap-6 lg:justify-end">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact</a>
+            <a href="#">List</a>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }
