@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function FeaturedCompanyPage({ company, onBack }: any) {
   return (
     <motion.div
-      className="min-h-screen bg-[#f3dfe3] text-black"
+      className="min-h-screen bg-[#0b0b0c] text-black"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
