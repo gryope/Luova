@@ -44,21 +44,19 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
   {company.name}
 </h1>
 
-            <div className="mb-16">
+            <div className="mb-20">
 
-  <p className="uppercase tracking-[0.22em] text-[11px] opacity-50 mb-6">
-    Featured Archive
+  <p className="uppercase tracking-[0.22em] text-[11px] opacity-40 mb-8">
+    CURATION / HARDWARE / 2026
   </p>
 
-  <div className="space-y-2">
+  <div className="w-[110px] md:w-[140px] opacity-90">
 
-    <p className="text-[30px] leading-tight">
-      {company.location}
-    </p>
-
-    <p className="text-[18px] opacity-60 leading-relaxed max-w-md">
-      {company.tags.join(" / ")}
-    </p>
+    <img
+      src={company.image}
+      alt={company.name}
+      className="w-full h-auto object-contain"
+    />
 
   </div>
 
