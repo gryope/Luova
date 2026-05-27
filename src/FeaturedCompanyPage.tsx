@@ -10,7 +10,7 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
     >
 
       {/* HERO */}
-      <section className="px-8 md:px-12 pt-40 pb-24">
+      <section className="bg-[#f3dfe3] rounded-bl-[72px] px-8 md:px-14 pt-24 pb-28">
 
         {/* TOP NAV */}
         <div className="flex items-center justify-between mb-16">
