@@ -156,16 +156,7 @@ export default function LuovaIXIPage() {
           </div>
         </div>
 
-        <div className="mt-24 flex items-center justify-center gap-8 text-[10px] tracking-[0.24em] uppercase text-white/35">
-          <span>Social:</span>
-          <a href="#" className="text-white/80 hover:text-white transition-colors">
-            Instagram
-          </a>
-          <a href="#" className="text-white/80 hover:text-white transition-colors">
-            LinkedIn
-          </a>
-        </div>
-      </section>
+        
 
       <footer className="border-t border-white/[0.04] px-10 md:px-16 lg:px-20 py-8 text-[10px] tracking-[0.22em] uppercase text-white/45">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
