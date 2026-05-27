@@ -37,14 +37,7 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
         {/* HERO GRID */}
         <div className="grid md:grid-cols-[0.6fr_1.4fr] gap-12 md:gap-16 items-start">
 
-          {/* IMAGE */}
-<div className="aspect-[4/3] max-w-[620px] overflow-hidden rounded-[28px] bg-black/5">
-  <img
-              src={company.image}
-              alt={company.name}
-              className="w-full h-full object-cover"
-            />
-          </div>
+          
 
           {/* CONTENT */}
         <div className="pt-10 md:pt-16">
