@@ -40,9 +40,9 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
 
           {/* CONTENT */}
 <div className="pt-2">
-            <h1 className="font-monumental-lg text-[52px] md:text-[84px] leading-none mb-10">
-              {company.name}
-            </h1>
+            <h1 className="font-monumental-lg text-[88px] md:text-[180px] tracking-[-0.08em] leading-[0.88] mb-14">
+  {company.name}
+</h1>
 
             <div className="mb-16">
 
