@@ -35,8 +35,7 @@ export default function FeaturedCompanyPage({ company, onBack }: any) {
         </div>
 
         {/* HERO GRID */}
-        <div className="grid md:grid-cols-[0.6fr_1.4fr] gap-12 md:gap-16 items-start">
-
+<div className="max-w-[1200px]">
           
 
           {/* CONTENT */}
