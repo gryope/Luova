@@ -155,6 +155,7 @@ export default function LuovaIXIPage() {
             </div>
           </div>
         </div>
+        <footer className="border-t border-white/[0.04] px-10 md:px-16 lg:px-20 py-10 text-[10px] tracking-[0.22em] uppercase text-white/45 bg-[#111111]">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="text-[#f2eee8] text-[28px] tracking-[-0.06em] normal-case">
             LUOVA
