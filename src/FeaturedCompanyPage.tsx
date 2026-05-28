@@ -156,24 +156,7 @@ export default function LuovaIXIPage() {
           </div>
           </div>
         </section>
-        <footer className="border-t border-white/[0.04] px-10 md:px-16 lg:px-20 py-10 text-[10px] tracking-[0.22em] uppercase text-white/45 bg-[#111111]">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-          <div className="text-[#f2eee8] text-[28px] tracking-[-0.06em] normal-case">
-            LUOVA
-          </div>
-
-          <div className="text-center">
-            © 2026 Luova Helsinki &nbsp; | &nbsp; Independent Archive for Creative Industry
-          </div>
-
-          <div className="flex gap-6 lg:justify-end">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Contact</a>
-            <a href="#">List</a>
-          </div>
-        </div>
-      </footer>
+        
     </main>
   );
 }
