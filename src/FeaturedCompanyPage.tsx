@@ -67,7 +67,7 @@ export default function LuovaIXIPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_0.8fr] gap-20 lg:gap-28">
           <div>
             <div className="max-w-[520px]">
-              <p className="text-[38px] leading-[1.48] tracking-[-0.045em] text-[#f1ede7] font-light">
+              <p className="text-[50px] md:text-[58px] leading-[1.34] tracking-[-0.045em] text-[#f1ede7] font-light">
                 Founded by veterans from Varjo, IXI explores a quieter direction for consumer technology: adaptive eyewear designed to integrate naturally into everyday life rather than compete for attention.
               </p>
 
@@ -98,7 +98,7 @@ export default function LuovaIXIPage() {
           </div>
 
           <div className="max-w-[620px] lg:ml-auto w-full">
-            <div className="overflow-hidden rounded-[20px] border border-white/5 bg-[#090909]">
+            <div className="overflow-hidden rounded-[20px] border border-white/5 bg-[#0d0d0d]">
               <div className="px-6 pt-5">
                 <p className="text-[10px] tracking-[0.24em] uppercase text-white/70">
                   Fig 01. Product Elevation
@@ -107,8 +107,8 @@ export default function LuovaIXIPage() {
 
               <div className="aspect-[1.12/1] bg-[radial-gradient(circle_at_center,#1a1a1a_0%,#070707_70%)]" />
             </div>
-
-            <div className="mt-5 rounded-[20px] border border-white/5 bg-white/[0.025] px-7 py-7 backdrop-blur-sm">
+rounded-[20px] border border-white/5 bg-white/[0.025]
+            <div className="mt-5  px-7 py-7 backdrop-blur-sm">
               <div className="flex items-start gap-5">
                 <div className="text-[#e7c3cb] text-xl mt-1">⌲</div>
 
@@ -135,7 +135,7 @@ export default function LuovaIXIPage() {
               </div>
             </div>
 
-            <div className="mt-5 rounded-[20px] border border-white/5 bg-white/[0.025] px-7 py-8 backdrop-blur-sm">
+            <div className="mt-5 rounded-[20px] bg-white/[0.02] px-7 py-8 backdrop-blur-sm">
               <p className="text-[10px] tracking-[0.24em] uppercase text-white/55">
                 Known For
               </p>
