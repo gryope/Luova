@@ -63,8 +63,8 @@ export default function LuovaIXIPage() {
         </section>
       </div>
 
-      <section className="relative max-w-[1440px] mx-auto px-10 md:px-16 lg:px-20 pt-20 pb-28">
-        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_0.8fr] gap-20 lg:gap-28">
+<section className="relative px-10 md:px-16 lg:px-20 pt-24 pb-32">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_0.8fr] gap-20 lg:gap-28">
           <div>
             <div className="max-w-[520px]">
               <p className="text-[38px] leading-[1.48] tracking-[-0.045em] text-[#f1ede7] font-light">
