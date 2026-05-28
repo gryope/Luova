@@ -2,7 +2,7 @@ export default function LuovaIXIPage() {
   return (
     <main className="min-h-screen bg-[#060606] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black">
       <div className="relative">
-        <section className="relative mr-[-2vw] rounded-bl-[30px] bg-[#e7c3cb] text-black pt-10 pb-20 px-10 md:px-16 lg:px-20 min-h-[760px]">
+        <section className="relative mr-[-2vw] rounded-bl-[30px] bg-[#e7c3cb] text-black pt-14 pb-20 px-12 md:px-20 lg:px-24 min-h-[980px]">
           <div className="flex items-center justify-between text-[11px] tracking-[0.22em] uppercase opacity-80">
             <button className="hover:opacity-100 transition-opacity">
               ← All Featured
@@ -19,16 +19,16 @@ export default function LuovaIXIPage() {
               Curation / Hardware / 2026
             </p>
 
-            <h1 className="mt-10 text-[120px] leading-none tracking-[-0.08em] font-light">
+            <h1 className="mt-10 text-[148px] leading-none tracking-[-0.08em] font-light">
               IXI
             </h1>
 
-            <h2 className="mt-10 text-[54px] leading-[1.08] tracking-[-0.045em] font-normal max-w-[620px]">
+            <h2 className="mt-10 text-[72px] leading-[1.02] tracking-[-0.045em] font-normal max-w-[760px]">
               Autofocus eyewear that adapts in real time to how we see.
             </h2>
           </div>
 
-          <div className="absolute bottom-20 left-10 right-10 md:left-16 md:right-16 lg:left-20 lg:right-20 border-t border-black/10 pt-12">
+          <div className="absolute bottom-28 left-10 right-10 md:left-16 md:right-16 lg:left-20 lg:right-20 border-t border-black/10 pt-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-12">
               {[
                 {
@@ -63,11 +63,11 @@ export default function LuovaIXIPage() {
         </section>
       </div>
 
-<section className="relative px-10 md:px-16 lg:px-20 pt-24 pb-32">
+<section className="relative px-10 md:px-16 lg:px-20 pt-36 pb-32">
           <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_0.8fr] gap-20 lg:gap-28">
           <div>
             <div className="max-w-[520px]">
-              <p className="text-[50px] md:text-[58px] leading-[1.34] tracking-[-0.045em] text-[#f1ede7] font-light">
+              <p className="text-[64px] md:text-[72px] leading-[1.34] tracking-[-0.045em] text-[#f1ede7] font-light">
                 Founded by veterans from Varjo, IXI explores a quieter direction for consumer technology: adaptive eyewear designed to integrate naturally into everyday life rather than compete for attention.
               </p>
 
