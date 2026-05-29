@@ -96,8 +96,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
   alt={company.name}
 className="w-full aspect-[3/2] object-cover"/>              
               </div>
-            </div>
-          </div>
+            
 
           {/* ── RIGHT COLUMN — 300px fixed ── */}
           <div className="flex flex-col gap-3 w-full">
