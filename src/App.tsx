@@ -763,6 +763,9 @@ const [selectedHiringCompany, setSelectedHiringCompany] = useState<Company | nul
 const [isAboutVisible, setIsAboutVisible] = useState(false);
 const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
 const [currentPage, setCurrentPage] = useState(1);
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, [selectedJob, selectedFeaturedCompany, selectedHiringCompany]);
 
 const JOBS_PER_PAGE = 4;
 const totalPages = Math.ceil(
