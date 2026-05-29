@@ -91,15 +91,18 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
             </div>
 
             {/* Carbon composite image card */}
-<div className="mt-14 max-w-[560px] overflow-hidden rounded-[16px]"><img
-  src={company.image}
-  alt={company.name}
-className="w-full aspect-[3/2] object-cover"/>              
-              </div>
-            
+<div className="mt-14 max-w-[560px] overflow-hidden rounded-[16px]">
+  <img
+    src={company.image}
+    alt={company.name}
+    className="w-full aspect-[3/2] object-cover"
+  />
+</div>
 
-          {/* ── RIGHT COLUMN — 300px fixed ── */}
-          <div className="flex flex-col gap-3 w-full">
+</div>
+
+{/* ── RIGHT COLUMN ── */}
+<div className="flex flex-col gap-3 w-full">
 
             {/* Fig 01 — Product Elevation */}
             <div className="overflow-hidden rounded-[16px] bg-[#111]">
@@ -161,7 +164,8 @@ className="w-full aspect-[4/4.6] object-cover"/>
               </div>
             </div>
 
-          </div>
+               </div>
+        </div>
       </section>
 
     </main>
