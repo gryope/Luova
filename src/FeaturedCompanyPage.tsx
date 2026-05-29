@@ -42,7 +42,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
         </h1>
 
         {/* Tagline — short description, Inter regular, 32px */}
-        <h2 className="mt-6 text-[32px] leading-[1.15] tracking-[-0.02em] font-normal font-['Inter',sans-serif] max-w-[560px]">
+        <h2 className="mt-6 text-[23px] leading-[1.15] tracking-[-0.02em] font-normal font-['Inter',sans-serif] max-w-[560px]">
           {company.description}
         </h2>
 
@@ -78,7 +78,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
           <div>
 
             {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
-            <p className="text-[26px] leading-[1.5] tracking-[-0.02em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[420px]">
+            <p className="text-[18px] leading-[1.55] tracking-[-0.02em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[380px]">
               {company.fullDescription}
             </p>
 
