@@ -19,8 +19,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
     <main className="min-h-screen bg-[#090909] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black pt-24 md:pt-32">
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="bg-[#e7c3cb] text-black rounded-bl-[48px] px-8 md:px-12 lg:px-14 pt-6 pb-0">
-
+<section className="ml-8 md:ml-10 lg:ml-12 -mr-8 md:-mr-12 lg:-mr-16 bg-[#e7c3cb] text-black rounded-bl-[30px] px-8 md:px-12 lg:px-14 pt-6 pb-0">
         {/* Nav row */}
         <div className="flex items-center justify-between text-[11px] tracking-[0.2em] uppercase opacity-60 font-['Inter',sans-serif]">
           <button onClick={onBack} className="hover:opacity-100 transition-opacity">
