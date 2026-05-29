@@ -18,7 +18,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
   return (
 <main className="min-h-screen bg-[#090909] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black pt-28 md:pt-36">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-<section className="ml-8 md:ml-10 lg:ml-12 -mr-8 md:-mr-12 lg:-mr-16 bg-[#e7c3cb] text-black rounded-bl-[30px] px-8 md:px-12 lg:px-14 pt-12 pb-20 ">
+<section className="ml-8 md:ml-10 lg:ml-12 -mr-8 md:-mr-12 lg:-mr-16 bg-[#e7c3cb] text-black rounded-bl-[30px] px-8 md:px-12 lg:px-14 pt-16 pb-20 ">
         {/* Nav row */}
         <div className="flex items-center justify-between text-[11px] tracking-[0.2em] uppercase opacity-60 font-['Inter',sans-serif]">
           <button onClick={onBack} className="hover:opacity-100 transition-opacity">
@@ -36,7 +36,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
         </p>
 
         {/* Company name — Inter extralight, fixed 96px */}
-        <h1 className="mt-10 text-[96px] leading-[0.95] tracking-[-0.03em] font-extralight font-['Inter',sans-serif]">
+        <h1 className="mt-14 text-[96px] leading-[0.95] tracking-[-0.03em] font-extralight font-['Inter',sans-serif]">
           {company.name}
         </h1>
 
@@ -46,7 +46,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
         </h2>
 
         {/* Spacer */}
-        <div className="h-72" />
+        <div className="h-96" />
 
         {/* Stats bar */}
         <div className="mr-6 md:mr-8 lg:mr-10 border-t border-black/10 pt-8 pb-12">
@@ -121,8 +121,8 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 <img
   src={company.image}
   alt={company.name}
-  className="w-full aspect-[4/3] object-cover"
-/>            </div>
+className="w-full aspect-[4/4.6] object-cover"/>  
+          </div>
 
             {/* Added to Luova */}
             <div className="rounded-[16px] bg-[#111] px-5 py-6">
