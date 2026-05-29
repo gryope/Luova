@@ -711,73 +711,27 @@ function Footer() {
 }
 
 export default function App() {
-  const [selectedFeaturedCompany, setSelectedFeaturedCompany] = useState<Company | null>(null);
+  // state declarations
 
-const [selectedHiringCompany, setSelectedHiringCompany] = useState<Company | null>(null);
+  const [selectedFeaturedCompany, ...]
+  const [selectedHiringCompany, ...]
+  const [isAboutVisible, ...]
+  const [isFeaturedVisible, ...]
+  const [currentPage, ...]
 
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, [selectedJob, selectedFeaturedCompany, selectedHiringCompany]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [selectedJob, selectedFeaturedCompany, selectedHiringCompany]);
 
-const [isAboutVisible, setIsAboutVisible] = useState(false);
-const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
-const [currentPage, setCurrentPage] = useState(1);
   useEffect(() => {
     const fetchJobs = async () => {
-      try {
-        const response = await fetch(
-          "https://docs.google.com/spreadsheets/d/1ihmxZQJ8evOI60KqQQjvwUz-IegeF6Hbv3OhUmHvhyM/gviz/tq?tqx=out:json"
-        );
-
-        const text = await response.text();
-
-        const json = JSON.parse(
-          text.substring(47).slice(0, -2)
-        );
-
-       const rows = json.table.rows.filter(
-  (row: any) => row.c[0]?.v !== "Title"
-);
-
-const formattedJobs: Job[] = rows.map((row: any) => {
-          const columns = row.c;
-
-          return {
-  title: columns[0]?.v || "",
-  company: columns[1]?.v || "",
-  location: columns[2]?.v || "",
-  type: columns[3]?.v || "",
-  description: columns[4]?.v || "",
-  requirements: columns[5]?.v
-    ? columns[5].v.split(";").map((r: string) => r.trim())
-    : [],
-  url: columns[6]?.v || "",
-  date: columns[7]?.f || "",
-};
-        });
-
-        setJobs(formattedJobs);
-
-      } catch (error) {
-        console.error("Error fetching jobs:", error);
-      }
+      ...
     };
 
     fetchJobs();
   }, []);
 
-const [selectedFeaturedCompany, setSelectedFeaturedCompany] = useState<Company | null>(null);
-
-const [selectedHiringCompany, setSelectedHiringCompany] = useState<Company | null>(null);
-const [isAboutVisible, setIsAboutVisible] = useState(false);
-const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
-const [currentPage, setCurrentPage] = useState(1);
-
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, [selectedJob, selectedFeaturedCompany, selectedHiringCompany]);
-
-const JOBS_PER_PAGE = 4;
+  const JOBS_PER_PAGE = 4;
 const totalPages = Math.ceil(
   jobs.length / JOBS_PER_PAGE
 );
