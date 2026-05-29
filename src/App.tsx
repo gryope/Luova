@@ -711,8 +711,17 @@ function Footer() {
 }
 
 export default function App() {
-  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
-  const [jobs, setJobs] = useState<Job[]>([]);
+  const [selectedFeaturedCompany, setSelectedFeaturedCompany] = useState<Company | null>(null);
+
+const [selectedHiringCompany, setSelectedHiringCompany] = useState<Company | null>(null);
+
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, [selectedJob, selectedFeaturedCompany, selectedHiringCompany]);
+
+const [isAboutVisible, setIsAboutVisible] = useState(false);
+const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
+const [currentPage, setCurrentPage] = useState(1);
   useEffect(() => {
     const fetchJobs = async () => {
       try {
