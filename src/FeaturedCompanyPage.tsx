@@ -72,12 +72,11 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
       {/* ── BODY ─────────────────────────────────────────────────────────── */}
       <section className="px-8 md:px-12 lg:px-14 pt-16 pb-24">
-<div className="grid grid-cols-1 lg:grid-cols-[460px_420px] justify-between gap-24 items-start">
-          {/* ── LEFT COLUMN ── */}
+<div className="grid grid-cols-1 lg:grid-cols-[560px_400px] justify-between gap-24 items-start lg:ml-[96px]">          {/* ── LEFT COLUMN ── */}
           <div>
 
             {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
-            <p className="text-[16px] leading-[1.55] tracking-[-0.02em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[500px]">
+            <p className="text-[16px] leading-[1.55] tracking-[-0.02em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[560px]">
               Aiven develops open-source cloud infrastructure that helps organisations manage, stream and scale data across major cloud platforms. Headquartered in Helsinki, the company has become one of Finland's most internationally recognised software companies, enabling teams to build and operate modern data systems without vendor lock-in.
             </p>
 
@@ -92,18 +91,10 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
             </div>
 
             {/* Carbon composite image card */}
-            <div className="mt-12 max-w-[340px] overflow-hidden rounded-[16px] bg-[#111]">
-<img
+<div className="mt-14 max-w-[560px] overflow-hidden rounded-[16px]"><img
   src={company.image}
   alt={company.name}
-  className="w-full aspect-[4/4.5] object-cover"
-/>              <div className="flex items-center justify-between px-5 py-4 border-t border-white/[0.06]">
-                <p className="text-[10px] tracking-[0.2em] uppercase text-[#f0ece6] font-normal font-['Inter',sans-serif]">
-                  Carbon Composite Detail
-                </p>
-                <button className="text-white/40 hover:text-white transition-colors text-[16px] leading-none">
-                  ⊕
-                </button>
+className="w-full aspect-[3/2] object-cover"/>              
               </div>
             </div>
           </div>
@@ -146,7 +137,7 @@ className="w-full aspect-[4/4.6] object-cover"/>
                       href={`https://${company.website}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[20px] tracking-[-0.02em] text-[#e5b8c2] hover:opacity-75 transition-opacity font-normal font-['Inter',sans-serif]"
+                      className="text-[15px] tracking-[-0.02em] text-[#e5b8c2] hover:opacity-75 transition-opacity font-normal font-['Inter',sans-serif]"
                     >
                       {company.website}
                     </a>
