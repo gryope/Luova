@@ -19,20 +19,20 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
     <main className="min-h-screen bg-[#090909] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black pt-24 md:pt-32">
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-<section className="ml-8 md:ml-10 lg:ml-12 -mr-8 md:-mr-12 lg:-mr-16 bg-[#e7c3cb] text-black rounded-bl-[30px] px-8 md:px-12 lg:px-14 pt-6 pb-0">
+<section className="ml-8 md:ml-10 lg:ml-12 -mr-8 md:-mr-12 lg:-mr-16 bg-[#e7c3cb] text-black rounded-bl-[30px] px-8 md:px-12 lg:px-14 pt-6 pb-10">
         {/* Nav row */}
         <div className="flex items-center justify-between text-[11px] tracking-[0.2em] uppercase opacity-60 font-['Inter',sans-serif]">
           <button onClick={onBack} className="hover:opacity-100 transition-opacity">
             ← All Featured
           </button>
-          <div className="flex gap-8">
+          <div className="flex gap-8 pr-4 md:pr-6 lg:pr-8">
             <button className="hover:opacity-100 transition-opacity">Prev</button>
             <button className="hover:opacity-100 transition-opacity">Next</button>
           </div>
         </div>
 
         {/* Breadcrumb */}
-        <p className="mt-10 text-[11px] tracking-[0.22em] uppercase opacity-55 font-['Inter',sans-serif] font-normal">
+        <p className="mt-16 text-[11px] tracking-[0.22em] uppercase opacity-55 font-['Inter',sans-serif] font-normal">
           Curation / Hardware / 2026
         </p>
 
@@ -47,10 +47,10 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
         </h2>
 
         {/* Spacer */}
-        <div className="h-24" />
+        <div className="h-40" />
 
         {/* Stats bar */}
-        <div className="border-t border-black/10 pt-8 pb-12">
+        <div className="mr-6 md:mr-8 lg:mr-10 border-t border-black/10 pt-8 pb-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-8">
             {[
               { label: 'Founded',   value: '2026' },
@@ -59,10 +59,10 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
               { label: 'Status',    value: '• Early stage' },
             ].map((item) => (
               <div key={item.label}>
-                <p className="text-[10px] tracking-[0.22em] uppercase opacity-40 font-normal font-['Inter',sans-serif]">
+                <p className="text-[10px] tracking-[0.22em] uppercase opacity-28 font-normal font-['Inter',sans-serif]">
                   {item.label}
                 </p>
-                <p className="mt-4 text-[18px] tracking-[-0.02em] leading-none font-normal font-['Inter',sans-serif]">
+                <p className="mt-4 text-[15px] tracking-[-0.02em] leading-none font-normal font-['Inter',sans-serif]">
                   {item.value}
                 </p>
               </div>
