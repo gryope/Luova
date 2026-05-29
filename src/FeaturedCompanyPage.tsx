@@ -16,8 +16,7 @@ interface FeaturedCompanyPageProps {
 
 export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompanyPageProps) {
   return (
-    <main className="min-h-screen bg-[#090909] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black pt-24 md:pt-32">
-
+<main className="min-h-screen bg-[#090909] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black pt-28 md:pt-36">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
 <section className="ml-8 md:ml-10 lg:ml-12 -mr-8 md:-mr-12 lg:-mr-16 bg-[#e7c3cb] text-black rounded-bl-[30px] px-8 md:px-12 lg:px-14 pt-12 pb-20 ">
         {/* Nav row */}
