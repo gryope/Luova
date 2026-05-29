@@ -711,13 +711,15 @@ function Footer() {
 }
 
 export default function App() {
-  // state declarations
+  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  const [jobs, setJobs] = useState<Job[]>([]);
 
-  const [selectedFeaturedCompany, ...]
-  const [selectedHiringCompany, ...]
-  const [isAboutVisible, ...]
-  const [isFeaturedVisible, ...]
-  const [currentPage, ...]
+  const [selectedFeaturedCompany, setSelectedFeaturedCompany] = useState<Company | null>(null);
+  const [selectedHiringCompany, setSelectedHiringCompany] = useState<Company | null>(null);
+
+  const [isAboutVisible, setIsAboutVisible] = useState(false);
+  const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -725,11 +727,6 @@ export default function App() {
 
   useEffect(() => {
     const fetchJobs = async () => {
-      ...
-    };
-
-    fetchJobs();
-  }, []);
 
   const JOBS_PER_PAGE = 4;
 const totalPages = Math.ceil(
