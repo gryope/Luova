@@ -19,7 +19,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
     <main className="min-h-screen bg-[#090909] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black pt-24 md:pt-32">
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-<section className="ml-8 md:ml-10 lg:ml-12 -mr-8 md:-mr-12 lg:-mr-16 bg-[#e7c3cb] text-black rounded-bl-[30px] px-8 md:px-12 lg:px-14 pt-6 pb-10">
+<section className="ml-8 md:ml-10 lg:ml-12 -mr-8 md:-mr-12 lg:-mr-16 bg-[#e7c3cb] text-black rounded-bl-[30px] px-8 md:px-12 lg:px-14 pt-6 pb-20 ">
         {/* Nav row */}
         <div className="flex items-center justify-between text-[11px] tracking-[0.2em] uppercase opacity-60 font-['Inter',sans-serif]">
           <button onClick={onBack} className="hover:opacity-100 transition-opacity">
@@ -47,7 +47,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
         </h2>
 
         {/* Spacer */}
-        <div className="h-40" />
+        <div className="h-72" />
 
         {/* Stats bar */}
         <div className="mr-6 md:mr-8 lg:mr-10 border-t border-black/10 pt-8 pb-12">
@@ -73,18 +73,17 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
       {/* ── BODY ─────────────────────────────────────────────────────────── */}
       <section className="px-8 md:px-12 lg:px-14 pt-16 pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-16 lg:gap-20 items-start">
-
+<div className="grid grid-cols-1 lg:grid-cols-[520px_360px] justify-between gap-24 items-start">
           {/* ── LEFT COLUMN ── */}
           <div>
 
             {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
-            <p className="text-[26px] leading-[1.5] tracking-[-0.02em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[480px]">
+            <p className="text-[26px] leading-[1.5] tracking-[-0.02em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[420px]">
               {company.fullDescription}
             </p>
 
             {/* Body copy — Inter regular, 14px, muted, same max-width */}
-            <div className="mt-10 space-y-7 text-[14px] leading-[1.9] tracking-[0] text-[#7a7470] font-normal font-['Inter',sans-serif] max-w-[380px]">
+            <div className="mt-10 space-y-7 text-[14px] leading-[1.9] tracking-[0] text-[#7a7470] font-normal font-['Inter',sans-serif] max-w-[420px]">
               <p>
                 By combining precision optics, industrial design and ambient computing principles, the company is building technology that feels almost invisible, responding to human behaviour instead of demanding constant focus.
               </p>
@@ -95,8 +94,11 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
             {/* Carbon composite image card */}
             <div className="mt-12 max-w-[340px] overflow-hidden rounded-[16px] bg-[#111]">
-              <div className="aspect-[4/3.2] bg-[linear-gradient(160deg,#2a2a2a_0%,#0d0d0d_100%)]" />
-              <div className="flex items-center justify-between px-5 py-4 border-t border-white/[0.06]">
+<img
+  src={company.image}
+  alt={company.name}
+  className="w-full aspect-[4/3.2] object-cover"
+/>              <div className="flex items-center justify-between px-5 py-4 border-t border-white/[0.06]">
                 <p className="text-[10px] tracking-[0.2em] uppercase text-[#f0ece6] font-normal font-['Inter',sans-serif]">
                   Carbon Composite Detail
                 </p>
@@ -117,8 +119,11 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
                   Fig 01. Product Elevation
                 </p>
               </div>
-              <div className="aspect-[4/3] bg-[radial-gradient(ellipse_at_60%_50%,#242424_0%,#060606_75%)]" />
-            </div>
+<img
+  src={company.image}
+  alt={company.name}
+  className="w-full aspect-[4/3] object-cover"
+/>            </div>
 
             {/* Added to Luova */}
             <div className="rounded-[16px] bg-[#111] px-5 py-6">
