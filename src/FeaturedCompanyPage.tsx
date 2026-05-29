@@ -61,7 +61,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
                 <p className="text-[10px] tracking-[0.22em] uppercase opacity-28 font-normal font-['Inter',sans-serif]">
                   {item.label}
                 </p>
-                <p className="mt-4 text-[15px] tracking-[-0.02em] leading-none font-normal font-['Inter',sans-serif]">
+                <p className="mt-4 text-[14px] tracking-[-0.02em] leading-none font-normal font-['Inter',sans-serif]">
                   {item.value}
                 </p>
               </div>
@@ -72,7 +72,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
       {/* ── BODY ─────────────────────────────────────────────────────────── */}
       <section className="px-8 md:px-12 lg:px-14 pt-16 pb-24">
-<div className="grid grid-cols-1 lg:grid-cols-[500px_420px] justify-between gap-24 items-start">
+<div className="grid grid-cols-1 lg:grid-cols-[460px_420px] justify-between gap-24 items-start">
           {/* ── LEFT COLUMN ── */}
           <div>
 
@@ -82,7 +82,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
             </p>
 
             {/* Body copy — Inter regular, 14px, muted, same max-width */}
-            <div className="mt-10 space-y-7 text-[14px] leading-[1.9] tracking-[0] text-[#7a7470] font-normal font-['Inter',sans-serif] max-w-[420px]">
+            <div className="mt-14 space-y-7 text-[14px] leading-[1.9] tracking-[0] text-[#7a7470] font-normal font-['Inter',sans-serif] max-w-[420px]">
               <p>
                 By combining precision optics, industrial design and ambient computing principles, the company is building technology that feels almost invisible, responding to human behaviour instead of demanding constant focus.
               </p>
@@ -96,7 +96,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 <img
   src={company.image}
   alt={company.name}
-  className="w-full aspect-[4/3.2] object-cover"
+  className="w-full aspect-[4/4.5] object-cover"
 />              <div className="flex items-center justify-between px-5 py-4 border-t border-white/[0.06]">
                 <p className="text-[10px] tracking-[0.2em] uppercase text-[#f0ece6] font-normal font-['Inter',sans-serif]">
                   Carbon Composite Detail
