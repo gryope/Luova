@@ -710,24 +710,30 @@ function Footer() {
   );
 }
 
-export default function App() {
-  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
-  const [jobs, setJobs] = useState<Job[]>([]);
+useEffect(() => {
+  const fetchJobs = async () => {
+    try {
+      const response = await fetch(
+        "https://docs.google.com/spreadsheets/d/1ihmxZQJ8evOI60KqQQjvwUz-IegeF6Hbv3OhUmHvhyM/gviz/tq?tqx=out:json"
+      );
 
-  const [selectedFeaturedCompany, setSelectedFeaturedCompany] = useState<Company | null>(null);
-  const [selectedHiringCompany, setSelectedHiringCompany] = useState<Company | null>(null);
+      const text = await response.text();
 
-  const [isAboutVisible, setIsAboutVisible] = useState(false);
-  const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
+      const json = JSON.parse(
+        text.substring(47).slice(0, -2)
+      );
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [selectedJob, selectedFeaturedCompany, selectedHiringCompany]);
+      // all the existing rows/map code
 
-  useEffect(() => {
-    const fetchJobs = async () => {
+      setJobs(formattedJobs);
 
+    } catch (error) {
+      console.error("Error fetching jobs:", error);
+    }
+  };
+
+  fetchJobs();
+}, []);
   const JOBS_PER_PAGE = 4;
 const totalPages = Math.ceil(
   jobs.length / JOBS_PER_PAGE
