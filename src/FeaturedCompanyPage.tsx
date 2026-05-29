@@ -163,7 +163,6 @@ className="w-full aspect-[4/4.6] object-cover"/>
             </div>
 
           </div>
-        </div>
       </section>
 
     </main>
