@@ -21,8 +21,8 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="bg-[#e7c3cb] text-black rounded-bl-[48px] px-8 md:px-12 lg:px-14 pt-6 pb-0">
 
-        {/* Nav row — sits right at the top of the pink area */}
-        <div className="flex items-center justify-between text-[11px] tracking-[0.2em] uppercase opacity-60">
+        {/* Nav row */}
+        <div className="flex items-center justify-between text-[11px] tracking-[0.2em] uppercase opacity-60 font-['Inter',sans-serif]">
           <button onClick={onBack} className="hover:opacity-100 transition-opacity">
             ← All Featured
           </button>
@@ -33,22 +33,22 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
         </div>
 
         {/* Breadcrumb */}
-        <p className="mt-10 text-[11px] tracking-[0.22em] uppercase opacity-55">
+        <p className="mt-10 text-[11px] tracking-[0.22em] uppercase opacity-55 font-['Inter',sans-serif] font-normal">
           Curation / Hardware / 2026
         </p>
 
-        {/* Company name — Inter extralight */}
-        <h1 className="mt-4 text-[120px] leading-none tracking-[-0.03em] font-extralight font-['Inter',sans-serif]">
+        {/* Company name — Inter extralight, fixed 96px */}
+        <h1 className="mt-4 text-[96px] leading-[0.95] tracking-[-0.03em] font-extralight font-['Inter',sans-serif]">
           {company.name}
         </h1>
 
-        {/* Tagline — Inter regular */}
-        <h2 className="mt-6 text-[40px] leading-[1.1] tracking-[-0.025em] font-normal font-['Inter',sans-serif] max-w-[580px]">
+        {/* Tagline — short description, Inter regular, 32px */}
+        <h2 className="mt-6 text-[32px] leading-[1.15] tracking-[-0.02em] font-normal font-['Inter',sans-serif] max-w-[560px]">
           {company.description}
         </h2>
 
-        {/* Generous spacer between tagline and stats rule */}
-        <div className="h-28" />
+        {/* Spacer */}
+        <div className="h-24" />
 
         {/* Stats bar */}
         <div className="border-t border-black/10 pt-8 pb-12">
@@ -74,18 +74,18 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
       {/* ── BODY ─────────────────────────────────────────────────────────── */}
       <section className="px-8 md:px-12 lg:px-14 pt-16 pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-16 lg:gap-20 items-start">
 
           {/* ── LEFT COLUMN ── */}
-          <div className="max-w-[400px]">
+          <div>
 
-            {/* Lead paragraph — Inter extralight ~28px */}
-            <p className="text-[28px] leading-[1.5] tracking-[-0.025em] text-[#f1ede7] font-extralight font-['Inter',sans-serif]">
+            {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
+            <p className="text-[26px] leading-[1.5] tracking-[-0.02em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[480px]">
               {company.fullDescription}
             </p>
 
-            {/* Body copy — Inter regular ~14px, muted */}
-            <div className="mt-10 space-y-7 text-[14px] leading-[1.9] tracking-[-0.01em] text-[#7a7470] font-normal font-['Inter',sans-serif]">
+            {/* Body copy — Inter regular, 14px, muted, same max-width */}
+            <div className="mt-10 space-y-7 text-[14px] leading-[1.9] tracking-[0] text-[#7a7470] font-normal font-['Inter',sans-serif] max-w-[380px]">
               <p>
                 By combining precision optics, industrial design and ambient computing principles, the company is building technology that feels almost invisible, responding to human behaviour instead of demanding constant focus.
               </p>
@@ -95,10 +95,10 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
             </div>
 
             {/* Carbon composite image card */}
-            <div className="mt-12 overflow-hidden rounded-[16px] bg-[#111]">
+            <div className="mt-12 max-w-[340px] overflow-hidden rounded-[16px] bg-[#111]">
               <div className="aspect-[4/3.2] bg-[linear-gradient(160deg,#2a2a2a_0%,#0d0d0d_100%)]" />
               <div className="flex items-center justify-between px-5 py-4 border-t border-white/[0.06]">
-                <p className="text-[10px] tracking-[0.2em] uppercase text-[#f0ece6]">
+                <p className="text-[10px] tracking-[0.2em] uppercase text-[#f0ece6] font-normal font-['Inter',sans-serif]">
                   Carbon Composite Detail
                 </p>
                 <button className="text-white/40 hover:text-white transition-colors text-[16px] leading-none">
@@ -108,13 +108,13 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
             </div>
           </div>
 
-          {/* ── RIGHT COLUMN — 300px fixed width ── */}
+          {/* ── RIGHT COLUMN — 300px fixed ── */}
           <div className="flex flex-col gap-3 w-full">
 
             {/* Fig 01 — Product Elevation */}
             <div className="overflow-hidden rounded-[16px] bg-[#111]">
               <div className="px-5 pt-4 pb-2">
-                <p className="text-[10px] tracking-[0.22em] uppercase text-white/45">
+                <p className="text-[10px] tracking-[0.22em] uppercase text-white/45 font-normal font-['Inter',sans-serif]">
                   Fig 01. Product Elevation
                 </p>
               </div>
@@ -132,10 +132,10 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <p className="text-[10px] tracking-[0.22em] uppercase text-white/40">
+                  <p className="text-[10px] tracking-[0.22em] uppercase text-white/40 font-normal font-['Inter',sans-serif]">
                     Added to Luova
                   </p>
-                  <p className="mt-3 text-[30px] tracking-[-0.03em] leading-none text-[#e5b8c2]">
+                  <p className="mt-3 text-[28px] tracking-[-0.03em] leading-none text-[#e5b8c2] font-normal font-['Inter',sans-serif]">
                     November 2026
                   </p>
                   <div className="mt-6 pt-5 border-t border-white/[0.06] flex items-center justify-between">
@@ -143,7 +143,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
                       href={`https://${company.website}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[22px] tracking-[-0.025em] text-[#e5b8c2] hover:opacity-75 transition-opacity"
+                      className="text-[20px] tracking-[-0.02em] text-[#e5b8c2] hover:opacity-75 transition-opacity font-normal font-['Inter',sans-serif]"
                     >
                       {company.website}
                     </a>
@@ -155,10 +155,10 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
             {/* Known For */}
             <div className="rounded-[16px] bg-[#111] px-5 py-6">
-              <p className="text-[10px] tracking-[0.22em] uppercase text-white/40">
+              <p className="text-[10px] tracking-[0.22em] uppercase text-white/40 font-normal font-['Inter',sans-serif]">
                 Known For
               </p>
-              <div className="mt-6 space-y-4 text-[14px] tracking-[-0.02em] text-[#efeae4]">
+              <div className="mt-6 space-y-4 text-[14px] tracking-[-0.01em] text-[#efeae4] font-normal font-['Inter',sans-serif]">
                 {company.tags.map((item) => (
                   <div key={item} className="flex items-center gap-4">
                     <span className="text-[#e7c3cb] select-none">—</span>
