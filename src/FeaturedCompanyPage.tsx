@@ -73,13 +73,13 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
       {/* ── BODY ─────────────────────────────────────────────────────────── */}
       <section className="px-8 md:px-12 lg:px-14 pt-16 pb-24">
-<div className="grid grid-cols-1 lg:grid-cols-[520px_360px] justify-between gap-24 items-start">
+<div className="grid grid-cols-1 lg:grid-cols-[500px_420px] justify-between gap-24 items-start">
           {/* ── LEFT COLUMN ── */}
           <div>
 
             {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
-            <p className="text-[18px] leading-[1.55] tracking-[-0.02em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[380px]">
-              {company.fullDescription}
+            <p className="text-[16px] leading-[1.55] tracking-[-0.02em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[500px]">
+              Aiven develops open-source cloud infrastructure that helps organisations manage, stream and scale data across major cloud platforms. Headquartered in Helsinki, the company has become one of Finland's most internationally recognised software companies, enabling teams to build and operate modern data systems without vendor lock-in.
             </p>
 
             {/* Body copy — Inter regular, 14px, muted, same max-width */}
@@ -139,7 +139,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
                   <p className="text-[10px] tracking-[0.22em] uppercase text-white/40 font-normal font-['Inter',sans-serif]">
                     Added to Luova
                   </p>
-                  <p className="mt-3 text-[28px] tracking-[-0.03em] leading-none text-[#e5b8c2] font-normal font-['Inter',sans-serif]">
+                  <p className="mt-3 text-[16px] tracking-[-0.03em] leading-none text-[#e5b8c2] font-normal font-['Inter',sans-serif]">
                     November 2026
                   </p>
                   <div className="mt-6 pt-5 border-t border-white/[0.06] flex items-center justify-between">
