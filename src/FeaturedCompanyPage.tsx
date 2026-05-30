@@ -72,17 +72,15 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
       {/* ── BODY ─────────────────────────────────────────────────────────── */}
       <section className="px-8 md:px-12 lg:px-14 pt-16 pb-24">
-<div className="grid grid-cols-1 lg:grid-cols-[560px_400px] justify-between gap-24 items-start">          {/* ── LEFT COLUMN ── */}
-          <div className="lg:pl-[80px]">
-
+<div className="grid grid-cols-1 lg:grid-cols-[640px_360px] justify-between gap-20 items-start">          
+  <div className="lg:pl-[40px]">
             {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
             <p className="text-[18px] leading-[1.65] tracking-[-0.02em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[560px]">
               Aiven develops open-source cloud infrastructure that helps organisations manage, stream and scale data across major cloud platforms. Headquartered in Helsinki, the company has become one of Finland's most internationally recognised software companies, enabling teams to build and operate modern data systems without vendor lock-in.
             </p>
 
             {/* Body copy — Inter regular, 14px, muted, same max-width */}
-            <div className="mt-14 space-y-7 text-[14px] leading-[1.9] tracking-[0] text-[#8b857f] font-normal font-['Inter',sans-serif] max-w-[420px]">
-              <p>
+<div className="mt-14 space-y-7 text-[14px] leading-[1.9] tracking-[0] text-[#8b857f] font-normal font-['Inter',sans-serif] max-w-[560px]">              <p>
                 By combining precision optics, industrial design and ambient computing principles, the company is building technology that feels almost invisible, responding to human behaviour instead of demanding constant focus.
               </p>
               <p>
