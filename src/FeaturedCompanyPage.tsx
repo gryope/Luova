@@ -46,7 +46,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
         </h2>
 
         {/* Spacer */}
-        <div className="h-64" />
+        <div className="h-72" />
 
         {/* Stats bar */}
         <div className="mr-6 md:mr-8 lg:mr-10 border-t border-black/10 pt-8 pb-12">
@@ -72,15 +72,15 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
       {/* ── BODY ─────────────────────────────────────────────────────────── */}
       <section className="px-8 md:px-12 lg:px-14 pt-16 pb-24">
-<div className="grid grid-cols-1 lg:grid-cols-[640px_360px] justify-between gap-20 items-start">          
-  <div className="lg:pl-[40px]">
+<div className="grid grid-cols-1 lg:grid-cols-[720px_320px] justify-between gap-12 items-start">
+    <div>
             {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
-            <p className="text-[18px] leading-[1.65] tracking-[-0.02em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[560px]">
+            <p className="text-[18px] leading-[1.65] tracking-[-0.02em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[680px]">
               Aiven develops open-source cloud infrastructure that helps organisations manage, stream and scale data across major cloud platforms. Headquartered in Helsinki, the company has become one of Finland's most internationally recognised software companies, enabling teams to build and operate modern data systems without vendor lock-in.
             </p>
 
             {/* Body copy — Inter regular, 14px, muted, same max-width */}
-<div className="mt-14 space-y-7 text-[14px] leading-[1.9] tracking-[0] text-[#8b857f] font-normal font-['Inter',sans-serif] max-w-[560px]">              <p>
+<div className="mt-14 space-y-7 text-[14px] leading-[1.9] tracking-[0] text-[#8b857f] font-normal font-['Inter',sans-serif] max-w-[680px]">              <p>
                 By combining precision optics, industrial design and ambient computing principles, the company is building technology that feels almost invisible, responding to human behaviour instead of demanding constant focus.
               </p>
               <p>
@@ -89,8 +89,8 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
             </div>
 
             {/* Carbon composite image card */}
-<div className="mt-14 max-w-[560px] overflow-hidden rounded-[16px]">
-  <img
+<div className="mt-14 max-w-[680px] overflow-hidden rounded-[16px]">
+    <img
     src={company.image}
     alt={company.name}
     className="w-full aspect-[3/2] object-cover"
@@ -100,7 +100,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 </div>
 
 {/* ── RIGHT COLUMN ── */}
-<div className="flex flex-col gap-3 w-full">
+<div className="flex flex-col gap-5 w-full">
 
             {/* Fig 01 — Product Elevation */}
             <div className="overflow-hidden rounded-[16px] bg-[#111]">
