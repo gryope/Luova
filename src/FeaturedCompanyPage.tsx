@@ -46,7 +46,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
         </h2>
 
         {/* Spacer */}
-        <div className="h-80" />
+        <div className="h-64" />
 
         {/* Stats bar */}
         <div className="mr-6 md:mr-8 lg:mr-10 border-t border-black/10 pt-8 pb-12">
