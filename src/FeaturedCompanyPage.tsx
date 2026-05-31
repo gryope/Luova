@@ -72,7 +72,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
       {/* ── BODY ─────────────────────────────────────────────────────────── */}
       <section className="px-8 md:px-12 lg:px-14 pt-16 pb-24">
-<div className="grid grid-cols-1 lg:grid-cols-[720px_320px] justify-between gap-12 items-start">
+<div className="grid grid-cols-1 lg:grid-cols-[700px_360px] justify-between gap-12 items-start">
     <div>
             {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
             <p className="text-[18px] leading-[1.65] tracking-[-0.02em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[680px]">
