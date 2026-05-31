@@ -18,13 +18,13 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
   return (
 <main className="min-h-screen bg-[#090909] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black pt-28 md:pt-36">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-<section className="<section className="ml-4 md:ml-10 lg:ml-12 -mr-4 md:-mr-12 lg:-mr-16 bg-[#e7c3cb] text-black rounded-bl-[30px] px-8 md:px-12 lg:px-14 pt-16 pb-20 ">
+<section className="ml-8 md:ml-10 lg:ml-12 -mr-8 md:-mr-12 lg:-mr-16 bg-[#e7c3cb] text-black rounded-bl-[30px] px-8 md:px-12 lg:px-14 pt-16 pb-20 ">
         {/* Nav row */}
         <div className="flex items-center justify-between text-[11px] tracking-[0.2em] uppercase opacity-60 font-['Inter',sans-serif]">
           <button onClick={onBack} className="hover:opacity-100 transition-opacity">
             ← All Featured
           </button>
-          <div className="flex gap-8 pr-12 md:pr-16 lg:pr-20">
+          <div className="flex gap-8 pr-4 md:pr-6 lg:pr-8">
             <button className="hover:opacity-100 transition-opacity">Prev</button>
             <button className="hover:opacity-100 transition-opacity">Next</button>
           </div>
@@ -36,17 +36,20 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
         </p>
 
         {/* Company name — Inter extralight, fixed 96px */}
-<h1 className="mt-14 text-[64px] md:text-[80px] lg:text-[96px] leading-[0.95] tracking-[-0.03em] font-extralight font-['Inter',sans-serif]">          {company.name}
+        <h1 className="mt-14 text-[96px] leading-[0.95] tracking-[-0.03em] font-extralight font-['Inter',sans-serif]">
+          {company.name}
         </h1>
 
         {/* Tagline — short description, Inter regular, 32px */}
-<h2 className="mt-6 text-[18px] md:text-[21px] lg:text-[23px] leading-[1.15] tracking-[-0.02em] font-normal font-['Inter',sans-serif] max-w-[560px]">          {company.description}
+        <h2 className="mt-6 text-[23px] leading-[1.15] tracking-[-0.02em] font-normal font-['Inter',sans-serif] max-w-[560px]">
+          {company.description}
         </h2>
 
         {/* Spacer */}
-<div className="h-32 md:h-48 lg:h-72" />
+        <div className="h-72" />
+
         {/* Stats bar */}
-        <div className="mr-12 md:mr-16 lg:mr-20 border-t border-black/10 pt-8 pb-12">
+        <div className="mr-6 md:mr-8 lg:mr-10 border-t border-black/10 pt-8 pb-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-8">
             {[
               { label: 'Founded',   value: '2026' },
@@ -68,7 +71,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
       </section>
 
       {/* ── BODY ─────────────────────────────────────────────────────────── */}
-      <section className="px-6 md:px-12 lg:px-14 pt-16 pb-24">
+      <section className="px-8 md:px-12 lg:px-14 pt-16 pb-24">
 <div className="grid grid-cols-1 lg:grid-cols-[700px_360px] justify-between gap-12 items-start">
     <div>
             {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
