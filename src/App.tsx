@@ -688,9 +688,8 @@ function Footer() {
         </div>
       </section>
 
-      <div className="bg-surface-container-low w-full border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center px-margin-page py-8 gap-8 md:gap-0 pb-32 lg:pb-8">
-        <div className="font-monumental-lg !text-2xl text-primary-fixed tracking-widest uppercase">
-          LUOVA
+<div className="bg-surface-container-low w-full border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center px-margin-page py-12 md:py-8 gap-6 md:gap-0 pb-24 lg:pb-8">        
+<div className="font-monumental-lg !text-2xl text-primary-fixed tracking-widest uppercase flex items-center justify-center">          LUOVA
         </div>
         
         <div className="font-metadata-light text-on-surface text-center md:text-left text-[10px] md:text-[12px] opacity-60 flex flex-col md:flex-row gap-1 md:gap-2 uppercase tracking-widest">
