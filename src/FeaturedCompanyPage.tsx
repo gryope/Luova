@@ -18,7 +18,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
   return (
 <main className="min-h-screen bg-[#090909] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black pt-28 md:pt-36">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-<section className="ml-0 md:ml-10 lg:ml-12 bg-[#e7c3cb] text-black rounded-bl-[24px] md:rounded-bl-[30px] px-5 md:px-12 lg:px-14 pt-10 md:pt-16 pb-12 md:pb-20">        {/* Nav row */}
+<section className="min-h-[100svh] md:min-h-0 ml-0 md:ml-10 lg:ml-12 bg-[#e7c3cb] text-black rounded-bl-[24px] md:rounded-bl-[30px] px-5 md:px-12 lg:px-14 pt-10 md:pt-16 pb-12 md:pb-20">        {/* Nav row */}
 <div className="flex items-center justify-between text-[10px] md:text-[11px] tracking-[0.2em] uppercase opacity-60 font-['Inter',sans-serif]">          <button onClick={onBack} className="hover:opacity-100 transition-opacity">
             ← All Featured
           </button>
@@ -34,16 +34,14 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
         </p>
 
         {/* Company name — Inter extralight, fixed 96px */}
-<h1 className="mt-10 md:mt-14 text-52px] md:text-[96px] leading-[0.92] tracking-[-0.04em] font-extralight font-['Inter',sans-serif]">          {company.name}
-        </h1>
+<h1 className="mt-14 md:mt-14 text-[72px] md:text-[96px] leading-[0.88] tracking-[-0.05em] font-extralight font-['Inter',sans-serif]">        </h1>
 
         {/* Tagline — short description, Inter regular, 32px */}
 <h2 className="mt-5 md:mt-6 text-[14px] md:text-[23px] leading-[1.35] tracking-[-0.01em] font-normal font-['Inter',sans-serif] max-w-[560px]">          {company.description}
         </h2>
 
         {/* Spacer */}
-        <div className="h-10 md:h-72" />
-
+<div className="h-[26vh] md:h-72" />
         {/* Stats bar */}
         <div className="mr-6 md:mr-8 lg:mr-10 border-t border-black/10 pt-8 pb-12">
 <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">            {[
