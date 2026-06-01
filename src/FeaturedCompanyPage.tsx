@@ -34,17 +34,15 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
         </p>
 
         {/* Company name — Inter extralight, fixed 96px */}
-        <h1 className="mt-14 text-[48px] md:text-[96px] leading-[0.95] tracking-[-0.03em] font-extralight font-['Inter',sans-serif]">
-          {company.name}
+<h1 className="mt-10 md:mt-14 text-[34px] md:text-[96px] leading-[0.92] tracking-[-0.04em] font-extralight font-['Inter',sans-serif]">          {company.name}
         </h1>
 
         {/* Tagline — short description, Inter regular, 32px */}
-        <h2 className="mt-6 text-[18px] md:text-[23px] leading-[1.15] tracking-[-0.02em] font-normal font-['Inter',sans-serif] max-w-[560px]">
-          {company.description}
+<h2 className="mt-5 md:mt-6 text-[14px] md:text-[23px] leading-[1.35] tracking-[-0.01em] font-normal font-['Inter',sans-serif] max-w-[560px]">          {company.description}
         </h2>
 
         {/* Spacer */}
-        <div className="h-12 md:h-72" />
+        <div className="h-10 md:h-72" />
 
         {/* Stats bar */}
         <div className="mr-6 md:mr-8 lg:mr-10 border-t border-black/10 pt-8 pb-12">
@@ -69,14 +67,12 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
       {/* ── BODY ─────────────────────────────────────────────────────────── */}
 <section className="px-5 md:px-12 lg:px-14 pt-10 md:pt-16 pb-16 md:pb-24">
-<div className="grid grid-cols-1 lg:grid-cols-[700px_360px] justify-between gap-10 md:gap-12 items-start">    <div>
-            {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
-            <p className="text-[17px] md:text-[18px] leading-[1.65] tracking-[-0.02em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[680px]">
-              Aiven develops open-source cloud infrastructure that helps organisations manage, stream and scale data across major cloud platforms. Headquartered in Helsinki, the company has become one of Finland's most internationally recognised software companies, enabling teams to build and operate modern data systems without vendor lock-in.
+<div className="grid grid-cols-1 lg:grid-cols-[700px_360px] justify-between gap-8 md:gap-12 items-start">            {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
+<p className="text-[13px] md:text-[18px] leading-[1.75] tracking-[-0.01em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[680px]">              Aiven develops open-source cloud infrastructure that helps organisations manage, stream and scale data across major cloud platforms. Headquartered in Helsinki, the company has become one of Finland's most internationally recognised software companies, enabling teams to build and operate modern data systems without vendor lock-in.
             </p>
 
             {/* Body copy — Inter regular, 14px, muted, same max-width */}
-<div className="mt-10 md:mt-14 space-y-7 text-[14px] leading-[1.9] tracking-[0] text-[#8b857f] font-normal font-['Inter',sans-serif] max-w-[680px]">              <p>
+<div className="mt-8 md:mt-14 space-y-6 text-[13px] leading-[1.9] tracking-[0] text-[#8b857f] font-normal font-['Inter',sans-serif] max-w-[680px]">              <p>
                 By combining precision optics, industrial design and ambient computing principles, the company is building technology that feels almost invisible, responding to human behaviour instead of demanding constant focus.
               </p>
               <p>
@@ -85,7 +81,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
             </div>
 
             {/* Carbon composite image card */}
-<div className="mt-10 md:mt-14 max-w-[680px] overflow-hidden rounded-[12px] md:rounded-[16px]">
+<div className="mt-8 md:mt-14 max-w-[680px] overflow-hidden rounded-[12px] md:rounded-[16px]">
       <img
     src={company.image}
     alt={company.name}
@@ -96,8 +92,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 </div>
 
 {/* ── RIGHT COLUMN ── */}
-<div className="flex flex-col gap-4 md:gap-5 w-full">
-            {/* Fig 01 — Product Elevation */}
+<div className="order-first lg:order-last flex flex-col gap-4 md:gap-5 w-full">            {/* Fig 01 — Product Elevation */}
             <div className="overflow-hidden rounded-[16px] bg-[#111]">
               <div className="px-5 pt-4 pb-2">
                 <p className="text-[10px] tracking-[0.22em] uppercase text-white/45 font-normal font-['Inter',sans-serif]">
@@ -132,11 +127,11 @@ className="w-full aspect-[4/4.6] object-cover"/>
                       href={`https://${company.website}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[15px] tracking-[-0.02em] text-[#e5b8c2] hover:opacity-75 transition-opacity font-normal font-['Inter',sans-serif]"
+                      className="text-[18px] tracking-[-0.02em] text-[#e5b8c2] hover:opacity-75 transition-opacity font-normal font-['Inter',sans-serif]"
                     >
                       {company.website}
                     </a>
-                    <span className="text-[#e5b8c2] text-sm">↗</span>
+<span className="text-[#e5b8c2] text-[20px] leading-none">↗</span>
                   </div>
                 </div>
               </div>
