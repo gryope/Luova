@@ -19,7 +19,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 <main className="min-h-screen bg-[#090909] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black pt-28 md:pt-36">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
 <section className="ml-0 md:ml-10 lg:ml-12 bg-[#e7c3cb] text-black rounded-bl-[24px] md:rounded-bl-[30px] px-5 md:px-12 lg:px-14 pt-10 md:pt-16 pb-12 md:pb-20">        {/* Nav row */}
-<div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between text-[10px] md:text-[11px] tracking-[0.2em] uppercase opacity-60 font-['Inter',sans-serif]">          <button onClick={onBack} className="hover:opacity-100 transition-opacity">
+<div className="flex items-center justify-between text-[10px] md:text-[11px] tracking-[0.2em] uppercase opacity-60 font-['Inter',sans-serif]">          <button onClick={onBack} className="hover:opacity-100 transition-opacity">
             ← All Featured
           </button>
           <div className="flex gap-8 pr-4 md:pr-6 lg:pr-8">
@@ -66,7 +66,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
       </section>
 
       {/* ── BODY ─────────────────────────────────────────────────────────── */}
-<section className="px-5 md:px-12 lg:px-14 pt-10 md:pt-16 pb-16 md:pb-24">
+<section className="px-5 md:px-12 lg:px-14 pt-6 md:pt-16 pb-16 md:pb-24">
 <div className="grid grid-cols-1 lg:grid-cols-[700px_360px] justify-between gap-8 md:gap-12 items-start">
   <div>            {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
     <p className="text-[13px] md:text-[18px] leading-[1.75] tracking-[-0.01em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[680px]">              Aiven develops open-source cloud infrastructure that helps organisations manage, stream and scale data across major cloud platforms. Headquartered in Helsinki, the company has become one of Finland's most internationally recognised software companies, enabling teams to build and operate modern data systems without vendor lock-in.
