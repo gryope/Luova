@@ -63,18 +63,6 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
           </div>
         </div>
       </section>
-
-      {/* Mobile Prev / Next */}
-      <div className="md:hidden bg-[#e7c3cb] px-5 pb-6 flex items-center justify-between text-[11px] tracking-[0.18em] uppercase text-black/60">
-        <button className="hover:text-black transition-colors">
-          Prev
-        </button>
-
-        <button className="hover:text-black transition-colors">
-          Next
-        </button>
-      </div>
-
       {/* ── BODY ─────────────────────────────────────────────────────────── */}
       <section className="px-5 md:px-12 lg:px-14 pt-6 md:pt-16 pb-16 md:pb-24">
 <div className="grid grid-cols-1 lg:grid-cols-[700px_360px] justify-between gap-8 md:gap-12 items-start">
