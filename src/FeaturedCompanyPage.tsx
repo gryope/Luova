@@ -62,7 +62,6 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
             ))}
           </div>
         </div>
-      </div>
       </section>
 
       {/* Mobile Prev / Next */}
