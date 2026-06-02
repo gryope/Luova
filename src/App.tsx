@@ -397,8 +397,8 @@ function AboutPage({ onBack }: { onBack: () => void }) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <section className="px-margin-page pt-32 md:pt-48 pb-20 flex-grow">
-        <button 
+<section className="px-margin-page pt-32 md:pt-48 pb-20 flex-grow overflow-hidden">
+          <button 
           onClick={onBack}
           className="flex items-center gap-2 font-metadata-light uppercase tracking-widest hover:opacity-60 transition-opacity mb-20 group"
         >
@@ -409,7 +409,7 @@ function AboutPage({ onBack }: { onBack: () => void }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-32">
           <div className="lg:col-span-8">
             <motion.h1
-  className="font-monumental-lg !leading-[0.9] !text-[clamp(56px,7vw,140px)] md:!text-[10vw] mb-16 tracking-tighter"
+className="font-monumental-lg text-primary-fixed mb-16 leading-[0.9] tracking-tighter"
   initial={{ x: -50, opacity: 0 }}
   animate={{ x: 0, opacity: 1 }}
   transition={{ delay: 0.2, duration: 1 }}
