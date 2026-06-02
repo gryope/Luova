@@ -414,8 +414,8 @@ className="font-monumental-lg mb-16 leading-[0.9] tracking-tighter"
   animate={{ x: 0, opacity: 1 }}
   transition={{ delay: 0.2, duration: 1 }}
 >
-  COMPANIES &<br />
-  OPPORTUNITIES.
+  AN EASIER &<br />
+  WAY
 </motion.h1>
 
 <motion.div
@@ -425,24 +425,19 @@ className="font-monumental-lg mb-16 leading-[0.9] tracking-tighter"
   transition={{ delay: 0.5, duration: 0.8 }}
 >
   <p className="font-interface-reg text-2xl md:text-4xl leading-tight">
-    Luova began as a personal search.
+    Finding your way through an industry shouldn't depend on luck.
   </p>
 
   <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
-    Finding creative opportunities in Finland isn't always straightforward.
-    Roles are scattered across company websites, recruitment platforms,
-    and personal networks. Many interesting opportunities are easy to miss.
+    Interesting companies are scattered across websites, job boards, newsletters, startup lists, social media, and word of mouth. Valuable opportunities appear and disappear. Some of the most interesting organisations are often the hardest to discover.
   </p>
 
   <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
-    Along the way, another observation emerged: the company often matters
-    as much as the role itself.
+    Luova is an attempt to bring some of those pieces together.
   </p>
 
   <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
-    Some organisations stand out because of their products. Others because
-    of their design culture, technology, ambition, or way of thinking.
-    Some are well known. Many are not.
+    A growing collection of companies and opportunities across Finland, from established organisations to early-stage startups.
   </p>
 
   <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
@@ -450,14 +445,15 @@ className="font-monumental-lg mb-16 leading-[0.9] tracking-tighter"
   </p>
 
   <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
-    The archive combines selected opportunities with a growing collection
-    of companies worth paying attention to, from established organisations
-    to early-stage startups.
+    Some are hiring.
   </p>
 
   <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
-    The focus begins in Finland, with a long-term interest in the wider
-    Nordic ecosystem.
+    Some are looking for collaborators.
+  </p>
+
+   <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
+    Some are simply worth knowing.
   </p>
 </motion.div>
 </div>
