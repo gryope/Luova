@@ -408,40 +408,72 @@ function AboutPage({ onBack }: { onBack: () => void }) {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-32">
           <div className="lg:col-span-8">
-            <motion.h1 
-              className="font-monumental-lg !leading-[0.9] !text-[12vw] md:!text-[10vw] mb-16 tracking-tighter"
-              initial={{ x: -50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.2, duration: 1 }}
-            >
-              CRAFTING THE <br/>FUTURE OF <br/>WORK.
-            </motion.h1>
+            <motion.h1
+  className="font-monumental-lg !leading-[0.9] !text-[12vw] md:!text-[10vw] mb-16 tracking-tighter"
+  initial={{ x: -50, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  transition={{ delay: 0.2, duration: 1 }}
+>
+  COMPANIES &<br />
+  OPPORTUNITIES.
+</motion.h1>
 
-            <motion.div 
-              className="space-y-12 max-w-3xl"
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-            >
-              <p className="font-interface-reg text-2xl md:text-4xl leading-tight">
-                LUOVA is a curated digital archive and intelligence platform dedicated to the global creative industry. 
-              </p>
-              <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
-                We believe that design isn't just a department—it's the core engine of modern value creation. By indexing the world's most innovative agencies, studios, and internal teams, we provide a bridge between visionary talent and groundbreaking opportunities. Based in Helsinki, operating globally.
-              </p>
-            </motion.div>
-          </div>
+<motion.div
+  className="space-y-10 max-w-3xl"
+  initial={{ y: 30, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ delay: 0.5, duration: 0.8 }}
+>
+  <p className="font-interface-reg text-2xl md:text-4xl leading-tight">
+    Luova began as a personal search.
+  </p>
+
+  <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
+    Finding creative opportunities in Finland isn't always straightforward.
+    Roles are scattered across company websites, recruitment platforms,
+    and personal networks. Many interesting opportunities are easy to miss.
+  </p>
+
+  <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
+    Along the way, another observation emerged: the company often matters
+    as much as the role itself.
+  </p>
+
+  <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
+    Some organisations stand out because of their products. Others because
+    of their design culture, technology, ambition, or way of thinking.
+    Some are well known. Many are not.
+  </p>
+
+  <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
+    Luova brings those things together.
+  </p>
+
+  <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
+    The archive combines selected opportunities with a growing collection
+    of companies worth paying attention to, from established organisations
+    to early-stage startups.
+  </p>
+
+  <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
+    The focus begins in Finland, with a long-term interest in the wider
+    Nordic ecosystem.
+  </p>
+</motion.div>
 
           <div className="lg:col-span-4 flex flex-col justify-end space-y-20">
             <div className="space-y-6">
-              <h3 className="font-metadata-light uppercase tracking-widest opacity-50 text-xs border-b border-on-primary-fixed/20 pb-4">Our Values</h3>
-              <ul className="space-y-4 font-action-med text-xl uppercase italic">
-                <li>01. Radical Minimalism</li>
-                <li>02. Architectural Integrity</li>
-                <li>03. Cultural Relevance</li>
-                <li>04. Human-Centric Systems</li>
-              </ul>
-            </div>
+  <h3 className="font-metadata-light uppercase tracking-widest opacity-50 text-xs border-b border-on-primary-fixed/20 pb-4">
+    Focus
+  </h3>
+
+  <ul className="space-y-4 font-interface-reg text-lg leading-relaxed">
+    <li>Selected opportunities.</li>
+    <li>Interesting companies.</li>
+    <li>Finland first.</li>
+    <li>Nordics next.</li>
+  </ul>
+</div>
 
             <div className="space-y-6">
               <h3 className="font-metadata-light uppercase tracking-widest opacity-50 text-xs border-b border-on-primary-fixed/20 pb-4">Connect</h3>
