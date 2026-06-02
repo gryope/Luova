@@ -370,7 +370,7 @@ className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border
                 </p>
                 <div className="flex flex-wrap gap-2 mt-8">
                   {company.tags.map(tag => (
-                    <span key={tag} cclassName="text-[10px] px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors">
+                    <span key={tag} className="text-[10px] px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors">
                       {tag}
                     </span>
                   ))}
