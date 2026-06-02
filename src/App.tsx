@@ -409,7 +409,7 @@ function AboutPage({ onBack }: { onBack: () => void }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-32">
           <div className="lg:col-span-8">
             <motion.h1
-  className="font-monumental-lg !leading-[0.9] !text-[12vw] md:!text-[10vw] mb-16 tracking-tighter"
+  className="font-monumental-lg !leading-[0.9] !text-[clamp(56px,7vw,140px)] md:!text-[10vw] mb-16 tracking-tighter"
   initial={{ x: -50, opacity: 0 }}
   animate={{ x: 0, opacity: 1 }}
   transition={{ delay: 0.2, duration: 1 }}
