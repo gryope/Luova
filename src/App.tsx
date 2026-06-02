@@ -414,7 +414,7 @@ className="font-monumental-lg mb-16 leading-[0.9] tracking-tighter"
   animate={{ x: 0, opacity: 1 }}
   transition={{ delay: 0.2, duration: 1 }}
 >
-  AN EASIER &<br />
+  AN EASIER <br />
   WAY
 </motion.h1>
 
