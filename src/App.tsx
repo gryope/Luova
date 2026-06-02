@@ -460,9 +460,8 @@ function AboutPage({ onBack }: { onBack: () => void }) {
     Nordic ecosystem.
   </p>
 </motion.div>
-
+</div>
           <div className="lg:col-span-4 flex flex-col justify-end space-y-20">
-            </motion.div>
             <div className="space-y-6">
   <h3 className="font-metadata-light uppercase tracking-widest opacity-50 text-xs border-b border-on-primary-fixed/20 pb-4">
     Focus
