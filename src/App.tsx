@@ -415,9 +415,11 @@ function AboutPage({ onBack }: { onBack: () => void }) {
     animate={{ x: 0, opacity: 1 }}
     transition={{ delay: 0.2, duration: 1 }}
   >
-    THERE SHOULD BE
+    THERE SHOULD 
     <br />
-    AN EASIER WAY.
+    BE AN EASIER
+    <br />
+    WAY.
   </motion.h1>
 
   <motion.div
