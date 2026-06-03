@@ -19,26 +19,32 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 <main className="min-h-screen bg-[#090909] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black pt-28 md:pt-36">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
 <section className="min-h-[760px] md:min-h-0 mx-5 md:ml-10 md:mr-0 lg:ml-12 bg-[#e7c3cb] text-black rounded-b-[28px] md:rounded-bl-[30px] px-5 md:px-12 lg:px-14 pt-10 md:pt-16 pb-12 md:pb-20">        {/* Nav row */}
-<div className="flex items-center justify-between text-[10px] md:text-[11px] tracking-[0.2em] uppercase opacity-60 font-['Inter',sans-serif]">          
-  <button
-  onClick={onBack}
-  className="flex items-center gap-2 font-metadata-light uppercase tracking-widest hover:opacity-100 transition-opacity group"
->
-  <span className="group-hover:-translate-x-1 transition-transform">
-    ←
-  </span>
-  Back to Featured
-</button>
-<div className="hidden md:flex gap-8 pr-4 md:pr-6 lg:pr-8">
-              <button className="hover:opacity-100 transition-opacity">
-  ← Previous
-</button>
+<div className="flex items-center justify-between font-metadata-light text-[11px] uppercase tracking-widest opacity-60">
 
-<button className="hover:opacity-100 transition-opacity">
-  Next →
-</button>
-          </div>
-        </div>
+  <button
+    onClick={onBack}
+    className="hover:opacity-100 transition-opacity"
+  >
+    ← Back to Featured
+  </button>
+
+  <div className="hidden md:flex gap-8 pr-4 md:pr-6 lg:pr-8">
+
+    <button
+      className="hover:opacity-100 transition-opacity"
+    >
+      Previous
+    </button>
+
+    <button
+      className="hover:opacity-100 transition-opacity"
+    >
+      Next
+    </button>
+
+  </div>
+
+</div>
 
         {/* Breadcrumb */}
         <p className="mt-10 md:mt-16 text-[11px] tracking-[0.22em] uppercase opacity-55 font-['Inter',sans-serif] font-normal">
