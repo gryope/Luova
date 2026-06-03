@@ -899,8 +899,9 @@ const showDock =
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              THE CREATIVE INDUSTRY INDEX
-            </motion.h1>
+WORTH
+  <br />
+  KNOWING.            </motion.h1>
             
             <motion.p 
               className="font-interface-reg text-on-surface-variant max-w-2xl text-lg md:text-xl leading-relaxed"
