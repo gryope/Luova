@@ -415,15 +415,18 @@ function AboutPage({ onBack }: { onBack: () => void }) {
     animate={{ x: 0, opacity: 1 }}
     transition={{ delay: 0.2, duration: 1 }}
   >
-    WORD OF
-    <br />
-    MOUTH.
+    WORD OF MOUTH.
     
   </motion.h1>
 <p className="font-interface-reg text-2xl md:text-4xl leading-tight max-w-2xl mb-12">
   The creative industry's original search engine.
 </p>
   <motion.div
+  className="space-y-10 max-w-3xl"
+  initial={{ y: 30, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ delay: 0.5, duration: 0.8 }}
+>
     <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
   Finding your way through an industry shouldn't depend on luck.
 </p>
