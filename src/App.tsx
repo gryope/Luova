@@ -421,7 +421,7 @@ MOUTH.
     
   </motion.h1>
 <p className="font-interface-reg text-2xl md:text-4xl leading-tight max-w-2xl mb-12">
-  The creative industry's original search engine.
+  How people discover what's worth knowing.
 </p>
   <motion.div
   className="space-y-10 max-w-3xl"
