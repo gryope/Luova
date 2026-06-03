@@ -415,7 +415,9 @@ function AboutPage({ onBack }: { onBack: () => void }) {
     animate={{ x: 0, opacity: 1 }}
     transition={{ delay: 0.2, duration: 1 }}
   >
-    WORD OF MOUTH.
+    WORD OF
+<br />
+MOUTH.
     
   </motion.h1>
 <p className="font-interface-reg text-2xl md:text-4xl leading-tight max-w-2xl mb-12">
@@ -442,7 +444,7 @@ function AboutPage({ onBack }: { onBack: () => void }) {
 
 <div className="pt-6 border-t border-on-primary-fixed/10">
   <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
-    Luova is an attempt to make some of that knowledge easier to find.
+    Luova exists because too much valuable information remains difficult to find.
   </p>
 </div>
 
