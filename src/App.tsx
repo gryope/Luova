@@ -415,71 +415,58 @@ function AboutPage({ onBack }: { onBack: () => void }) {
     animate={{ x: 0, opacity: 1 }}
     transition={{ delay: 0.2, duration: 1 }}
   >
-    THERE SHOULD 
+    WORD OF
     <br />
-    BE AN EASIER
-    <br />
-    WAY.
+    MOUTH.
+    
   </motion.h1>
-
+<p className="font-interface-reg text-2xl md:text-4xl leading-tight max-w-2xl mb-12">
+  The creative industry's original search engine.
+</p>
   <motion.div
-    className="space-y-10 max-w-3xl"
-    initial={{ y: 30, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    transition={{ delay: 0.5, duration: 0.8 }}
-  >
+    <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
+  Finding your way through an industry shouldn't depend on luck.
+</p>
 
-    <p className="font-interface-reg text-2xl md:text-4xl leading-tight max-w-2xl">
-      Finding your way through an industry shouldn't depend on luck.
-    </p>
+<div className="pt-6 border-t border-on-primary-fixed/10">
+  <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
+    Interesting companies are scattered across websites, job boards,
+    newsletters, startup lists, social media, and word of mouth.
+    Valuable opportunities appear and disappear. Some of the most
+    interesting organisations are often the hardest to discover.
+  </p>
+</div>
 
-    <div className="pt-6 border-t border-on-primary-fixed/10">
-      <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
-        Interesting companies are scattered across websites, job boards,
-        newsletters, startup lists, social media, and word of mouth.
-        Valuable opportunities appear and disappear. Some of the most
-        interesting organisations are often the hardest to discover.
-      </p>
-    </div>
+<div className="pt-6 border-t border-on-primary-fixed/10">
+  <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
+    Luova is an attempt to make some of that knowledge easier to find.
+  </p>
+</div>
 
-    <div className="pt-6 border-t border-on-primary-fixed/10">
-      <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
-        Luova is an attempt to bring some of those pieces together.
-      </p>
-    </div>
-
-    <div className="pt-6 border-t border-on-primary-fixed/10">
-      <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
-        A growing collection of companies and opportunities across Finland,
-        from established organisations to early-stage startups.
-      </p>
-    </div>
-
-    <div className="pt-10">
-      <div className="space-y-3 font-interface-reg text-xl md:text-2xl">
-        <p>Some are hiring.</p>
-        <p>Some are looking for collaborators.</p>
-        <p>Some are simply worth knowing.</p>
-      </div>
-    </div>
-
+<div className="pt-10">
+  <div className="space-y-3 font-interface-reg text-xl md:text-2xl">
+    <p>Some are hiring.</p>
+    <p>Some are looking for collaborators.</p>
+    <p>Some are simply worth knowing.</p>
+  </div>
+</div>
   </motion.div>
 
 </div>
           <div className="lg:col-span-4 flex flex-col justify-end space-y-20">
             <div className="space-y-6">
   <h3 className="font-metadata-light uppercase tracking-widest opacity-50 text-xs border-b border-on-primary-fixed/20 pb-4">
-    Focus
-  </h3>
+  Scope
+</h3>
 
-  <ul className="space-y-4 font-interface-reg text-lg leading-relaxed">
-    <li>Websites</li>
-    <li>Job boards</li>
-    <li>Newsletters</li>
-    <li>Startup lists</li>
-    <li>Social media</li>
-    <li>Word of mouth</li>
-  </ul>
+<ul className="space-y-4 font-interface-reg text-lg leading-relaxed">
+  <li>Creative</li>
+  <li>Design</li>
+  <li>Marketing</li>
+  <li>Technology</li>
+  <li>Finland</li>
+  <li>Nordics</li>
+</ul>
 </div>
 
             <div className="space-y-6">
