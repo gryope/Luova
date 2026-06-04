@@ -25,7 +25,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
     onClick={onBack}
     className="hover:opacity-100 transition-opacity"
   >
-    ← Back to Featured
+    ← FEATURED
   </button>
 
   <div className="hidden md:flex gap-8 pr-4 md:pr-6 lg:pr-8">
@@ -33,13 +33,13 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
     <button
       className="hover:opacity-100 transition-opacity"
     >
-      Previous
+      PREVIOUS
     </button>
 
     <button
       className="hover:opacity-100 transition-opacity"
     >
-      Next
+      NEXT
     </button>
 
   </div>
