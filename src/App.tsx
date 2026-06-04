@@ -24,12 +24,29 @@ date?: string;
 interface Company {
   name: string;
   location: string;
+
   description: string;
-  fullDescription: string;
-  mission: string;
+
+  lead: string;
+
+  body: string[];
+
   image: string;
+
   tags: string[];
+
   website: string;
+
+  founded: string;
+  teamSize: string;
+  status: string;
+
+  category: string;
+  year: string;
+
+  figureTitle: string;
+
+  addedToLuova: string;
 }
 
 const FEATURED_COMPANIES: Company[] = [
