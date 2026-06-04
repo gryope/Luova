@@ -64,11 +64,11 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
         {/* Stats bar */}
         <div className="mr-6 md:mr-8 lg:mr-10 border-t border-black/10 pt-8 pb-12">
 <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">            {[
-              { label: 'Founded',   value: '2026' },
-              { label: 'Location',  value: company.location },
-              { label: 'Team Size', value: '11–50' },
-              { label: 'Status',    value: '• Early stage' },
-            ].map((item) => (
+  { label: 'Founded',   value: '2022' },
+  { label: 'Location',  value: 'Helsinki, FI / Lisbon, PT' },
+  { label: 'Team Size', value: '2–10' },
+  { label: 'Status',    value: '• Independent' },
+].map((item) => (
               <div key={item.label}>
                 <p className="text-[10px] tracking-[0.22em] uppercase opacity-28 font-normal font-['Inter',sans-serif]">
                   {item.label}
@@ -85,17 +85,24 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
       <section className="px-5 md:px-12 lg:px-14 pt-6 md:pt-16 pb-16 md:pb-24">
 <div className="grid grid-cols-1 lg:grid-cols-[700px_360px] justify-between gap-8 md:gap-12 items-start">
   <div>            {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
-    <p className="text-[13px] md:text-[18px] leading-[1.75] tracking-[-0.01em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[680px]">              Aiven develops open-source cloud infrastructure that helps organisations manage, stream and scale data across major cloud platforms. Headquartered in Helsinki, the company has become one of Finland's most internationally recognised software companies, enabling teams to build and operate modern data systems without vendor lock-in.
+    <p className="text-[13px] md:text-[18px] leading-[1.75] tracking-[-0.01em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[680px]">            
+  Paloceras is an independent eyewear studio operating between Helsinki and Lisbon. Through a practice informed by digital design, contemporary craft and material experimentation, the studio has developed a distinctive approach to object-making that sits between fashion and industrial design.
             </p>
 
             {/* Body copy — Inter regular, 14px, muted, same max-width */}
-<div className="mt-8 md:mt-14 space-y-6 text-[13px] leading-[1.9] tracking-[0] text-[#8b857f] font-normal font-['Inter',sans-serif] max-w-[680px]">              <p>
-                By combining precision optics, industrial design and ambient computing principles, the company is building technology that feels almost invisible, responding to human behaviour instead of demanding constant focus.
-              </p>
-              <p>
-                The broader philosophy behind IXI removes spectacle from the experience entirely. The product is designed to disappear into use: soft interfaces, restrained form language and seamless interaction replacing the visual noise commonly associated with consumer hardware.
-              </p>
-            </div>
+<div className="mt-8 md:mt-14 space-y-6 text-[13px] leading-[1.9] tracking-[0] text-[#8b857f] font-normal font-['Inter',sans-serif] max-w-[680px]">
+  <p>
+    Its work explores the translation of digital form into physical object, resulting in collections defined by sculptural silhouettes, technical precision and a strong sense of authorship.
+  </p>
+
+  <p>
+    Part of a growing wave of digitally informed design practices, Paloceras reflects changing relationships between technology, craft and production. The studio's work demonstrates how contemporary tools can expand traditional disciplines rather than replace them.
+  </p>
+
+  <p>
+    The result is eyewear that functions not only as an accessory, but as an expression of contemporary design culture.
+  </p>
+</div>
 
             {/* Carbon composite image card */}
 <div className="mt-8 md:mt-14 max-w-[680px] overflow-hidden rounded-[12px] md:rounded-[16px]">
@@ -113,7 +120,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
             <div className="overflow-hidden rounded-[16px] bg-[#111]">
               <div className="px-5 pt-4 pb-2">
                 <p className="text-[10px] tracking-[0.22em] uppercase text-white/45 font-normal font-['Inter',sans-serif]">
-                  Fig 01. Product Elevation
+                  Fig 01. Selected Work
                 </p>
               </div>
 <img
