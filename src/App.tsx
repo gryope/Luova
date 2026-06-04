@@ -884,9 +884,12 @@ const showDock =
   />
 ) : selectedFeaturedCompany ? (
   <FeaturedCompanyPage
-    company={selectedFeaturedCompany}
-    onBack={() => setSelectedFeaturedCompany(null)}
-  />
+  company={selectedFeaturedCompany}
+  onBack={() => {
+    setSelectedFeaturedCompany(null);
+    setIsFeaturedVisible(true);
+  }}
+/>
 ) : (
         <main className="flex-grow pt-32 md:pt-48 pb-16 md:pb-32">
           {/* Hero Section */}
