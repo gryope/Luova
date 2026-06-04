@@ -35,7 +35,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
   return (
 <main className="min-h-screen bg-[#090909] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black pt-28 md:pt-36">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-<section className="relative z-0 min-h-[760px] md:min-h-0 mx-5 md:ml-10 md:mr-0 lg:ml-12 bg-[#e7c3cb] text-black rounded-b-[28px] md:rounded-bl-[30px] px-5 md:px-12 lg:px-14 pt-10 md:pt-16 pb-12 md:pb-20">        {/* Nav row */}
+<section className="relative z-0  md:min-h-0 mx-5 md:ml-10 md:mr-0 lg:ml-12 bg-[#e7c3cb] text-black rounded-b-[28px] md:rounded-bl-[30px] px-5 md:px-12 lg:px-14 pt-10 md:pt-16 pb-12 md:pb-20">        {/* Nav row */}
 <div className="flex items-center justify-between font-metadata-light text-[11px] uppercase tracking-widest opacity-60">
 
   <button
@@ -69,15 +69,14 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 </p>
 
         {/* Company name — Inter extralight, fixed 96px */}
-<h1 className="mt-14 md:mt-14 text-[72px] md:text-[96px] leading-[0.88] tracking-[-0.05em] font-extralight font-['Inter',sans-serif]">
-  {company.name}
+<h1 className="mt-10 md:mt-14 text-[48px] sm:text-[60px] md:text-[96px] leading-[0.9] tracking-[-0.05em] font-extralight font-['Inter',sans-serif]">  {company.name}
 </h1>
         {/* Tagline — short description, Inter regular, 32px */}
 <h2 className="mt-5 md:mt-6 text-[20px] md:text-[23px] leading-[1.35] tracking-[-0.01em] font-normal font-['Inter',sans-serif] max-w-[560px]">          {company.description}
         </h2>
 
         {/* Spacer */}
-<div className="h-20 md:h-72" />
+<div className="h-8 md:h-72" />
         {/* Stats bar */}
         <div className="mr-6 md:mr-8 lg:mr-10 border-t border-black/10 pt-8 pb-12">
 <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">            {[
