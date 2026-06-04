@@ -76,7 +76,7 @@ const FEATURED_COMPANIES: Company[] = [
 ];
 const HIRING_COMPANIES: Company[] = [
   {
-    name: "Aiven",
+    name: "AIVEN",
     location: "Finland, FI",
     description: "Aiven is your AI-ready Open Source Data Platform.",
     fullDescription: "Aiven is an AI-ready open source data platform company helping organizations gain more value from data.",
