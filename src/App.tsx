@@ -61,15 +61,54 @@ const FEATURED_COMPANIES: Company[] = [
   website: "teenage.engineering"
 },
   {
-    name: "AIVEN",
-    location: "Finland, FI",
-    description: "Aiven is your AI-ready Open Source Data Platform.",
-    fullDescription: "Aiven is an AI-ready open source data platform company, helping organizations gain more value from their data. Aiven’s cloud platform combines open choice services to stream, store, and serve data, simply, securely, and rapidly across major cloud providers to power innovation. Aiven is trusted by thousands of customers to create next-generation applications confidently and quickly.Aiven is headquartered in Helsinki and has hubs in Amsterdam, Berlin, Paris, London, Singapore, Sydney, Auckland, Austin and Toronto.",
-    image: "/Luova/images/companies/Data1.jpg",
-    mission: "To simplify cloud infrastructure for developers worldwide.",
-    tags: ["Databases", "Software"],
-    website: "aiven.io/"
-  },
+  name: "PALOCERAS",
+
+  location: "Helsinki, FI / Lisbon, PT",
+
+  description:
+    "Where contemporary craft meets digital imagination.",
+
+  lead:
+    "Paloceras is an independent eyewear studio operating between Helsinki and Lisbon. Working across digital design, craft and contemporary culture, the studio has developed a distinctive approach to object-making that sits between fashion and industrial design.",
+
+  body: [
+    "Its work explores the translation of digital form into physical object, resulting in collections defined by sculptural silhouettes, technical precision and a strong sense of authorship.",
+
+    "Its collections occupy a space between accessory, object and design statement, reflecting a growing interest in limited production, authorship and experimentation.",
+
+    "Rather than following established eyewear conventions, the studio approaches each release as an opportunity to explore new relationships between form, material and digital culture."
+  ],
+
+  image: "/Luova/images/companies/paloceras.jpg",
+
+  tags: [
+    "Eyewear",
+    "Product Design",
+    "Contemporary Fashion"
+  ],
+
+  website: "paloceras.com",
+
+  founded: "2022",
+
+  teamSize: "2–10",
+
+  status: "• Independent",
+
+  category: "Design",
+
+  year: "2026",
+
+  figureTitle: "Collection Study",
+
+  addedToLuova: "November 2026",
+
+  fullDescription:
+    "Paloceras is an independent eyewear studio operating between Helsinki and Lisbon.",
+
+  mission:
+    "Exploring the relationship between digital design, craft and contemporary object-making."
+},
   {
     name: "POLESTAR",
     location: "GOTHENBURG, SE",
