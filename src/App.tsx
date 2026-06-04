@@ -139,9 +139,11 @@ function Header({ onHome, onAbout, onFeatured, activePage }: HeaderProps) {
   return (
     <>
       <header 
-        className={`fixed top-0 w-full z-50 flex justify-between items-center px-margin-page transition-all duration-300 h-24 md:h-32 ${
-          scrolled ? "bg-background/80 backdrop-blur-lg border-b border-white/10" : "bg-transparent border-b border-white/5"
-        }`}
+        className={`fixed top-0 w-full z-50 flex justify-between items-center px-margin-page backdrop-blur-lg transition-all duration-300 h-24 md:h-32 ${
+  scrolled
+    ? "bg-background/80 border-b border-white/10"
+    : "bg-background/0 border-b border-white/5"
+}`}
       >
         <button 
           onClick={() => handleNavClick(onHome)}
