@@ -1,12 +1,29 @@
 interface Company {
   name: string;
   location: string;
+
   description: string;
-  fullDescription: string;
-  mission: string;
+
+  lead: string;
+
+  body: string[];
+
   image: string;
+
   tags: string[];
+
   website: string;
+
+  founded: string;
+  teamSize: string;
+  status: string;
+
+  category: string;
+  year: string;
+
+  figureTitle: string;
+
+  addedToLuova: string;
 }
 
 interface FeaturedCompanyPageProps {
@@ -48,7 +65,8 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
         {/* Breadcrumb */}
         <p className="mt-10 md:mt-16 text-[11px] tracking-[0.22em] uppercase opacity-55 font-['Inter',sans-serif] font-normal">
-Curation / Design / 2026        </p>
+  Curation / {company.category} / {company.year}
+</p>
 
         {/* Company name — Inter extralight, fixed 96px */}
 <h1 className="mt-14 md:mt-14 text-[72px] md:text-[96px] leading-[0.88] tracking-[-0.05em] font-extralight font-['Inter',sans-serif]">
@@ -63,10 +81,10 @@ Curation / Design / 2026        </p>
         {/* Stats bar */}
         <div className="mr-6 md:mr-8 lg:mr-10 border-t border-black/10 pt-8 pb-12">
 <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">            {[
-  { label: 'Founded',   value: '2022' },
-  { label: 'Location',  value: 'Helsinki, FI / Lisbon, PT' },
-  { label: 'Team Size', value: '2–10' },
-  { label: 'Status',    value: '• Independent' },
+  { label: 'Founded',   value: company.founded },
+  { label: 'Location',  value: company.location },
+  { label: 'Team Size', value: company.teamSize },
+  { label: 'Status',    value: company.status },
 ].map((item) => (
               <div key={item.label}>
                 <p className="text-[10px] tracking-[0.22em] uppercase opacity-28 font-normal font-['Inter',sans-serif]">
@@ -84,21 +102,15 @@ Curation / Design / 2026        </p>
       <section className="px-5 md:px-12 lg:px-14 pt-6 md:pt-16 pb-16 md:pb-24">
 <div className="grid grid-cols-1 lg:grid-cols-[700px_360px] justify-between gap-8 md:gap-12 items-start">
   <div>            {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
-    <p className="text-[13px] md:text-[18px] leading-[1.75] tracking-[-0.01em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[680px]">            
-Paloceras is an independent eyewear studio operating between Helsinki and Lisbon. Working across digital design, craft and contemporary culture, the studio has developed a distinctive approach to object-making that sits between fashion and industrial design.            </p>
+    <p className="text-[13px] md:text-[18px] leading-[1.75] tracking-[-0.01em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[680px]">
+  {company.lead}
+</p>
 
             {/* Body copy — Inter regular, 14px, muted, same max-width */}
 <div className="mt-8 md:mt-14 space-y-6 text-[13px] leading-[1.9] tracking-[0] text-[#8b857f] font-normal font-['Inter',sans-serif] max-w-[680px]">
-  <p>
-    Its work explores the translation of digital form into physical object, resulting in collections defined by sculptural silhouettes, technical precision and a strong sense of authorship.
-  </p>
-
-  <p>
-Its collections occupy a space between accessory, object and design statement, reflecting a growing interest in limited production, authorship and experimentation.  </p>
-
-  <p>
-    The result is eyewear that functions not only as an accessory, but as an expression of contemporary design culture.
-  </p>
+  {company.body.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+  ))}
 </div>
 
             {/* Carbon composite image card */}
@@ -117,7 +129,7 @@ Its collections occupy a space between accessory, object and design statement, r
             <div className="overflow-hidden rounded-[16px] bg-[#111]">
               <div className="px-5 pt-4 pb-2">
                 <p className="text-[10px] tracking-[0.22em] uppercase text-white/45 font-normal font-['Inter',sans-serif]">
-                  Fig 01. Collection Study
+                  Fig 01. {company.figureTitle}
                 </p>
               </div>
 <img
@@ -141,8 +153,8 @@ className="w-full aspect-[4/4.6] object-cover"/>
                     Added to Luova
                   </p>
                   <p className="mt-3 text-[14px] tracking-[-0.03em] leading-none text-[#e5b8c2] font-normal font-['Inter',sans-serif]">
-                    November 2026
-                  </p>
+  {company.addedToLuova}
+</p>
                   <div className="mt-6 pt-5 border-t border-white/[0.06] flex items-center justify-between">
                     <a
                       href={`https://${company.website}`}
