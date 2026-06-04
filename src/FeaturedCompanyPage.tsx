@@ -48,8 +48,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
         {/* Breadcrumb */}
         <p className="mt-10 md:mt-16 text-[11px] tracking-[0.22em] uppercase opacity-55 font-['Inter',sans-serif] font-normal">
-          Curation / Hardware / 2026
-        </p>
+Curation / Design / 2026        </p>
 
         {/* Company name — Inter extralight, fixed 96px */}
 <h1 className="mt-14 md:mt-14 text-[72px] md:text-[96px] leading-[0.88] tracking-[-0.05em] font-extralight font-['Inter',sans-serif]">
@@ -86,8 +85,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 <div className="grid grid-cols-1 lg:grid-cols-[700px_360px] justify-between gap-8 md:gap-12 items-start">
   <div>            {/* Lead paragraph — Inter extralight, ~26px, max ~480px wide */}
     <p className="text-[13px] md:text-[18px] leading-[1.75] tracking-[-0.01em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[680px]">            
-  Paloceras is an independent eyewear studio operating between Helsinki and Lisbon. Through a practice informed by digital design, contemporary craft and material experimentation, the studio has developed a distinctive approach to object-making that sits between fashion and industrial design.
-            </p>
+Paloceras is an independent eyewear studio operating between Helsinki and Lisbon. Working across digital design, craft and contemporary culture, the studio has developed a distinctive approach to object-making that sits between fashion and industrial design.            </p>
 
             {/* Body copy — Inter regular, 14px, muted, same max-width */}
 <div className="mt-8 md:mt-14 space-y-6 text-[13px] leading-[1.9] tracking-[0] text-[#8b857f] font-normal font-['Inter',sans-serif] max-w-[680px]">
@@ -96,8 +94,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
   </p>
 
   <p>
-    Part of a growing wave of digitally informed design practices, Paloceras reflects changing relationships between technology, craft and production. The studio's work demonstrates how contemporary tools can expand traditional disciplines rather than replace them.
-  </p>
+Its collections occupy a space between accessory, object and design statement, reflecting a growing interest in limited production, authorship and experimentation.  </p>
 
   <p>
     The result is eyewear that functions not only as an accessory, but as an expression of contemporary design culture.
@@ -120,7 +117,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
             <div className="overflow-hidden rounded-[16px] bg-[#111]">
               <div className="px-5 pt-4 pb-2">
                 <p className="text-[10px] tracking-[0.22em] uppercase text-white/45 font-normal font-['Inter',sans-serif]">
-                  Fig 01. Selected Work
+                  Fig 01. Collection Study
                 </p>
               </div>
 <img
