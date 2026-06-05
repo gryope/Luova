@@ -129,12 +129,16 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
 {/* ── RIGHT COLUMN ── */}
 <div className="order-first lg:order-last flex flex-col gap-4 md:gap-5 w-full">
-  <img
-    src={company.thumbnailImage}
-    alt={company.name}
-    className="w-full aspect-[4/4.6] object-cover"
-  />
-            {/* Added to Luova */}
+
+  <div className="overflow-hidden rounded-[16px]">
+    <img
+      src={company.thumbnailImage}
+      alt={company.name}
+      className="w-full aspect-[4/4.6] object-cover"
+    />
+  </div>
+
+  {/* Added to Luova */}
             <div className="rounded-[16px] bg-[#111] px-4 md:px-5 py-5 md:py-6">
               <div className="flex items-start gap-3">
                 <div className="mt-0.5 shrink-0 text-white/35">
