@@ -387,7 +387,7 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
           className="flex items-center gap-2 text-on-surface-variant font-metadata-light uppercase tracking-widest hover:text-primary transition-colors mb-20 group"
         >
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-          Back to Index
+          BACK TO OPPORTUNITIES 
         </button>
 
         <div className="max-w-4xl mb-24">
