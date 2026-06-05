@@ -55,16 +55,58 @@ interface Company {
   addedToLuova: string;
 }
 
-const FEATURED_COMPANIES: Company[] = [
-  {
-  name: "TEENAGE ENGINEERING",
-  location: "STOCKHOLM, SE",
-  description: "Swedish electronics and audio design company.",
-  fullDescription: "TE is known for industrial design and experimental hardware.",
-  image: "/Luova/images/companies/teenage.jpg",
-  mission: "To rethink electronic products through design.",
-  tags: ["Industrial Design", "Audio"],
-  website: "teenage.engineering"
+const{
+  name: "AIVAN",
+
+  location: "Helsinki, FI",
+
+  description:
+    "Designing products, brands and spaces that shape contemporary life.",
+
+  lead:
+    "Aivan is a Helsinki-based design and innovation studio whose work spans products, environments, brands and emerging technologies. Operating across disciplines rather than within them, the studio has developed a distinctive approach that combines strategic thinking, industrial design and creative experimentation.",
+
+  body: [
+    "Its projects range from consumer products and furniture to exhibitions, retail concepts and brand experiences, reflecting a belief that meaningful innovation emerges when different fields intersect.",
+
+    "Rather than treating design as a single discipline, Aivan approaches it as a framework for shaping how people interact with objects, organisations and environments.",
+
+    "Whether working with physical products, spatial experiences or new technologies, the studio's focus remains consistent: creating solutions that are functional, enduring and culturally relevant."
+  ],
+
+  image: "/Luova/images/companies/Aivan-featurepage.jpg",
+
+  mainImage: "/Luova/images/companies/Aivan-Main-Image.jpg",
+
+  thumbnailImage: "/Luova/images/companies/Aivan-Thumbnail-Image.jpg",
+
+  tags: [
+    "Industrial Design",
+    "Innovation",
+    "Brand Experience"
+  ],
+
+  website: "aivan.fi",
+
+  founded: "2007",
+
+  teamSize: "11–50",
+
+  status: "• Independent",
+
+  category: "Design",
+
+  year: "2026",
+
+  figureTitle: "Selected Work",
+
+  addedToLuova: "November 2026",
+
+  fullDescription:
+    "Aivan is a Helsinki-based design and innovation studio working across products, brands and built environments.",
+
+  mission:
+    "Creating meaningful products, experiences and innovations through multidisciplinary design."
 },
   {
   name: "PALOCERAS",
