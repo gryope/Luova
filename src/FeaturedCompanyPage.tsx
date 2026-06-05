@@ -134,7 +134,6 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
     alt={company.name}
     className="w-full aspect-[4/4.6] object-cover"
   />
-</div>
             {/* Added to Luova */}
             <div className="rounded-[16px] bg-[#111] px-4 md:px-5 py-5 md:py-6">
               <div className="flex items-start gap-3">
