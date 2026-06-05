@@ -86,6 +86,9 @@ const FEATURED_COMPANIES: Company[] = [
   ],
 
   image: "/Luova/images/companies/Paloceras-featurepage.jpg",
+  mainImage: "/Luova/images/companies/Paloceras-Main-Image.jpg",
+
+thumbnailImage: "/Luova/images/companies/Paloceras-Thumbnail-Image.jpg",
 
   tags: [
     "Eyewear",

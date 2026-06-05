@@ -119,7 +119,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
             {/* Carbon composite image card */}
 <div className="mt-8 md:mt-14 max-w-[680px] overflow-hidden rounded-[12px] md:rounded-[16px]">
       <img
-  src={company.thumbnailImage}
+      src={company.mainImage}
   alt={company.name}
   className="w-full aspect-[4/4.6] object-cover"
 />
@@ -136,7 +136,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
                 </p>
               </div>
 <img
-  src={company.mainImage}
+  src={company.thumbnailImage}
   alt={company.name}
   className="w-full aspect-[3/2] object-cover"
 />  
