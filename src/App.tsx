@@ -461,7 +461,7 @@ function AboutPage({ onBack }: { onBack: () => void }) {
           className="flex items-center gap-2 font-metadata-light uppercase tracking-widest hover:opacity-60 transition-opacity mb-20 group"
         >
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-          Close Archive
+          BACK TO OPPORTUNITIES 
         </button>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-32">
