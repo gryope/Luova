@@ -128,13 +128,13 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 </div>
 
 {/* ── RIGHT COLUMN ── */}
-<div className="order-first lg:order-last flex flex-col gap-4 md:gap-5 w-full">            {/* Fig 01 — Product Elevation */}
-            <div className="overflow-hidden rounded-[16px] bg-[#111]">
-              <div className="px-5 pt-4 pb-2">
-                <p className="text-[10px] tracking-[0.22em] uppercase text-white/45 font-normal font-['Inter',sans-serif]">
-                  Fig 01. {company.figureTitle}
-                </p>
-              </div>
+<div className="overflow-hidden rounded-[16px]">
+  <img
+    src={company.thumbnailImage}
+    alt={company.name}
+    className="w-full aspect-[4/4.6] object-cover"
+  />
+</div>
 <img
   src={company.thumbnailImage}
   alt={company.name}
