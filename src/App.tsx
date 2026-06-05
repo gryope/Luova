@@ -37,8 +37,6 @@ interface Company {
 
   body: string[];
 
-  image: string;
-
   tags: string[];
 
   website: string;
@@ -55,7 +53,8 @@ interface Company {
   addedToLuova: string;
 }
 
-const{
+const FEATURED_COMPANIES: Company[] = [
+{
   name: "AIVAN",
 
   location: "Helsinki, FI",
