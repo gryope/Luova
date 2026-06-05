@@ -10,6 +10,10 @@ interface Company {
 
   image: string;
 
+mainImage: string;
+
+thumbnailImage: string;
+
   tags: string[];
 
   website: string;
@@ -115,10 +119,10 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
             {/* Carbon composite image card */}
 <div className="mt-8 md:mt-14 max-w-[680px] overflow-hidden rounded-[12px] md:rounded-[16px]">
       <img
-    src={company.image}
-    alt={company.name}
-    className="w-full aspect-[3/2] object-cover"
-  />
+  src={company.thumbnailImage}
+  alt={company.name}
+  className="w-full aspect-[4/4.6] object-cover"
+/>
 </div>
 
 </div>
@@ -132,9 +136,10 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
                 </p>
               </div>
 <img
-  src={company.image}
+  src={company.mainImage}
   alt={company.name}
-className="w-full aspect-[4/4.6] object-cover"/>  
+  className="w-full aspect-[3/2] object-cover"
+/>  
           </div>
 
             {/* Added to Luova */}
