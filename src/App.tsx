@@ -29,6 +29,12 @@ interface Company {
 
   lead: string;
 
+  image: string;
+
+  mainImage: string;
+  
+  thumbnailImage: string;
+
   body: string[];
 
   image: string;
@@ -79,7 +85,7 @@ const FEATURED_COMPANIES: Company[] = [
     "Rather than following established eyewear conventions, the studio approaches each release as an opportunity to explore new relationships between form, material and digital culture."
   ],
 
-  image: "/Luova/images/companies/paloceras.webp",
+  image: "/Luova/images/companies/Paloceras-featurepage.jpg",
 
   tags: [
     "Eyewear",
