@@ -54,7 +54,6 @@ interface Company {
 }
 
 const FEATURED_COMPANIES: Company[] = [
-<<<<<<< HEAD
   {
   name: "AIVAN",
 
@@ -107,7 +106,7 @@ const FEATURED_COMPANIES: Company[] = [
 
   mission:
     "Creating meaningful products, experiences and innovations through multidisciplinary design."
-=======
+
 {
   name: "AIVAN",
 
@@ -160,7 +159,6 @@ const FEATURED_COMPANIES: Company[] = [
 
   mission:
     "Creating meaningful products, experiences and innovations through multidisciplinary design."
->>>>>>> db274d3fcbfd6f91eadf888098ccb4c203f1c8a4
 },
   {
   name: "PALOCERAS",
