@@ -54,6 +54,60 @@ interface Company {
 }
 
 const FEATURED_COMPANIES: Company[] = [
+<<<<<<< HEAD
+  {
+  name: "AIVAN",
+
+  location: "Helsinki, FI",
+
+  description:
+    "Designing products, brands and spaces that shape contemporary life.",
+
+  lead:
+    "Aivan is a Helsinki-based design and innovation studio whose work spans products, environments, brands and emerging technologies. Operating across disciplines rather than within them, the studio has developed a distinctive approach that combines strategic thinking, industrial design and creative experimentation.",
+
+  body: [
+    "Its projects range from consumer products and furniture to exhibitions, retail concepts and brand experiences, reflecting a belief that meaningful innovation emerges when different fields intersect.",
+
+    "Rather than treating design as a single discipline, Aivan approaches it as a framework for shaping how people interact with objects, organisations and environments.",
+
+    "Whether working with physical products, spatial experiences or new technologies, the studio's focus remains consistent: creating solutions that are functional, enduring and culturally relevant."
+  ],
+
+  image: "/Luova/images/companies/Aivan-featurepage.jpg",
+
+  mainImage: "/Luova/images/companies/Aivan-Main-Image.jpg",
+
+  thumbnailImage: "/Luova/images/companies/Aivan-Thumbnail-Image.jpg",
+
+  tags: [
+    "Industrial Design",
+    "Innovation",
+    "Brand Experience"
+  ],
+
+  website: "aivan.fi",
+
+  founded: "2007",
+
+  teamSize: "11–50",
+
+  status: "• Independent",
+
+  category: "Design",
+
+  year: "2026",
+
+  figureTitle: "Selected Work",
+
+  addedToLuova: "November 2026",
+
+  fullDescription:
+    "Aivan is a Helsinki-based design and innovation studio working across products, brands and built environments.",
+
+  mission:
+    "Creating meaningful products, experiences and innovations through multidisciplinary design."
+=======
 {
   name: "AIVAN",
 
@@ -106,6 +160,7 @@ const FEATURED_COMPANIES: Company[] = [
 
   mission:
     "Creating meaningful products, experiences and innovations through multidisciplinary design."
+>>>>>>> db274d3fcbfd6f91eadf888098ccb4c203f1c8a4
 },
   {
   name: "PALOCERAS",
@@ -160,15 +215,58 @@ thumbnailImage: "/Luova/images/companies/Paloceras-Thumbnail-Image.jpg",
     "Exploring the relationship between digital design, craft and contemporary object-making."
 },
   {
-    name: "POLESTAR",
-    location: "GOTHENBURG, SE",
-    description: "Electric performance car brand focused on minimalist design, sustainable technology, and architectural retail experiences.",
-    fullDescription: "Polestar is an electric performance car brand determined to improve the society we live in by focusing on uncompromised design and technology. They utilize design as a tool for progress, creating vehicles that are as beautiful as they are sustainable, often showcased in minimalist 'Spaces' that feel like high-end art galleries.",
-    mission: "To accelerate the shift to sustainable mobility through design-led innovation.",
-    image: "/Luova/images/companies/polestar.png",
-    tags: ["Campaigns", "Motion", "Interactive"],
-    website: "polestar.com"
-  },
+  name: "DISTANCE TECHNOLOGIES",
+
+  location: "Helsinki, FI",
+
+  description:
+    "Where physical space becomes digital interface.",
+
+  lead:
+    "Distance Technologies is a Helsinki-based company developing a new generation of spatial interfaces that move digital information beyond screens. Through advances in optics and mixed reality, the company explores how information can exist directly within the environments people already inhabit.",
+
+  body: [
+    "Founded by pioneers in immersive technology, Distance is building systems that merge digital content with the physical world in ways that feel natural and immediate. Its work challenges traditional assumptions about how information is displayed, experienced and understood.",
+
+    "Rather than creating another device for people to carry or wear, the company focuses on transforming existing surfaces into intelligent interfaces. From automotive applications to future forms of spatial computing, its technology explores how digital experiences can become part of everyday environments.",
+
+    "Operating at the intersection of optics, software and human-machine interaction, Distance represents a new generation of Finnish deep technology companies. Its vision extends beyond augmented reality, proposing a future where digital information exists seamlessly within the spaces around us."
+  ],
+
+  image: "/Luova/images/companies/DistanceT-featurepage.jpg",
+
+  mainImage: "/Luova/images/companies/DistanceT-Main-Image.jpg",
+
+  thumbnailImage: "/Luova/images/companies/DistanceT-Thumbnail-Image.jpg",
+
+  tags: [
+    "Spatial Computing",
+    "Mixed Reality",
+    "Computational Optics"
+  ],
+
+  website: "distance.tech",
+
+  founded: "2024",
+
+  teamSize: "51–200",
+
+  status: "• Private",
+
+  category: "Technology",
+
+  year: "2026",
+
+  figureTitle: "Technology Demonstration",
+
+  addedToLuova: "November 2026",
+
+  fullDescription:
+    "Distance Technologies is a Finnish spatial computing company developing mixed reality systems that integrate digital information directly into physical environments.",
+
+  mission:
+    "Exploring a future where digital information exists naturally beyond screens."
+},
   {
     name: "SPACE 10",
     location: "COPENHAGEN, NO",
