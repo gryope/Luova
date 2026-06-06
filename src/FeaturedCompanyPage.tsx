@@ -73,7 +73,8 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 </p>
 
         {/* Company name — Inter extralight, fixed 96px */}
-<h1 className="mt-10 md:mt-14 text-[48px] sm:text-[60px] md:text-[96px] leading-[0.9] tracking-[-0.05em] font-extralight font-['Inter',sans-serif]">  {company.name}
+<h1 className="mt-10 md:mt-14 text-[36px] sm:text-[60px] md:text-[96px] leading-[0.9] tracking-[-0.05em] font-extralight font-['Inter',sans-serif]">
+  {company.name}
 </h1>
         {/* Tagline — short description, Inter regular, 32px */}
 <h2 className="mt-5 md:mt-6 text-[20px] md:text-[23px] leading-[1.35] tracking-[-0.01em] font-normal font-['Inter',sans-serif] max-w-[560px]">          {company.description}
