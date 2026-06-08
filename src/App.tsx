@@ -136,7 +136,7 @@ image: "/Luova/images/companies/Aivan-featurepage.jpg",
   ],
   whyFeatured:
   "Featured for its distinctive intersection of digital culture, contemporary fashion and object design.",
-image: "/Luova/images/companies/Aivan-featurepage.jpg",
+image: "/Luova/images/companies/Paloceras-featurepage.jpg",
   mainImage: "/Luova/images/companies/Paloceras-Main-Image.jpg",
 
 thumbnailImage: "/Luova/images/companies/Paloceras-Thumbnail-Image.jpg",
