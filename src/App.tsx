@@ -531,8 +531,7 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
             FEATURED <br/>CO.
           </motion.h1>
           <p className="font-interface-reg text-on-surface-variant text-xl md:text-2xl leading-relaxed">
-            A curated selection of the industry's most influential studios, agencies, and brands. These are the teams defining the visual landscape of our time.
-          </p>
+A curated archive of organisations shaping creativity, business and culture. Selected for their ideas, ambition and the opportunities they create.          </p>
         </div>
 
         <div className="flex flex-col border-t border-outline-variant/30">
@@ -610,7 +609,7 @@ MOUTH.
     
   </motion.h1>
 <p className="font-interface-reg text-2xl md:text-4xl leading-tight max-w-2xl mb-12">
-  How people discover what's worth knowing.
+  Finding your way through an industry shouldn't depend on luck.
 </p>
   <motion.div
   className="space-y-10 max-w-3xl"
@@ -619,22 +618,24 @@ MOUTH.
   transition={{ delay: 0.5, duration: 0.8 }}
 >
     <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
-  Finding your way through an industry shouldn't depend on luck.
+  The most interesting organisations are rarely the easiest to discover. Opportunities appear and disappear. New companies emerge. Established ones evolve. Valuable information is scattered across websites, newsletters, job boards and private conversations.
 </p>
 
 <div className="pt-6 border-t border-on-primary-fixed/10">
   <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
-    Interesting companies are scattered across websites, job boards,
-    newsletters, startup lists, social media, and word of mouth.
-    Valuable opportunities appear and disappear. Some of the most
-    interesting organisations are often the hardest to discover.
+    Luova exists to make those discoveries easier.
   </p>
 </div>
 
 <div className="pt-6 border-t border-on-primary-fixed/10">
   <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
-    Luova exists because too much valuable information remains difficult to find.
+    We curate organisations, opportunities and ideas from across the creative economy. Some are hiring. Some are looking for collaborators. Some are simply worth knowing.
   </p>
+</div>
+
+<div className="pt-6 border-t border-on-primary-fixed/10">
+  <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
+From architecture and hospitality to technology, branding, design and media, Luova is built for people shaping what comes next.  </p>
 </div>
 
 <div className="pt-10">
@@ -654,9 +655,9 @@ MOUTH.
 </h3>
 
 <ul className="space-y-4 font-interface-reg text-lg leading-relaxed">
-  <li>Creative</li>
   <li>Design</li>
-  <li>Marketing</li>
+  <li>Business</li>
+  <li>Culture</li>
   <li>Technology</li>
   <li>Finland</li>
   <li>Nordics</li>
@@ -1101,7 +1102,7 @@ WORTH
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
-              Cross-disciplinary roles in <strong className="font-bold text-on-surface">Agencies</strong>, <strong className="font-bold text-on-surface">Startups</strong>, and <strong className="font-bold text-on-surface">In-house</strong> teams. Curated for the global creative economy.
+              Curated opportunities across design, <strong className="font-bold text-on-surface">marketing,</strong>, <strong className="font-bold text-on-surface">strategy,</strong>, <strong className="font-bold text-on-surface">technology</strong>, and <strong className="font-bold text-on-surface">business.</strong> Sourced from organisations worth paying attention to.
             </motion.p>
           </section>
 
