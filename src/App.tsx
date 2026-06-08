@@ -1102,7 +1102,7 @@ WORTH
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
-              Curated opportunities across design, <strong className="font-bold text-on-surface">marketing,</strong>, <strong className="font-bold text-on-surface">strategy,</strong>, <strong className="font-bold text-on-surface">technology</strong>, and <strong className="font-bold text-on-surface">business.</strong> Sourced from organisations worth paying attention to.
+              Curated opportunities across design, <strong className="font-bold text-on-surface">marketing,</strong> <strong className="font-bold text-on-surface">strategy,</strong> <strong className="font-bold text-on-surface">technology</strong>, and <strong className="font-bold text-on-surface">business.</strong> Sourced from organisations worth paying attention to.
             </motion.p>
           </section>
 
