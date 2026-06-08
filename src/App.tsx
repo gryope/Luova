@@ -232,11 +232,11 @@ thumbnailImage: "/Luova/images/companies/Paloceras-Thumbnail-Image.jpg",
     "At a time when workplaces are increasingly optimised for productivity, Metsä / Skogen offers a different perspective. One that recognises attention, wellbeing and human experience as design challenges in their own right. The result is a body of work that feels less like interior design and more like a vision for how future environments can support the people who inhabit them."
   ],
 
-  image: "/Luova/images/companies/MetsaSkogen-featurepage.jpg",
+  image: "/Luova/images/companies/MetsäSkogen-featurepage.jpg",
 
-  mainImage: "/Luova/images/companies/MetsaSkogen-Main-Image.jpg",
+  mainImage: "/Luova/images/companies/MetsäSkogen-Main-Image.jpg",
 
-  thumbnailImage: "/Luova/images/companies/MetsaSkogen-Thumbnail-Image.jpg",
+  thumbnailImage: "/Luova/images/companies/MetsäSkogen-Thumbnail-Image.jpg",
 
   tags: [
     "Spatial Design",
