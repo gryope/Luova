@@ -109,6 +109,15 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
     <p className="text-[13px] md:text-[18px] leading-[1.75] tracking-[-0.01em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[680px]">
   {company.lead}
 </p>
+<div className="mt-8 md:mt-10 max-w-[680px] border-t border-white/10 pt-6">
+  <p className="text-[10px] tracking-[0.22em] uppercase text-white/40 font-normal font-['Inter',sans-serif]">
+    LUOVA NOTE
+  </p>
+
+  <p className="mt-4 text-[14px] md:text-[15px] leading-[1.8] text-[#e7c3cb] font-normal font-['Inter',sans-serif]">
+    {company.whyFeatured}
+  </p>
+</div>
 
             {/* Body copy — Inter regular, 14px, muted, same max-width */}
 <div className="mt-8 md:mt-14 space-y-6 text-[13px] leading-[1.9] tracking-[0] text-[#8b857f] font-normal font-['Inter',sans-serif] max-w-[680px]">
