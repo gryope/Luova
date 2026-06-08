@@ -76,7 +76,7 @@ const FEATURED_COMPANIES: Company[] = [
     "Whether working with physical products, spatial experiences or new technologies, the studio's focus remains consistent: creating solutions that are functional, enduring and culturally relevant."
   ],
   whyFeatured:
-  "Featured for its distinctive intersection of digital culture, contemporary fashion and object design.",
+  "Featured for demonstrating how multidisciplinary design can shape products, brands and experiences across industries."
 
   image: "/Luova/images/companies/Aivan-featurepage.jpg",
 
@@ -185,7 +185,7 @@ thumbnailImage: "/Luova/images/companies/Paloceras-Thumbnail-Image.jpg",
     "Operating at the intersection of optics, software and human-machine interaction, Distance represents a new generation of Finnish deep technology companies. Its vision extends beyond augmented reality, proposing a future where digital information exists seamlessly within the spaces around us."
   ],
   whyFeatured:
-  "Featured for its distinctive intersection of digital culture, contemporary fashion and object design.",
+  "Featured for imagining a future where digital information seamlessly integrates into the physical world."
 
   image: "/Luova/images/companies/DistanceT-featurepage.jpg",
 
@@ -240,8 +240,7 @@ thumbnailImage: "/Luova/images/companies/Paloceras-Thumbnail-Image.jpg",
     "At a time when workplaces are increasingly optimised for productivity, Metsä / Skogen offers a different perspective. One that recognises attention, wellbeing and human experience as design challenges in their own right. The result is a body of work that feels less like interior design and more like a vision for how future environments can support the people who inhabit them."
   ],
   whyFeatured:
-  "Featured for its distinctive intersection of digital culture, contemporary fashion and object design.",
-
+  "Featured for reimagining how nature can shape future environments through design, experience and wellbeing."
   image: "/Luova/images/companies/MetsäSkogen-featurepage.jpg",
 
   mainImage: "/Luova/images/companies/MetsäSkogen-Main-Image.jpg",
