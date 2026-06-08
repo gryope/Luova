@@ -39,6 +39,10 @@ interface Company {
 
   whyFeatured: string;
 
+  fullDescription: string;
+
+  mission: string;
+
   tags: string[];
 
   website: string;
@@ -131,9 +135,9 @@ const FEATURED_COMPANIES: Company[] = [
     "Rather than following established eyewear conventions, the studio approaches each release as an opportunity to explore new relationships between form, material and digital culture."
   ],
   whyFeatured:
-  "Featured for its distinctive intersection of digital culture, contemporary fashion and object design.",
+  "Featured for demonstrating how multidisciplinary design can shape products, brands and experiences across industries.",
 
-  image: "/Luova/images/companies/Paloceras-featurepage.jpg",
+image: "/Luova/images/companies/Aivan-featurepage.jpg",
   mainImage: "/Luova/images/companies/Paloceras-Main-Image.jpg",
 
 thumbnailImage: "/Luova/images/companies/Paloceras-Thumbnail-Image.jpg",
@@ -185,9 +189,9 @@ thumbnailImage: "/Luova/images/companies/Paloceras-Thumbnail-Image.jpg",
     "Operating at the intersection of optics, software and human-machine interaction, Distance represents a new generation of Finnish deep technology companies. Its vision extends beyond augmented reality, proposing a future where digital information exists seamlessly within the spaces around us."
   ],
   whyFeatured:
-  "Featured for imagining a future where digital information seamlessly integrates into the physical world."
+  "Featured for imagining a future where digital information seamlessly integrates into the physical world.",
 
-  image: "/Luova/images/companies/DistanceT-featurepage.jpg",
+image: "/Luova/images/companies/DistanceT-featurepage.jpg",
 
   mainImage: "/Luova/images/companies/DistanceT-Main-Image.jpg",
 
@@ -240,9 +244,9 @@ thumbnailImage: "/Luova/images/companies/Paloceras-Thumbnail-Image.jpg",
     "At a time when workplaces are increasingly optimised for productivity, Metsä / Skogen offers a different perspective. One that recognises attention, wellbeing and human experience as design challenges in their own right. The result is a body of work that feels less like interior design and more like a vision for how future environments can support the people who inhabit them."
   ],
   whyFeatured:
-  "Featured for reimagining how nature can shape future environments through design, experience and wellbeing."
-  image: "/Luova/images/companies/MetsäSkogen-featurepage.jpg",
+  "Featured for reimagining how nature can shape future environments through design, experience and wellbeing.",
 
+image: "/Luova/images/companies/MetsäSkogen-featurepage.jpg",
   mainImage: "/Luova/images/companies/MetsäSkogen-Main-Image.jpg",
 
   thumbnailImage: "/Luova/images/companies/MetsäSkogen-Thumbnail-Image.jpg",
