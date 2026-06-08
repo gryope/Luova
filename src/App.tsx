@@ -1092,18 +1092,21 @@ const showDock =
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-WORTH
+DISCOVER ORGANISATIONS
   <br />
-  KNOWING.            </motion.h1>
+  WORTH WORKING FOR.          </motion.h1>
             
-            <motion.p 
-              className="font-interface-reg text-on-surface-variant max-w-2xl text-lg md:text-xl leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            >
-              Curated opportunities across design, <strong className="font-bold text-on-surface">marketing,</strong> <strong className="font-bold text-on-surface">strategy,</strong> <strong className="font-bold text-on-surface">technology</strong>, and <strong className="font-bold text-on-surface">business.</strong> Sourced from organisations worth paying attention to.
-            </motion.p>
+            <motion.p
+  className="font-interface-reg text-on-surface-variant max-w-2xl text-lg md:text-xl leading-relaxed"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+>
+  The best career opportunities often appear before a job posting does.
+  <span className="block mt-4">
+    Discover organisations worth following, collaborating with, and working for.
+  </span>
+</motion.p>
           </section>
 
           {/* Job Listings Section */}
