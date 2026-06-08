@@ -80,9 +80,9 @@ const FEATURED_COMPANIES: Company[] = [
     "Whether working with physical products, spatial experiences or new technologies, the studio's focus remains consistent: creating solutions that are functional, enduring and culturally relevant."
   ],
   whyFeatured:
-  "Featured for demonstrating how multidisciplinary design can shape products, brands and experiences across industries."
+  "Featured for demonstrating how multidisciplinary design can shape products, brands and experiences across industries.",
 
-  image: "/Luova/images/companies/Aivan-featurepage.jpg",
+image: "/Luova/images/companies/Aivan-featurepage.jpg",
 
   mainImage: "/Luova/images/companies/Aivan-Main-Image.jpg",
 
@@ -135,8 +135,7 @@ const FEATURED_COMPANIES: Company[] = [
     "Rather than following established eyewear conventions, the studio approaches each release as an opportunity to explore new relationships between form, material and digital culture."
   ],
   whyFeatured:
-  "Featured for demonstrating how multidisciplinary design can shape products, brands and experiences across industries.",
-
+  "Featured for its distinctive intersection of digital culture, contemporary fashion and object design.",
 image: "/Luova/images/companies/Aivan-featurepage.jpg",
   mainImage: "/Luova/images/companies/Paloceras-Main-Image.jpg",
 
@@ -271,7 +270,16 @@ image: "/Luova/images/companies/MetsäSkogen-featurepage.jpg",
 
   figureTitle: "Immersive Forest Environment",
 
-  addedToLuova: "June 2026"
+addedToLuova: "June 2026",
+
+fullDescription:
+  "Metsä / Skogen Concepts is a Helsinki-based studio creating nature-inspired environments that support wellbeing, focus and human experience.",
+
+mission:
+  "Reconnecting people with the restorative qualities of nature through spatial design.",
+
+whyFeatured:
+  "Featured for reimagining how nature can shape future environments through design, experience and wellbeing."
 },
 ];
 const HIRING_COMPANIES: Company[] = [
