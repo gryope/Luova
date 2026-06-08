@@ -28,6 +28,8 @@ thumbnailImage: string;
   figureTitle: string;
 
   addedToLuova: string;
+
+  whyFeatured: string;
 }
 
 interface FeaturedCompanyPageProps {
@@ -110,7 +112,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
   {company.lead}
 </p>
 <div className="mt-8 md:mt-10 max-w-[680px] border-t border-white/10 pt-6">
-className="text-[10px] tracking-[0.22em] uppercase text-white/70 font-semibold"
+  <p className="text-[10px] tracking-[0.22em] uppercase text-white/70 font-semibold font-['Inter',sans-serif]">
     LUOVA NOTE
   </p>
 
