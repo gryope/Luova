@@ -100,7 +100,7 @@ const FEATURED_COMPANIES: Company[] = [
 
   figureTitle: "Selected Work",
 
-  addedToLuova: "November 2026",
+  addedToLuova: "June 2026",
 
   fullDescription:
     "Aivan is a Helsinki-based design and innovation studio working across products, brands and built environments.",
@@ -152,7 +152,7 @@ thumbnailImage: "/Luova/images/companies/Paloceras-Thumbnail-Image.jpg",
 
   figureTitle: "Collection Study",
 
-  addedToLuova: "November 2026",
+  addedToLuova: "June 2026",
 
   fullDescription:
     "Paloceras is an independent eyewear studio operating between Helsinki and Lisbon.",
@@ -161,7 +161,7 @@ thumbnailImage: "/Luova/images/companies/Paloceras-Thumbnail-Image.jpg",
     "Exploring the relationship between digital design, craft and contemporary object-making."
 },
   {
-  name: "DISTANCE TECHNOLOGIES",
+  name: "DISTANCE",
 
   location: "Helsinki, FI",
 
@@ -214,15 +214,52 @@ thumbnailImage: "/Luova/images/companies/Paloceras-Thumbnail-Image.jpg",
     "Exploring a future where digital information exists naturally beyond screens."
 },
   {
-    name: "SPACE 10",
-    location: "COPENHAGEN, NO",
-    description: "Research and design lab exploring sustainable living and circular design through technology and community-driven projects.",
-    fullDescription: "SPACE10 was a research and design lab on a mission to create a better everyday life for people and the planet. Based in Copenhagen, the lab explored how to make our lives more sustainable, healthy, and affordable through cross-disciplinary collaborations that sat at the intersection of design, technology, and social trends.",
-    mission: "To enable a more sustainable and equitable future through collaborative research.",
- image: "/Luova/images/companies/Data2.jpg",
-    tags: ["Product Design", "AI", "Technology"],
-    website: "space10.com"
-  },
+  name: "METSÄ/SKOGEN",
+
+  location: "Helsinki, FI",
+
+  description:
+    "Designing environments where nature becomes part of the experience.",
+
+  lead:
+    "Metsä / Skogen Concepts is a Helsinki-based spatial design studio exploring how the restorative qualities of nature can be translated into contemporary environments. Through immersive spaces inspired by the Nordic forest, the company reimagines the relationship between people, place and wellbeing in an increasingly urban and digital world.",
+
+  body: [
+    "For centuries, the forest has been a defining part of Nordic life. A place for recovery, reflection and connection. Metsä / Skogen explores what happens when those same qualities are brought into the environments where people now spend most of their time. Its work transforms nature from a backdrop into an active component of the built experience.",
+
+    "Working across spatial design, sensory experience and environmental storytelling, the studio creates spaces that influence how people feel, focus and interact. Natural materials, sound, light and atmosphere are carefully orchestrated to create environments that encourage presence rather than distraction, and recovery rather than constant stimulation.",
+
+    "At a time when workplaces are increasingly optimised for productivity, Metsä / Skogen offers a different perspective. One that recognises attention, wellbeing and human experience as design challenges in their own right. The result is a body of work that feels less like interior design and more like a vision for how future environments can support the people who inhabit them."
+  ],
+
+  image: "/Luova/images/companies/MetsaSkogen-featurepage.jpg",
+
+  mainImage: "/Luova/images/companies/MetsaSkogen-Main-Image.jpg",
+
+  thumbnailImage: "/Luova/images/companies/MetsaSkogen-Thumbnail-Image.jpg",
+
+  tags: [
+    "Spatial Design",
+    "Human Experience",
+    "Environmental Storytelling"
+  ],
+
+  website: "metsaskogenconcepts.com",
+
+  founded: "2018",
+
+  teamSize: "2–10",
+
+  status: "• Independent",
+
+  category: "Experience Design",
+
+  year: "2026",
+
+  figureTitle: "Immersive Forest Environment",
+
+  addedToLuova: "June 2026"
+},
 ];
 const HIRING_COMPANIES: Company[] = [
   {
