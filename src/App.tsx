@@ -1107,15 +1107,23 @@ const showDock =
           <section className="px-margin-page relative mb-12 md:mb-20">
             <div className="absolute inset-x-0 top-0 bg-primary-fixed/5 blur-[80px] md:blur-[120px] rounded-full -z-10 w-[90%] md:w-3/4 mx-auto h-[250px] md:h-[400px]"></div>
             
-            <motion.h1 
-              className="font-monumental-lg mb-6 md:mb-8 max-w-5xl text-primary-fixed"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-DISCOVER ORGANISATIONS
+            <motion.h1
+  className="
+    font-monumental-lg
+    text-[64px]
+    leading-[0.92]
+    md:text-[120px]
+    mb-6 md:mb-8
+    max-w-5xl
+    text-primary-fixed
+  "
+>
+  DISCOVER
   <br />
-  WORTH WORKING FOR.          </motion.h1>
+  ORGANISATIONS
+  <br />
+  WORTH WORKING FOR.
+</motion.h1>
             
             <motion.p
   className="font-interface-reg text-on-surface-variant max-w-2xl text-lg md:text-xl leading-relaxed"
