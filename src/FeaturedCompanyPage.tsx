@@ -111,20 +111,18 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
     <p className="text-[13px] md:text-[18px] leading-[1.75] tracking-[-0.01em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[680px]">
   {company.lead}
 </p>
-<div className="my-12 md:my-16 max-w-[680px]">
+<div className="my-20 md:my-24 max-w-[680px]">
 
-  <div className="w-12 h-px bg-[#e7c3cb]/40 mb-6"></div>
-
-  <p className="text-[10px] tracking-[0.22em] uppercase text-[#e7c3cb]/70 font-semibold font-['Inter',sans-serif]">
+<div className="w-20 h-px bg-[#e7c3cb]/25 mb-8"></div>
+  <p className="text-[10px] tracking-[0.22em] uppercase text-[#e7c3cb]/40 font-semibold font-['Inter',sans-serif]">
     CURATOR'S NOTE
   </p>
 
-  <p className="mt-6 text-[22px] md:text-[30px] leading-[1.35] tracking-[-0.03em] text-[#f5f1ec] font-extralight font-['Inter',sans-serif] max-w-[620px]">
+  <p className="mt-6 text-[30px] md:text-[42px] leading-[1.35] tracking-[-0.03em] text-[#f5f1ec] font-extralight font-['Inter',sans-serif] max-w-[620px]">
     {company.whyFeatured}
   </p>
 
-  <div className="w-12 h-px bg-[#e7c3cb]/40 mt-6"></div>
-
+<div className="w-20 h-px bg-[#e7c3cb]/25 mt-8"></div>
 </div>
 
             {/* Body copy — Inter regular, 14px, muted, same max-width */}
