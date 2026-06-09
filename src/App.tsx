@@ -135,7 +135,7 @@ image: "/Luova/images/companies/Aivan-featurepage.jpg",
     "Rather than following established eyewear conventions, the studio approaches each release as an opportunity to explore new relationships between form, material and digital culture."
   ],
   whyFeatured:
-  "Featured for its distinctive intersection of digital culture, contemporary fashion and object design.",
+  "Paloceras treats eyewear as an object of authorship rather than a fashion accessory.",
 image: "/Luova/images/companies/Paloceras-featurepage.jpg",
   mainImage: "/Luova/images/companies/Paloceras-Main-Image.jpg",
 
