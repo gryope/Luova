@@ -111,14 +111,20 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
     <p className="text-[13px] md:text-[18px] leading-[1.75] tracking-[-0.01em] text-[#f1ede7] font-extralight font-['Inter',sans-serif] max-w-[680px]">
   {company.lead}
 </p>
-<div className="mt-8 md:mt-10 max-w-[680px] border-t border-white/10 pt-6">
-  <p className="text-[10px] tracking-[0.22em] uppercase text-white/70 font-semibold font-['Inter',sans-serif]">
-    LUOVA NOTE
+<div className="my-12 md:my-16 max-w-[680px]">
+
+  <div className="w-12 h-px bg-[#e7c3cb]/40 mb-6"></div>
+
+  <p className="text-[10px] tracking-[0.22em] uppercase text-[#e7c3cb]/70 font-semibold font-['Inter',sans-serif]">
+    CURATOR'S NOTE
   </p>
 
-  <p className="mt-4 text-[14px] md:text-[15px] leading-[1.8] text-[#e7c3cb] font-normal font-['Inter',sans-serif]">
+  <p className="mt-6 text-[22px] md:text-[30px] leading-[1.35] tracking-[-0.03em] text-[#f5f1ec] font-extralight font-['Inter',sans-serif] max-w-[620px]">
     {company.whyFeatured}
   </p>
+
+  <div className="w-12 h-px bg-[#e7c3cb]/40 mt-6"></div>
+
 </div>
 
             {/* Body copy — Inter regular, 14px, muted, same max-width */}
