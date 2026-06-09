@@ -115,7 +115,7 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
 
 <div className="w-20 h-px bg-[#e7c3cb]/25 mb-8"></div>
   <p className="text-[10px] tracking-[0.22em] uppercase text-[#e7c3cb]/40 font-semibold font-['Inter',sans-serif]">
-    CURATOR'S NOTE
+    LUOVA OBSERVATION
   </p>
 
   <p className="mt-6 text-[30px] md:text-[42px] leading-[1.35] tracking-[-0.03em] text-[#f5f1ec] font-extralight font-['Inter',sans-serif] max-w-[620px]">
