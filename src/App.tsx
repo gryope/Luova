@@ -80,7 +80,7 @@ const FEATURED_COMPANIES: Company[] = [
     "Whether working with physical products, spatial experiences or new technologies, the studio's focus remains consistent: creating solutions that are functional, enduring and culturally relevant."
   ],
   whyFeatured:
-  "Aivan demonstrates how industrial design can become a strategic capability rather than a specialist discipline.,
+  "Aivan demonstrates how industrial design can become a strategic capability rather than a specialist discipline.",
 
 image: "/Luova/images/companies/Aivan-featurepage.jpg",
 
