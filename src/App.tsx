@@ -1110,7 +1110,7 @@ const showDock =
             <motion.h1
   className="
     font-monumental-lg
-    text-[64px]
+    text-[61px]
     leading-[0.92]
     md:text-[120px]
     mb-6 md:mb-8
