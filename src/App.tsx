@@ -1131,7 +1131,9 @@ style={{ fontFamily: "MonumentExtended, sans-serif" }}
 >
   The best career opportunities often appear before a job posting does.
   <span className="block mt-4">
-    Discover organisations worth following, collaborating with, and working for.
+    Some are hiring.
+Some are looking for collaborators.
+Some are simply worth knowing.
   </span>
 </motion.p>
           </section>
