@@ -1165,14 +1165,16 @@ const showDock =
             
             <motion.h1
   className="
-  text-[42px]
-  md:text-[120px]
-  leading-[0.92]
-  max-w-none
-  mb-6 md:mb-8
-  text-primary-fixed
-"
-style={{ fontFamily: "MonumentExtended, sans-serif" }}
+    font-monumental-lg
+    text-[48px]
+    leading-[0.9]
+    tracking-[-0.04em]
+    md:text-[120px]
+    max-w-none
+    mb-6 md:mb-8
+    text-primary-fixed
+    font-light
+  "
 >
   DISCOVER
   <br />
