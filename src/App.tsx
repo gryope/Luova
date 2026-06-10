@@ -279,6 +279,64 @@ mission:
 whyFeatured:
   "Featured for reimagining how nature can shape future environments through design, experience and wellbeing."
 },
+{
+  name: "IVALO",
+
+  location: "Helsinki, FI",
+
+  description:
+"Working at the intersection of strategy, communications and organisational change.",
+
+  lead:
+"Large organisations rarely struggle with ideas. They struggle with adoption. A new strategy is approved. A new direction is announced. A new ambition is defined. The difficult part begins afterwards, when employees, customers and stakeholders are expected to understand what has changed and why it matters. This is where IVALO operates.",
+  body: [
+  "Founded in Helsinki, IVALO works across strategy, communications, customer experience and organisational development. Rather than treating these disciplines separately, the company approaches them as different expressions of the same challenge: helping organisations create clarity at scale.",
+
+  "Its work spans industries and project types, from brand development to large-scale transformation initiatives. What connects them is a focus on implementation. Not simply defining a direction, but helping people recognise it, understand it and participate in it.",
+
+  "This places IVALO in an unusual position. Too operational to be a traditional consultancy. Too strategic to be a conventional agency. The company works in the territory between organisational intent and human behaviour, where the success of a decision depends less on its logic than on its ability to gain traction.",
+
+  "As organisations become increasingly complex, that territory is becoming more important. The challenge is no longer deciding what to do. It is ensuring that people move with the decision."
+],
+
+image: "/Luova/images/companies/MetsäSkogen-featurepage.jpg",
+  mainImage: "/Luova/images/companies/MetsäSkogen-Main-Image.jpg",
+
+  thumbnailImage: "/Luova/images/companies/MetsäSkogen-Thumbnail-Image.jpg",
+
+  tags: [
+  "Organisational Change",
+  "Strategy",
+  "Communications",
+  "Customer Experience",
+  "Transformation"
+],
+
+  website: "ivalocreative.fi",
+
+  founded: "2013",
+
+  teamSize: "50+",
+
+  status: "• Independent",
+
+  category: "Creative Transformation",
+
+  year: "2025",
+
+  figureTitle: "Immersive Forest Environment",
+
+addedToLuova: "June 2026",
+
+fullDescription:
+  "Metsä / Skogen Concepts is a Helsinki-based studio creating nature-inspired environments that support wellbeing, focus and human experience.",
+
+mission:
+  "Reconnecting people with the restorative qualities of nature through spatial design.",
+
+whyFeatured:
+"IVALO works where organisational decisions meet human behaviour.",
+},
 ];
 const HIRING_COMPANIES: Company[] = [
   {
