@@ -242,8 +242,6 @@ image: "/Luova/images/companies/DistanceT-featurepage.jpg",
 
     "At a time when workplaces are increasingly optimised for productivity, Metsä / Skogen offers a different perspective. One that recognises attention, wellbeing and human experience as design challenges in their own right. The result is a body of work that feels less like interior design and more like a vision for how future environments can support the people who inhabit them."
   ],
-  whyFeatured:
-  "Metsä/Skogen approaches nature as a design material rather than a visual reference.",
 
 image: "/Luova/images/companies/MetsäSkogen-featurepage.jpg",
   mainImage: "/Luova/images/companies/MetsäSkogen-Main-Image.jpg",
@@ -1109,15 +1107,14 @@ const showDock =
             
             <motion.h1
   className="
-    font-monumental-lg
-    text-[64px]
-    leading-[0.92]
-    max-w-[320px]
-    md:max-w-none
-    md:text-[120px]
-    mb-6 md:mb-8
-    text-primary-fixed
-  "
+  text-[42px]
+  md:text-[120px]
+  leading-[0.92]
+  max-w-none
+  mb-6 md:mb-8
+  text-primary-fixed
+"
+style={{ fontFamily: "MonumentExtended, sans-serif" }}
 >
   DISCOVER
   <br />
