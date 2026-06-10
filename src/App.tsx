@@ -299,10 +299,10 @@ whyFeatured:
   "As organisations become increasingly complex, that territory is becoming more important. The challenge is no longer deciding what to do. It is ensuring that people move with the decision."
 ],
 
-image: "/Luova/images/companies/MetsäSkogen-featurepage.jpg",
-  mainImage: "/Luova/images/companies/MetsäSkogen-Main-Image.jpg",
+image: "/Luova/images/companies/Ivalo Creative-featurepage.jpg",
+  mainImage: "/Luova/images/companies/Ivalo Creative-Main-Image.jpg",
 
-  thumbnailImage: "/Luova/images/companies/MetsäSkogen-Thumbnail-Image.jpg",
+  thumbnailImage: "/Luova/images/companies/Ivalo Creative-Thumbnail-Image.jpg",
 
   tags: [
   "Organisational Change",
