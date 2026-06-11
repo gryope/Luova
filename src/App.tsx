@@ -736,7 +736,7 @@ function AboutPage({ onBack }: { onBack: () => void }) {
         </button>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-32">
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-8 flex justify-center">
 
   <motion.h1
     className="font-monumental-lg mb-16 leading-[0.9] tracking-tighter"
@@ -867,8 +867,16 @@ const companyJobs = jobs.filter(
           </div>
           
           <div className="lg:col-span-8">
-            <div className="aspect-video rounded-[3rem] overflow-hidden bg-surface-container relative">
-              <img src={company.image} alt={company.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+<div className="
+  w-full
+  md:w-full
+  max-w-[680px]
+  aspect-[4/3.5]
+  rounded-[16px]
+  overflow-hidden
+  bg-surface-container
+  relative
+">              <img src={company.image} alt={company.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
             </div>
           </div>
