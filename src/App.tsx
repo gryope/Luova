@@ -1207,7 +1207,7 @@ const showDock =
   sm:text-[48px]
   md:text-[120px]
   leading-[0.9]
-  tracking-[-0.015em]
+  tracking-[-0.014em]
   max-w-[320px]
   md:max-w-none
   mb-6 md:mb-8
