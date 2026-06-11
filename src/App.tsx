@@ -671,8 +671,15 @@ className="group flex flex-col md:flex-row gap-6 md:gap-16 py-12 md:py-14 border
   </p>
 
   <div className="flex flex-wrap gap-2 mt-8">
-    ...
-  </div>
+  {company.tags.map(tag => (
+    <span
+      key={tag}
+      className="text-[8px] md:text-[9px] px-2 py-[3px] rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors"
+    >
+      {tag}
+    </span>
+  ))}
+</div>
 </div>
             </motion.div>
           ))}
