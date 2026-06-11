@@ -618,7 +618,7 @@ const visibleCompanies = FEATURED_COMPANIES.slice(
           >
             FEATURED <br/>ORGANISATIONS
           </motion.h1>
-          <p className="font-interface-reg text-on-surface-variant text-xl md:text-2xl leading-relaxed">
+          <p className="font-interface-reg text-on-surface-variant text-[16px] md:text-xl leading-relaxed max-w-2xl leading-relaxed">
 A curated archive of organisations shaping creativity, business and culture. Selected for their ideas, ambition and the opportunities they create.          </p>
         </div>
 
@@ -627,11 +627,10 @@ A curated archive of organisations shaping creativity, business and culture. Sel
   <motion.div
   key={company.name}
   onClick={() => onSelectCompany(company)}
-className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed md:hover:px-8 hover:rounded-2xl"              whileInView={{ opacity: 1, y: 0 }}
+className="group flex flex-col md:flex-row gap-5 md:gap-16 py-8 md:py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed md:hover:px-8 hover:rounded-2xl"              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-<div className="md:w-[28%] aspect-video md:aspect-[4/3] overflow-hidden rounded-2xl bg-surface-container">                <img src={company.image} alt={company.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" referrerPolicy="no-referrer" />
-              </div>
+<div className="w-full aspect-[16/8] md:w-[28%] md:aspect-[4/3] overflow-hidden rounded-2xl bg-surface-container">              </div>
               <div className="md:w-[72%] flex flex-col justify-center">
 <div className="flex items-start mb-4">
   <h2 className="
@@ -653,7 +652,7 @@ transition-colors
                 </p>
                 <div className="flex flex-wrap gap-2 mt-8">
                   {company.tags.map(tag => (
-                    <span key={tag} className="text-[9px] px-2 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors">
+                    <span key={tag} className="text-[8px] md:text-[9px] px-2 py-[3px] rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors">
                       {tag}
                     </span>
                   ))}
