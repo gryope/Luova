@@ -627,44 +627,52 @@ A curated archive of organisations shaping creativity, business and culture. Sel
   <motion.div
   key={company.name}
   onClick={() => onSelectCompany(company)}
-className="group flex flex-col md:flex-row gap-6 md:gap-16 py-8 md:py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed md:hover:px-8 hover:rounded-2xl"              whileInView={{ opacity: 1, y: 0 }}
+className="group flex flex-col md:flex-row gap-6 md:gap-16 py-12 md:py-14 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed md:hover:px-8 hover:rounded-2xl"              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-<div className="w-full aspect-[16/8] md:w-[28%] md:aspect-[4/3] overflow-hidden rounded-2xl bg-surface-container">
+<div className="w-full aspect-[4/3] md:w-[28%] md:aspect-[4/3] overflow-hidden rounded-2xl bg-surface-container">
   <img
     src={company.image}
     alt={company.name}
     className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
   />
+<div className="md:w-[72%] flex flex-col justify-center px-5 md:px-0">
+  <div className="flex items-start mb-4">
+    <h2
+      className="
+      font-sans
+      font-light
+      text-[28px]
+      md:text-[56px]
+      tracking-[-0.04em]
+      leading-[0.9]
+      text-primary-fixed
+      group-hover:text-black
+      transition-colors
+      "
+    >
+      {company.name}
+    </h2>
+  </div>
+
+  <p className="
+    font-interface-reg
+    text-on-surface-variant
+    text-lg
+    md:text-xl
+    leading-relaxed
+    max-w-[90%]
+    md:max-w-2xl
+    group-hover:text-black/80
+    transition-colors
+  ">
+    {company.description}
+  </p>
+
+  <div className="flex flex-wrap gap-2 mt-8">
+    ...
+  </div>
 </div>
-              <div className="md:w-[72%] flex flex-col justify-center">
-                <div className="px-4 md:px-0"></div>
-<div className="flex items-start mb-4">
-  <h2 className="
-font-sans
-font-light
-text-[32px]
-md:text-[56px]
-tracking-[-0.04em]
-leading-[0.9]
-text-primary-fixed
-group-hover:text-black
-transition-colors
-">
-    {company.name}
-  </h2>
-</div>
-                <p className="font-interface-reg text-on-surface-variant text-xl leading-relaxed max-w-2xl group-hover:text-black/80 transition-colors">
-                  {company.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mt-8">
-                  {company.tags.map(tag => (
-                    <span key={tag} className="text-[8px] md:text-[9px] px-2 py-[3px] rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
             </motion.div>
           ))}
         </div>
