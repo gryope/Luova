@@ -635,9 +635,10 @@ className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border
               </div>
               <div className="md:w-2/3 flex flex-col justify-center">
 <div className="flex items-start mb-4">
-  <h2 className="font-monumental-lg text-[32px] md:text-[64px] leading-[0.9] text-primary-fixed group-hover:text-black transition-colors">                <div className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest mb-6 border-b border-outline-variant/20 pb-4 inline-block self-start group-hover:text-black/70 transition-colors">
-                  {company.location}
-                </div>
+  <h2 className="font-monumental-lg text-[32px] md:text-[64px] leading-[0.9] break-words text-primary-fixed group-hover:text-black transition-colors">
+    {company.name}
+  </h2>
+</div>
                 <p className="font-interface-reg text-on-surface-variant text-xl leading-relaxed max-w-2xl group-hover:text-black/80 transition-colors">
                   {company.description}
                 </p>
