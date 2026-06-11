@@ -627,10 +627,10 @@ A curated archive of organisations shaping creativity, business and culture. Sel
   <motion.div
   key={company.name}
   onClick={() => onSelectCompany(company)}
-className="group flex flex-col md:flex-row gap-6 md:gap-16 py-16 md:py-14 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed md:hover:px-8 hover:rounded-2xl"              whileInView={{ opacity: 1, y: 0 }}
+className="group flex flex-col md:flex-row gap-6 md:gap-16 pt-10 pb-16 md:py-14 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed md:hover:px-8 hover:rounded-2xl"              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-<div className="w-[92%] mx-auto aspect-[4/3] md:w-[28%] md:mx-0 md:aspect-[4/3] overflow-hidden rounded-2xl bg-surface-container">  <img
+<div className="w-[90%] mx-auto aspect-[4/3] md:w-[28%] md:mx-0 md:aspect-[4/3] overflow-hidden rounded-2xl bg-surface-container">  <img
     src={company.image}
     alt={company.name}
     className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
@@ -642,7 +642,7 @@ className="group flex flex-col md:flex-row gap-6 md:gap-16 py-16 md:py-14 border
       className="
       font-sans
       font-light
-      text-[34px]
+      text-[38px]
       md:text-[56px]
       tracking-[-0.04em]
       leading-[0.9]
@@ -669,7 +669,7 @@ className="group flex flex-col md:flex-row gap-6 md:gap-16 py-16 md:py-14 border
     {company.description}
   </p>
 
-  <div className="flex flex-wrap gap-2 mt-8">
+  <div className="flex flex-wrap gap-2 mt-14">
   {company.tags.map(tag => (
     <span
       key={tag}
