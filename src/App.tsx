@@ -544,7 +544,7 @@ function CompanyCard({ company, onSelect }: { company: Company, onSelect: (compa
         <img 
           src={company.image} 
           alt={company.name} 
-          className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
+          className="w-full h-full object-cover opacity-80 group-hover:opacity-100 hover:scale-105 transition-all duration-700" 
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
