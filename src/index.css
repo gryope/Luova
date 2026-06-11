@@ -43,7 +43,7 @@ body {
 
 .font-monumental-lg {
   @apply font-sans font-light tracking-[-0.04em];
-  font-size: clamp(56px, 8vw, 120px);
+  font-size: clamp(42px, 8vw, 120px);
   line-height: 1.1;
 }
 
