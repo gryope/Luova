@@ -617,7 +617,7 @@ const visibleCompanies = FEATURED_COMPANIES.slice(
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            FEATURED <br/>CO.
+            FEATURED <br/>ORGANISATIONS
           </motion.h1>
           <p className="font-interface-reg text-on-surface-variant text-xl md:text-2xl leading-relaxed">
 A curated archive of organisations shaping creativity, business and culture. Selected for their ideas, ambition and the opportunities they create.          </p>
