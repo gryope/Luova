@@ -630,12 +630,22 @@ A curated archive of organisations shaping creativity, business and culture. Sel
 className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed md:hover:px-8 hover:rounded-2xl"              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="md:w-1/3 aspect-video md:aspect-square overflow-hidden rounded-2xl bg-surface-container">
+              <div className="md:w-[28%] aspect-video md:aspect-[4/3]" overflow-hidden rounded-2xl bg-surface-container">
                 <img src={company.image} alt={company.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" referrerPolicy="no-referrer" />
               </div>
-              <div className="md:w-2/3 flex flex-col justify-center">
+              <div className="md:w-[72%] flex flex-col justify-center">
 <div className="flex items-start mb-4">
-  <h2 className="font-monumental-lg text-[32px] md:text-[64px] leading-[0.9] break-words text-primary-fixed group-hover:text-black transition-colors">
+  <h2 className="
+font-sans
+font-light
+text-[32px]
+md:text-[56px]
+tracking-[-0.04em]
+leading-[0.9]
+text-primary-fixed
+group-hover:text-black
+transition-colors
+">
     {company.name}
   </h2>
 </div>
