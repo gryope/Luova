@@ -519,9 +519,27 @@ className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border
       </div>
       
       <div className="mt-6 md:mt-0 flex items-center gap-4 self-start md:self-auto">
-        <button className="px-6 py-2 rounded-full bg-primary-fixed text-on-primary-fixed font-action-med text-[12px]">
-          APPLY
-        </button>
+        <button
+  className="
+  px-6 py-2
+  rounded-full
+  bg-primary-fixed
+  text-on-primary-fixed
+  border border-transparent
+  font-action-med
+  text-[12px]
+  transition-all
+  duration-300
+
+  hover:bg-transparent
+  hover:border-primary-fixed
+  hover:text-primary-fixed
+  hover:shadow-[0_0_20px_rgba(251,219,222,0.15)]
+
+  "
+>
+  APPLY
+</button>
         <ArrowRight 
           className="hidden md:block transition-transform duration-300 group-hover:translate-x-2 text-primary-fixed" 
           size={24} 
