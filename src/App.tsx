@@ -1200,23 +1200,40 @@ const showDock =
           <section className="px-5 relative mb-12 md:mb-20">
             <div className="absolute inset-x-0 top-0 bg-primary-fixed/5 blur-[80px] md:blur-[120px] rounded-full -z-10 w-[90%] md:w-3/4 mx-auto h-[250px] md:h-[400px]"></div>
             
-            <motion.h1
+            {/* Mobile */}
+<motion.h1
   className="
-  font-monumental-lg
-  text-[38px]
-  sm:text-[48px]
-  md:text-[120px]
-  leading-[0.9]
-  tracking-[-0.014em]
-  max-w-[320px]
-  md:max-w-none
-  mb-6 md:mb-8
-  text-primary-fixed
-"
+    block md:hidden
+    font-monumental-lg
+    text-[38px]
+    leading-[0.9]
+    tracking-[-0.014em]
+    mb-6
+    text-primary-fixed
+  "
 >
   DISCOVER
   <br />
   ORGANISATIONS
+  <br />
+  WORTH WORKING
+  <br />
+  FOR.
+</motion.h1>
+
+{/* Desktop */}
+<motion.h1
+  className="
+    hidden md:block
+    font-monumental-lg
+    text-[120px]
+    leading-[0.9]
+    tracking-[-0.03em]
+    mb-8
+    text-primary-fixed
+  "
+>
+  DISCOVER ORGANISATIONS
   <br />
   WORTH WORKING FOR.
 </motion.h1>
