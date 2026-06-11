@@ -581,6 +581,18 @@ function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelec
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const [currentPage, setCurrentPage] = useState(1);
+
+const COMPANIES_PER_PAGE = 4;
+
+const totalPages = Math.ceil(
+  FEATURED_COMPANIES.length / COMPANIES_PER_PAGE
+);
+
+const visibleCompanies = FEATURED_COMPANIES.slice(
+  (currentPage - 1) * COMPANIES_PER_PAGE,
+  currentPage * COMPANIES_PER_PAGE
+);
 
   return (
     <motion.div 
@@ -612,7 +624,7 @@ A curated archive of organisations shaping creativity, business and culture. Sel
         </div>
 
         <div className="flex flex-col border-t border-outline-variant/30">
-{FEATURED_COMPANIES.map((company) => (
+{visibleCompanies.map((company) => (
   <motion.div
   key={company.name}
   onClick={() => onSelectCompany(company)}
@@ -644,6 +656,31 @@ className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border
             </motion.div>
           ))}
         </div>
+
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center mt-16 md:mt-24 gap-4">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                onClick={() => {
+                  setCurrentPage(page);
+                  window.scrollTo({
+                    top: 300,
+                    behavior: "smooth",
+                  });
+                }}
+                className={`w-12 h-12 rounded-full border border-outline-variant transition-all duration-300 font-metadata-light tracking-widest flex items-center justify-center ${
+                  currentPage === page
+                    ? "bg-primary-fixed text-on-primary-fixed border-primary-fixed scale-110 shadow-[0_0_20px_rgba(251,219,222,0.3)]"
+                    : "text-on-surface-variant hover:border-primary-fixed hover:text-primary-fixed"
+                }`}
+              >
+                {page.toString().padStart(2, "0")}
+              </button>
+            ))}
+          </div>
+        )}
+
       </section>
     </motion.div>
   );
