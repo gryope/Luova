@@ -540,7 +540,7 @@ function CompanyCard({ company, onSelect }: { company: Company, onSelect: (compa
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
     >
-      <div className="aspect-[4/3] rounded-3xl overflow-hidden mb-6 bg-surface-container relative">
+      <div className="aspect-[4/3.5] rounded-[16px] overflow-hidden mb-4 bg-surface-container relative">
         <img 
           src={company.image} 
           alt={company.name} 
@@ -553,11 +553,11 @@ function CompanyCard({ company, onSelect }: { company: Company, onSelect: (compa
 <h4 className="font-headline-md text-[28px] md:text-[48px] text-primary tracking-tight leading-[0.9]">        {company.name}
       </h4>
       
-      <p className="font-interface-reg text-on-surface-variant mt-2 max-w-sm">
+      <p className="font-interface-reg text-on-surface-variant mt-4 max-w-sm">
         {company.description}
       </p>
       
-      <div className="mt-4 space-y-3">
+      <div className="mt-8 space-y-3">
         <div className="text-xs uppercase tracking-widest text-primary-fixed-dim border-t border-outline-variant/30 pt-4">
           <span className="opacity-60">{company.location}</span>
         </div>
