@@ -628,7 +628,7 @@ A curated archive of organisations shaping creativity, business and culture. Sel
   <motion.div
   key={company.name}
   onClick={() => onSelectCompany(company)}
-className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed hover:px-8 hover:rounded-2xl"              whileInView={{ opacity: 1, y: 0 }}
+className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:bg-primary-fixed md:hover:px-8 hover:rounded-2xl"              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
               <div className="md:w-1/3 aspect-video md:aspect-square overflow-hidden rounded-2xl bg-surface-container">
@@ -1161,8 +1161,8 @@ const showDock =
   !isAboutVisible;
 
   return (
-    <div className="min-h-screen flex flex-col font-sans">
-      <Header onHome={handleHome} onAbout={handleAbout} onFeatured={handleFeatured} activePage={activePage} />
+<div className="min-h-screen flex flex-col font-sans overflow-x-hidden">
+        <Header onHome={handleHome} onAbout={handleAbout} onFeatured={handleFeatured} activePage={activePage} />
 
       {isAboutVisible ? (
         <AboutPage onBack={() => setIsAboutVisible(false)} />
@@ -1202,16 +1202,17 @@ const showDock =
             
             <motion.h1
   className="
-    font-monumental-lg
-    text-[48px]
-    leading-[0.9]
-    tracking-[-0.04em]
-    md:text-[120px]
-    max-w-none
-    mb-6 md:mb-8
-    text-primary-fixed
-    font-light
-  "
+  font-monumental-lg
+  text-[42px]
+  sm:text-[48px]
+  md:text-[120px]
+  leading-[0.9]
+  tracking-[-0.03em]
+  max-w-[320px]
+  md:max-w-none
+  mb-6 md:mb-8
+  text-primary-fixed
+"
 >
   DISCOVER
   <br />
@@ -1302,7 +1303,7 @@ onSelect={setSelectedHiringCompany}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 100, opacity: 0 }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="lg:hidden fixed bottom-0 left-0 w-full p-4 bg-background/40 backdrop-blur-2xl border-t border-white/5 z-[100] transform-gpu"
+            className="lg:hidden fixed bottom-0 inset-x-0 p-4 bg-background/40 backdrop-blur-2xl border-t border-white/5 z-[100] transform-gpu"
           >
             <div className="max-w-md mx-auto">
               <button className="w-full font-action-med text-primary-fixed border border-primary-fixed px-6 py-3 rounded-full hover:bg-primary-fixed hover:text-surface-dim transition-all duration-300 uppercase tracking-widest text-[10px]">
