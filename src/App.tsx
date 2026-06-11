@@ -642,7 +642,7 @@ className="group flex flex-col md:flex-row gap-6 md:gap-16 py-16 md:py-14 border
       className="
       font-sans
       font-light
-      text-[28px]
+      text-[31px]
       md:text-[56px]
       tracking-[-0.04em]
       leading-[0.9]
