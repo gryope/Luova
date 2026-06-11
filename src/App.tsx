@@ -1197,8 +1197,8 @@ const showDock =
 ) : (
         <main className="flex-grow pt-32 md:pt-48 pb-16 md:pb-32">
           {/* Hero Section */}
-          <section className="px-5 relative mb-12 md:mb-20">
-            <div className="absolute inset-x-0 top-0 bg-primary-fixed/5 blur-[80px] md:blur-[120px] rounded-full -z-10 w-[90%] md:w-3/4 mx-auto h-[250px] md:h-[400px]"></div>
+<section className="px-margin-page relative mb-12 md:mb-20">
+              <div className="absolute inset-x-0 top-0 bg-primary-fixed/5 blur-[80px] md:blur-[120px] rounded-full -z-10 w-[90%] md:w-3/4 mx-auto h-[250px] md:h-[400px]"></div>
             
             {/* Mobile */}
 <motion.h1
