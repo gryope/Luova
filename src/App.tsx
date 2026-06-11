@@ -550,8 +550,7 @@ function CompanyCard({ company, onSelect }: { company: Company, onSelect: (compa
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
       
-      <h4 className="font-headline-md !text-3xl md:!text-4xl text-primary tracking-tight">
-        {company.name}
+<h4 className="font-headline-md text-[28px] md:text-[48px] text-primary tracking-tight leading-[0.9]">        {company.name}
       </h4>
       
       <p className="font-interface-reg text-on-surface-variant mt-2 max-w-sm">
@@ -635,11 +634,8 @@ className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border
                 <img src={company.image} alt={company.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" referrerPolicy="no-referrer" />
               </div>
               <div className="md:w-2/3 flex flex-col justify-center">
-                <div className="flex justify-between items-start mb-4">
-                  <h2 className="font-monumental-lg !text-[48px] md:!text-[64px] leading-tight text-primary-fixed group-hover:text-black transition-colors">{company.name}</h2>
-<ArrowRight className="text-primary-fixed opacity-0 group-hover:opacity-100 group-hover:translate-x-2 group-hover:text-black transition-all" />                
-                </div>
-                <div className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest mb-6 border-b border-outline-variant/20 pb-4 inline-block self-start group-hover:text-black/70 transition-colors">
+<div className="flex items-start mb-4">
+  <h2 className="font-monumental-lg text-[32px] md:text-[64px] leading-[0.9] text-primary-fixed group-hover:text-black transition-colors">                <div className="font-metadata-light text-primary-fixed-dim uppercase tracking-widest mb-6 border-b border-outline-variant/20 pb-4 inline-block self-start group-hover:text-black/70 transition-colors">
                   {company.location}
                 </div>
                 <p className="font-interface-reg text-on-surface-variant text-xl leading-relaxed max-w-2xl group-hover:text-black/80 transition-colors">
@@ -647,7 +643,7 @@ className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border
                 </p>
                 <div className="flex flex-wrap gap-2 mt-8">
                   {company.tags.map(tag => (
-                    <span key={tag} className="text-[10px] px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors">
+                    <span key={tag} className="text-[9px] px-2 py-1 rounded-full border border-outline-variant text-on-surface-variant uppercase tracking-widest bg-surface-container/30 group-hover:text-black/70 group-hover:border-black/20 group-hover:bg-black/5 transition-colors">
                       {tag}
                     </span>
                   ))}
