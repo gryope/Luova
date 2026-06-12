@@ -817,17 +817,6 @@ function AboutPage({ onBack }: { onBack: () => void }) {
             Luova exists to make those discoveries easier.
           </p>
         </div>
-
-        {/* KEEP THE REST OF YOUR PARAGRAPHS BELOW THIS */}
-
-      </motion.div>
-
-    </div>
-
-  </div>
-
-</div>
-
 <div className="pt-6 border-t border-on-primary-fixed/10">
   <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
     We curate organisations, opportunities and ideas from across the creative economy. Some are hiring. Some are looking for collaborators. Some are simply worth knowing.
@@ -846,7 +835,12 @@ From architecture and hospitality to technology, branding, design and media, Luo
     <p>Some are simply worth knowing.</p>
   </div>
 </div>
-  </motion.div>
+
+      </motion.div>
+
+    </div>
+
+  </div>
 
 </div>
           <div className="lg:col-span-4 pt-[280px] lg:pt-[320px] space-y-20">
