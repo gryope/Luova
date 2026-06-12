@@ -766,36 +766,66 @@ function AboutPage({ onBack }: { onBack: () => void }) {
         </button>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-32">
-          <div className="lg:col-span-8 flex justify-center">
+<div className="lg:col-span-8">
 
-  <motion.h1
-    className="font-monumental-lg mb-16 leading-[0.9] tracking-tighter"
-    initial={{ x: -50, opacity: 0 }}
-    animate={{ x: 0, opacity: 1 }}
-    transition={{ delay: 0.2, duration: 1 }}
-  >
-    WORD OF
-<br />
-MOUTH.
-    
-  </motion.h1>
-<p className="font-interface-reg text-2xl md:text-4xl leading-tight max-w-2xl mb-12">
-  Finding your way through an industry shouldn't depend on luck.
-</p>
-  <motion.div
-  className="space-y-10 max-w-3xl"
-  initial={{ y: 30, opacity: 0 }}
-  animate={{ y: 0, opacity: 1 }}
-  transition={{ delay: 0.5, duration: 0.8 }}
->
-    <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
-  The most interesting organisations are rarely the easiest to discover. Opportunities appear and disappear. New companies emerge. Established ones evolve. Valuable information is scattered across websites, newsletters, job boards and private conversations.
-</p>
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
 
-<div className="pt-6 border-t border-on-primary-fixed/10">
-  <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
-    Luova exists to make those discoveries easier.
-  </p>
+    {/* Left column */}
+    <div>
+      <motion.h1
+        className="
+        font-sans
+        font-light
+        text-[64px]
+        md:text-[110px]
+        xl:text-[120px] 
+        leading-[0.85]
+        tracking-[-0.06em]
+        "
+        initial={{ x: -50, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 1 }}
+      >
+        WORD
+        <br />
+        OF
+        <br />
+        MOUTH.
+      </motion.h1>
+    </div>
+
+    {/* Right column */}
+    <div>
+
+      <p className="font-interface-reg text-xl md:text-2xl leading-tight mb-12">
+        Finding your way through an industry shouldn't depend on luck.
+      </p>
+
+      <motion.div
+        className="space-y-14"
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+      >
+
+        <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
+          The most interesting organisations are rarely the easiest to discover. Opportunities appear and disappear. New companies emerge. Established ones evolve. Valuable information is scattered across websites, newsletters, job boards and private conversations.
+        </p>
+
+        <div className="pt-6 border-t border-on-primary-fixed/10">
+          <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
+            Luova exists to make those discoveries easier.
+          </p>
+        </div>
+
+        {/* KEEP THE REST OF YOUR PARAGRAPHS BELOW THIS */}
+
+      </motion.div>
+
+    </div>
+
+  </div>
+
 </div>
 
 <div className="pt-6 border-t border-on-primary-fixed/10">
@@ -819,7 +849,7 @@ From architecture and hospitality to technology, branding, design and media, Luo
   </motion.div>
 
 </div>
-          <div className="lg:col-span-4 flex flex-col justify-end space-y-20">
+          <div className="lg:col-span-4 pt-[280px] lg:pt-[320px] space-y-20">
             <div className="space-y-6">
   <h3 className="font-metadata-light uppercase tracking-widest opacity-50 text-xs border-b border-on-primary-fixed/20 pb-4">
   Scope
