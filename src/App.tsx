@@ -487,14 +487,26 @@ function JobRow({ job, onSelect }: { job: Job, onSelect: (job: Job) => void }) {
   return (
     <motion.div
       onClick={() => onSelect(job)}
-className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer md:hover:px-8 transition-all duration-500 hover:my-2 hover:rounded-2xl"      initial={{ opacity: 0, y: 20 }}
+className="group flex flex-col gap-8 py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:my-2 hover:rounded-2xl"
+initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
     >
       <div className="flex flex-col gap-2 max-w-3xl">
-        <h2 className="font-headline-md text-primary-fixed group-hover:text-primary transition-colors duration-300">
-          {job.title}
-        </h2>
+        <h2
+  className="
+  font-headline-md
+  text-primary-fixed
+  group-hover:text-primary
+  transition-colors
+  duration-300
+  text-[52px]
+  leading-[0.95]
+  tracking-[-0.04em]
+  "
+>
+  {job.title}
+</h2>
         <div className="flex items-center gap-4 font-metadata-light text-on-surface-variant uppercase tracking-widest">
           <div className="flex items-center gap-2 normal-case">
             <span className="text-on-surface capitalize">{job.company}</span>
@@ -518,7 +530,7 @@ className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border
         </span>
       </div>
       
-      <div className="mt-6 md:mt-0 flex items-center gap-4 self-start md:self-auto">
+      <div className="mt-10 flex items-center gap-4 self-start md:self-auto">
         <button
   className="
   px-6 py-2
@@ -888,7 +900,7 @@ const companyJobs = jobs.filter(
 <div className="
   w-full
   md:w-full
-  max-w-[680px]
+  max-w-[600px]
   aspect-[4/3.5]
   rounded-[16px]
   overflow-hidden
@@ -920,7 +932,7 @@ const companyJobs = jobs.filter(
 
       <section className="px-margin-page py-32 border-t border-outline-variant/10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-4">
             <h3 className="font-action-med text-primary-fixed mb-8">Philosophy</h3>
             <p className="font-interface-reg text-on-surface-variant text-2xl leading-relaxed">
               {company.fullDescription}
