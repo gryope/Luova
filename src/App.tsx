@@ -487,7 +487,7 @@ function JobRow({ job, onSelect }: { job: Job, onSelect: (job: Job) => void }) {
   return (
     <motion.div
       onClick={() => onSelect(job)}
-className="group flex flex-col gap-8 py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:my-2 hover:rounded-2xl"
+className="group flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-outline-variant/30 cursor-pointer transition-all duration-500 hover:my-2 hover:rounded-2xl"
 initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -530,8 +530,8 @@ initial={{ opacity: 0, y: 20 }}
         </span>
       </div>
       
-      <div className="mt-10 flex items-center gap-4 self-start md:self-auto">
-        <button
+<div className="mt-6 md:mt-0 flex items-center gap-4 self-start md:self-auto"> 
+         <button
   className="
   px-6 py-2
   rounded-full
@@ -938,7 +938,7 @@ const companyJobs = jobs.filter(
               {company.fullDescription}
             </p>
           </div>
-          <div className="lg:col-span-6 space-y-12">
+          <div className="lg:col-span-8 space-y-12">
             <h3 className="font-action-med text-primary-fixed mb-8">Current Opportunities ({companyJobs.length})</h3>
             <div className="flex flex-col border-t border-outline-variant/30">
               {companyJobs.length > 0 ? (
