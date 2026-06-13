@@ -1191,8 +1191,19 @@ const [isAboutVisible, setIsAboutVisible] = useState(false);
 const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
 const [currentPage, setCurrentPage] = useState(1);
 useEffect(() => {
-  window.scrollTo(0, 0);
-}, [selectedJob, selectedFeaturedCompany, selectedHiringCompany]);
+  useEffect(() => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "instant"
+  });
+}, [
+  selectedJob,
+  selectedFeaturedCompany,
+  selectedHiringCompany,
+  isAboutVisible,
+  isFeaturedVisible
+]);
 
 const JOBS_PER_PAGE = 4;
 const totalPages = Math.ceil(
@@ -1208,32 +1219,48 @@ const visibleJobs = jobs.slice(
 );
 
 const handleHome = () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "instant"
+  });
+
   setSelectedJob(null);
   setSelectedHiringCompany(null);
-setSelectedFeaturedCompany(null);
+  setSelectedFeaturedCompany(null);
   setIsAboutVisible(false);
   setIsFeaturedVisible(false);
   setCurrentPage(1);
 };
 
 const handleAbout = () => {
-  setSelectedJob(null);
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "instant"
+  });
 
+  setSelectedJob(null);
   setSelectedHiringCompany(null);
   setSelectedFeaturedCompany(null);
-
+  setIsAboutVisible(false);
   setIsFeaturedVisible(false);
-  setIsAboutVisible(true);
+  setCurrentPage(1);
 };
 
 const handleFeatured = () => {
-  setSelectedJob(null);
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "instant"
+  });
 
+  setSelectedJob(null);
   setSelectedHiringCompany(null);
   setSelectedFeaturedCompany(null);
-
   setIsAboutVisible(false);
-  setIsFeaturedVisible(true);
+  setIsFeaturedVisible(false);
+  setCurrentPage(1);
 };
 
 let activePage: 'featured' | 'opportunities' | 'about' = 'opportunities';
