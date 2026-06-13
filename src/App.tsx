@@ -1191,7 +1191,6 @@ const [isAboutVisible, setIsAboutVisible] = useState(false);
 const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
 const [currentPage, setCurrentPage] = useState(1);
 useEffect(() => {
-  useEffect(() => {
   window.scrollTo({
     top: 0,
     left: 0,
