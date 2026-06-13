@@ -1242,9 +1242,9 @@ const handleAbout = () => {
   setSelectedJob(null);
   setSelectedHiringCompany(null);
   setSelectedFeaturedCompany(null);
-  setIsAboutVisible(false);
+
   setIsFeaturedVisible(false);
-  setCurrentPage(1);
+  setIsAboutVisible(true);
 };
 
 const handleFeatured = () => {
@@ -1257,9 +1257,9 @@ const handleFeatured = () => {
   setSelectedJob(null);
   setSelectedHiringCompany(null);
   setSelectedFeaturedCompany(null);
+
   setIsAboutVisible(false);
-  setIsFeaturedVisible(false);
-  setCurrentPage(1);
+  setIsFeaturedVisible(true);
 };
 
 let activePage: 'featured' | 'opportunities' | 'about' = 'opportunities';
