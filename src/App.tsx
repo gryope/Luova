@@ -788,44 +788,52 @@ function AboutPage({ onBack }: { onBack: () => void }) {
 </motion.h1>
 
 <p className="
-  mt-12
+  mt-20
+  md:mt-24
   text-2xl
   md:text-[40px]
   leading-tight
-  max-w-3xl
+  max-w-[800px]
 ">
   Finding your way through an industry shouldn't depend on luck.
 </p>
 
       <motion.div
-        className="space-y-14"
+  className="space-y-16 mt-12"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
 
-        <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
+        <p className="font-interface-reg text-[22px] md:text-[26px] opacity-80 leading-[1.6]">
           The most interesting organisations are rarely the easiest to discover. Opportunities appear and disappear. New companies emerge. Established ones evolve. Valuable information is scattered across websites, newsletters, job boards and private conversations.
         </p>
 
         <div className="pt-6 border-t border-on-primary-fixed/10">
-          <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed">
+          <p className="font-interface-reg text-[22px] md:text-[26px] opacity-80 leading-[1.6]">
             Luova exists to make those discoveries easier.
           </p>
         </div>
 <div className="pt-6 border-t border-on-primary-fixed/10">
-  <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
+  <p className="font-interface-reg text-[22px] md:text-[26px] opacity-80 leading-[1.6] max-w-3xl">
     We curate organisations, opportunities and ideas from across the creative economy. Some are hiring. Some are looking for collaborators. Some are simply worth knowing.
   </p>
 </div>
 
 <div className="pt-6 border-t border-on-primary-fixed/10">
-  <p className="font-interface-reg text-xl md:text-2xl opacity-80 leading-relaxed max-w-3xl">
+  <p className="font-interface-reg text-[22px] md:text-[26px] opacity-80 leading-[1.6] max-w-3xl">
 From architecture and hospitality to technology, branding, design and media, Luova is built for people shaping what comes next.  </p>
 </div>
 
 <div className="pt-10">
-  <div className="space-y-4 font-interface-reg text-2xl md:text-4xl">
+  <div className="
+space-y-5
+font-interface-reg
+text-[30px]
+md:text-[54px]
+leading-[1.05]
+tracking-[-0.03em]
+">
     <p>Some are hiring.</p>
     <p>Some are looking for collaborators.</p>
     <p>Some are simply worth knowing.</p>
@@ -839,7 +847,7 @@ From architecture and hospitality to technology, branding, design and media, Luo
   </div>
 
 </div>
-          <div className="lg:col-span-4 pt-[280px] lg:pt-[420px] space-y-20">
+          <div className="lg:col-span-4 pt-[280px] lg:pt-[520px] space-y-20">
             <div className="space-y-6">
   <h3 className="font-metadata-light uppercase tracking-widest opacity-50 text-xs border-b border-on-primary-fixed/20 pb-4">
   Scope
@@ -1000,8 +1008,8 @@ function JobDetail({ job, onBack }: { job: Job, onBack: () => void }) {
         </button>
 
         <div className="flex flex-col md:flex-row justify-between items-start gap-12">
-          <div className="max-w-4xl">
-            <motion.h1 
+<div>
+              <motion.h1 
               className="font-monumental-lg text-primary-fixed mb-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
