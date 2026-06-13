@@ -786,18 +786,16 @@ function AboutPage({ onBack }: { onBack: () => void }) {
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 1 }}
       >
-        WORD
-        <br />
-        OF
-        <br />
-        MOUTH.
+        WORD OF
+<br />
+MOUTH.
       </motion.h1>
     </div>
 
     {/* Right column */}
     <div>
 
-      <p className="font-interface-reg text-xl md:text-2xl leading-tight mb-12">
+      <p className="font-interface-reg text-xl text-2xl md:text-[42px] leading-tight">
         Finding your way through an industry shouldn't depend on luck.
       </p>
 
@@ -829,7 +827,7 @@ From architecture and hospitality to technology, branding, design and media, Luo
 </div>
 
 <div className="pt-10">
-  <div className="space-y-3 font-interface-reg text-xl md:text-2xl">
+  <div className="space-y-4 font-interface-reg text-2xl md:text-4xl">
     <p>Some are hiring.</p>
     <p>Some are looking for collaborators.</p>
     <p>Some are simply worth knowing.</p>
@@ -843,7 +841,7 @@ From architecture and hospitality to technology, branding, design and media, Luo
   </div>
 
 </div>
-          <div className="lg:col-span-4 pt-[280px] lg:pt-[320px] space-y-20">
+          <div className="lg:col-span-4 pt-[280px] lg:pt-[420px] space-y-20">
             <div className="space-y-6">
   <h3 className="font-metadata-light uppercase tracking-widest opacity-50 text-xs border-b border-on-primary-fixed/20 pb-4">
   Scope
