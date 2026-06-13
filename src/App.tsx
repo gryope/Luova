@@ -768,36 +768,34 @@ function AboutPage({ onBack }: { onBack: () => void }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-32">
 <div className="lg:col-span-8">
 
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
-
+<div className="max-w-4xl">
     {/* Left column */}
     <div>
       <motion.h1
-        className="
-        font-sans
-        font-light
-        text-[64px]
-        md:text-[110px]
-        xl:text-[120px] 
-        leading-[0.85]
-        tracking-[-0.06em]
-        "
-        initial={{ x: -50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.2, duration: 1 }}
-      >
-        WORD OF
-<br />
-MOUTH.
-      </motion.h1>
-    </div>
+  className="
+  font-sans
+  font-light
+  text-[64px]
+  md:text-[110px]
+  xl:text-[120px]
+  leading-[0.9]
+  tracking-[-0.06em]
+  "
+>
+  WORD OF
+  <br />
+  MOUTH.
+</motion.h1>
 
-    {/* Right column */}
-    <div>
-
-      <p className="font-interface-reg text-xl text-2xl md:text-[42px] leading-tight">
-        Finding your way through an industry shouldn't depend on luck.
-      </p>
+<p className="
+  mt-12
+  text-2xl
+  md:text-[40px]
+  leading-tight
+  max-w-3xl
+">
+  Finding your way through an industry shouldn't depend on luck.
+</p>
 
       <motion.div
         className="space-y-14"
