@@ -847,8 +847,8 @@ tracking-[-0.03em]
   </div>
 
 </div>
-          <div className="lg:col-span-4 pt-[280px] lg:pt-[520px] space-y-20">
-            <div className="space-y-6">
+<div className="lg:col-span-4 pt-12 lg:pt-[440px] space-y-20">
+                <div className="space-y-6">
   <h3 className="font-metadata-light uppercase tracking-widest opacity-50 text-xs border-b border-on-primary-fixed/20 pb-4">
   Scope
 </h3>
