@@ -21,7 +21,7 @@ date?: string;
 }
 
 
-interface Company {
+interface FeaturedCompany {  
   name: string;
   location: string;
 
@@ -58,9 +58,17 @@ interface Company {
 
   addedToLuova: string;
 }
-
-const FEATURED_COMPANIES: Company[] = [
-
+interface HiringCompany {
+  name: string;
+  location: string;
+  description: string;
+  fullDescription: string;
+  image: string;
+  mission: string;
+  tags: string[];
+  website: string;
+}
+const FEATURED_COMPANIES: FeaturedCompany[] = [
 {
   name: "AIVAN",
 
@@ -338,8 +346,8 @@ whyFeatured:
 "IVALO works where organisational decisions meet human behaviour.",
 },
 ];
-const HIRING_COMPANIES: Company[] = [
-  {
+const HIRING_COMPANIES: HiringCompany[] = [
+    {
     name: "AIVEN",
     location: "Finland, FI",
     description: "Aiven is your AI-ready Open Source Data Platform.",
@@ -561,7 +569,13 @@ initial={{ opacity: 0, y: 20 }}
   );
 }
 
-function CompanyCard({ company, onSelect }: { company: Company, onSelect: (company: Company) => void }) {
+function CompanyCard({
+  company,
+  onSelect
+}: {
+  company: HiringCompany,
+  onSelect: (company: HiringCompany) => void
+}){
   return (
     <motion.div 
       onClick={() => onSelect(company)}
@@ -574,13 +588,13 @@ function CompanyCard({ company, onSelect }: { company: Company, onSelect: (compa
         <img 
           src={company.image} 
           alt={company.name} 
-          className="w-full h-full object-cover opacity-80 group-hover:opacity-100 hover:scale-105 transition-all duration-700" 
-          referrerPolicy="no-referrer"
+className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"          referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
       
-<h4 className="font-headline-md text-[28px] md:text-[48px] text-primary tracking-tight leading-[0.9]">        {company.name}
+<h4 className="font-headline-md text-[28px] md:text-[48px] text-primary tracking-tight leading-[0.9]">        
+  {company.name}
       </h4>
       
       <p className="font-interface-reg text-on-surface-variant mt-4 max-w-sm">
@@ -606,7 +620,8 @@ function CompanyCard({ company, onSelect }: { company: Company, onSelect: (compa
   );
 }
 
-function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void, onSelectCompany: (company: Company) => void }) {
+function FeaturedPage({ onBack, onSelectCompany }: { onBack: () => void,   onSelectCompany: (company: FeaturedCompany) => void }) 
+{
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -885,7 +900,7 @@ function CompanyDetail({
   onBack,
   onSelectJob
 }: {
-  company: Company;
+  company: HiringCompany;
   jobs: Job[];
   onBack: () => void;
   onSelectJob: (job: Job) => void;
@@ -1184,9 +1199,11 @@ const formattedJobs: Job[] = rows.map((row: any) => {
     fetchJobs();
   }, []);
 
-const [selectedFeaturedCompany, setSelectedFeaturedCompany] = useState<Company | null>(null);
+const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
+useState<FeaturedCompany | null>(null);
 
-const [selectedHiringCompany, setSelectedHiringCompany] = useState<Company | null>(null);
+const [selectedHiringCompany, setSelectedHiringCompany] =
+useState<HiringCompany | null>(null);
 const [isAboutVisible, setIsAboutVisible] = useState(false);
 const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
 const [currentPage, setCurrentPage] = useState(1);
@@ -1194,7 +1211,7 @@ useEffect(() => {
   window.scrollTo({
     top: 0,
     left: 0,
-    behavior: "instant"
+    behavior: "auto"
   });
 }, [
   selectedJob,
