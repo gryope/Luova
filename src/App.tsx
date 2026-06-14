@@ -371,7 +371,7 @@ const HIRING_COMPANIES: HiringCompany[] = [
   
   {
   name: "SPACE 10",
-  location: "COPENHAGEN, NO",
+  location: "COPENHAGEN, DK",
   description: "Research and design lab exploring sustainable living and circular design through technology and community-driven projects.",
   fullDescription: "SPACE10 was a research and design lab on a mission to create a better everyday life for people and the planet.",
   image: "/Luova/images/companies/Data2.jpg",
@@ -1138,7 +1138,7 @@ function Footer() {
         <div className="font-metadata-light text-on-surface text-center md:text-left text-[10px] md:text-[12px] opacity-60 flex flex-col md:flex-row gap-1 md:gap-2 uppercase tracking-widest">
           <span>© 2026 LUOVA HELSINKI</span>
           <span className="hidden md:inline">|</span>
-          <span>INDEPENDANT ARCHIVE FOR CREATIVE INDUSTRY</span>
+          <span>INDEPENDENT ARCHIVE FOR CREATIVE INDUSTRY</span>
         </div>
 
         <nav className="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8 font-metadata-light">
@@ -1238,7 +1238,7 @@ const handleHome = () => {
   window.scrollTo({
     top: 0,
     left: 0,
-    behavior: "instant"
+    behavior: "auto"
   });
 
   setSelectedJob(null);
@@ -1253,7 +1253,7 @@ const handleAbout = () => {
   window.scrollTo({
     top: 0,
     left: 0,
-    behavior: "instant"
+behavior: "auto"
   });
 
   setSelectedJob(null);
@@ -1268,7 +1268,7 @@ const handleFeatured = () => {
   window.scrollTo({
     top: 0,
     left: 0,
-    behavior: "instant"
+    behavior: "auto"
   });
 
   setSelectedJob(null);
@@ -1304,7 +1304,7 @@ const showDock =
         <AboutPage onBack={() => setIsAboutVisible(false)} />
       ) : isFeaturedVisible ? (
         <FeaturedPage 
-          onBack={() => setIsFeaturedVisible(false)} 
+          onBack={() => onBack={handleHome}} 
           onSelectCompany={(c) => {
             setSelectedFeaturedCompany(c);
             setIsFeaturedVisible(false);
