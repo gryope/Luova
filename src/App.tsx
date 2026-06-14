@@ -332,15 +332,15 @@ image: "/Luova/images/companies/Ivalo Creative-featurepage.jpg",
 
   year: "2025",
 
-  figureTitle: "Immersive Forest Environment",
+  figureTitle: "Stories That Move Organisations",
 
 addedToLuova: "June 2026",
 
 fullDescription:
-  "Metsä / Skogen Concepts is a Helsinki-based studio creating nature-inspired environments that support wellbeing, focus and human experience.",
+  "IVALO Creative is a Helsinki-based creative transformation company operating at the intersection of strategy, branding and organisational change. Rather than treating communication as the final output of strategy, the agency uses storytelling as a tool to help organisations align people, build momentum and navigate transformation. Their work spans brand strategy, customer experience, internal culture and marketing communications, partnering with organisations such as Finnair, Posti, Fazer and Storytel. Across sectors, IVALO focuses on translating complex business challenges into narratives people can understand, believe in and act upon.",
 
 mission:
-  "Reconnecting people with the restorative qualities of nature through spatial design.",
+  "Turning strategy into stories that create growth, engagement and lasting change.",
 
 whyFeatured:
 "IVALO works where organisational decisions meet human behaviour.",
