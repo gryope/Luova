@@ -224,7 +224,7 @@ image: "/Luova/images/companies/DistanceT-featurepage.jpg",
 
   figureTitle: "Technology Demonstration",
 
-  addedToLuova: "November 2026",
+  addedToLuova: "June 2026",
 
   fullDescription:
     "Distance Technologies is a Finnish spatial computing company developing mixed reality systems that integrate digital information directly into physical environments.",
@@ -1142,10 +1142,30 @@ function Footer() {
         </div>
 
         <nav className="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8 font-metadata-light">
-          <a href="#" className="text-on-secondary-container hover:text-on-surface transition-colors">PRIVACY</a>
-          <a href="#" className="text-on-secondary-container hover:text-on-surface transition-colors">TERMS</a>
-          <a href="#" className="text-on-secondary-container hover:text-on-surface transition-colors">CONTACT</a>
-          <a href="#" className="text-on-secondary-container hover:text-on-surface transition-colors">LIST</a>
+          <a
+  href="mailto:hello@luova.io"
+  className="text-on-secondary-container hover:text-on-surface transition-colors"
+>
+  CONTACT
+</a>
+
+<a
+  href="https://linkedin.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-on-secondary-container hover:text-on-surface transition-colors"
+>
+  LINKEDIN
+</a>
+
+<a
+  href="https://instagram.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-on-secondary-container hover:text-on-surface transition-colors"
+>
+  INSTAGRAM
+</a>
         </nav>
       </div>
     </footer>
@@ -1301,7 +1321,7 @@ const showDock =
         <Header onHome={handleHome} onAbout={handleAbout} onFeatured={handleFeatured} activePage={activePage} />
 
       {isAboutVisible ? (
-        <AboutPage onBack={() => setIsAboutVisible(false)} />
+        <AboutPage onBack={handleHome} />
       ) : isFeaturedVisible ? (
         <FeaturedPage 
           onBack={() => onBack={handleHome}} 
