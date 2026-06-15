@@ -35,9 +35,16 @@ thumbnailImage: string;
 interface FeaturedCompanyPageProps {
   company: Company;
   onBack: () => void;
+  onPrevious?: () => void;
+  onNext?: () => void;
 }
 
-export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompanyPageProps) {
+export default function FeaturedCompanyPage({
+  company,
+  onBack,
+  onPrevious,
+  onNext
+}: FeaturedCompanyPageProps)
   return (
 <main className="min-h-screen bg-[#090909] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black pt-28 md:pt-36">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
@@ -54,16 +61,18 @@ export default function FeaturedCompanyPage({ company, onBack }: FeaturedCompany
   <div className="hidden md:flex gap-8 pr-4 md:pr-6 lg:pr-8">
 
     <button
-      className="hover:opacity-100 transition-opacity"
-    >
-      PREVIOUS
-    </button>
+  onClick={onPrevious}
+  className="hover:opacity-100 transition-opacity"
+>
+  PREVIOUS
+</button>
 
-    <button
-      className="hover:opacity-100 transition-opacity"
-    >
-      NEXT
-    </button>
+   <button
+  onClick={onNext}
+  className="hover:opacity-100 transition-opacity"
+>
+  NEXT
+</button>
 
   </div>
 
