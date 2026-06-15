@@ -431,9 +431,15 @@ function Header({ onHome, onAbout, onFeatured, activePage }: HeaderProps) {
         </nav>
 
         <div className="flex items-center gap-6">
-          <button className="hidden lg:block font-action-med text-primary-fixed border border-primary-fixed px-6 py-2 rounded-full hover:bg-primary-fixed hover:text-surface-dim transition-all duration-300 text-xs">
-            SUBMIT A ROLE
-          </button>
+          <button
+  onClick={() => {
+    window.location.href =
+      "mailto:hello@luova.io?subject=Submit%20a%20Role&body=Company:%0AWebsite:%0ALocation:%0ARole:%0AApplication%20Link:%0A";
+  }}
+  className="hidden lg:block font-action-med text-primary-fixed border border-primary-fixed px-6 py-2 rounded-full hover:bg-primary-fixed hover:text-surface-dim transition-all duration-300 text-xs"
+>
+  SUBMIT A ROLE
+</button>
           
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -1503,9 +1509,15 @@ onSelect={setSelectedHiringCompany}
             className="lg:hidden fixed bottom-0 inset-x-0 p-4 bg-background/40 backdrop-blur-2xl border-t border-white/5 z-[100] transform-gpu"
           >
             <div className="max-w-md mx-auto">
-              <button className="w-full font-action-med text-primary-fixed border border-primary-fixed px-6 py-3 rounded-full hover:bg-primary-fixed hover:text-surface-dim transition-all duration-300 uppercase tracking-widest text-[10px]">
-                SUBMIT A ROLE
-              </button>
+              <button
+  onClick={() => {
+    window.location.href =
+      "mailto:hello@luova.io?subject=Submit%20a%20Role&body=Company:%0AWebsite:%0ALocation:%0ARole:%0AApplication%20Link:%0A";
+  }}
+  className="w-full font-action-med text-primary-fixed border border-primary-fixed px-6 py-3 rounded-full hover:bg-primary-fixed hover:text-surface-dim transition-all duration-300 uppercase tracking-widest text-[10px]"
+>
+  SUBMIT A ROLE
+</button>
             </div>
           </motion.div>
         )}
