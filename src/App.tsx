@@ -1349,6 +1349,30 @@ const showDock =
     setSelectedFeaturedCompany(null);
     setIsFeaturedVisible(true);
   }}
+
+  onPrevious={() => {
+    const currentIndex = FEATURED_COMPANIES.findIndex(
+      c => c.name === selectedFeaturedCompany.name
+    );
+
+    if (currentIndex > 0) {
+      setSelectedFeaturedCompany(
+        FEATURED_COMPANIES[currentIndex - 1]
+      );
+    }
+  }}
+
+  onNext={() => {
+    const currentIndex = FEATURED_COMPANIES.findIndex(
+      c => c.name === selectedFeaturedCompany.name
+    );
+
+    if (currentIndex < FEATURED_COMPANIES.length - 1) {
+      setSelectedFeaturedCompany(
+        FEATURED_COMPANIES[currentIndex + 1]
+      );
+    }
+  }}
 />
 ) : (
         <main className="flex-grow pt-32 md:pt-48 pb-16 md:pb-32">
