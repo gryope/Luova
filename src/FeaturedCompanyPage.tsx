@@ -44,7 +44,7 @@ export default function FeaturedCompanyPage({
   onBack,
   onPrevious,
   onNext
-}: FeaturedCompanyPageProps)
+}: FeaturedCompanyPageProps) {
   return (
 <main className="min-h-screen bg-[#090909] text-[#f5f1ec] overflow-x-hidden selection:bg-[#e7c3cb] selection:text-black pt-28 md:pt-36">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
