@@ -4,7 +4,7 @@
  */
 
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowLeft, ArrowRight, Menu, X, Instagram, Linkedin, Share2, Bookmark } from "lucide-react";
+import { ArrowLeft, ArrowRight, Menu, X, Instagram, LinkedIn, Share2, Bookmark } from "lucide-react";
 import { useState, useEffect } from "react";
 import FeaturedCompanyPage from "./FeaturedCompanyPage";
 
@@ -330,7 +330,7 @@ image: "/Luova/images/companies/Ivalo Creative-featurepage.jpg",
 
   category: "Creative Transformation",
 
-  year: "2025",
+  year: "2026",
 
   figureTitle: "Stories That Move Organisations",
 
@@ -1127,7 +1127,7 @@ function Footer() {
           <span className="opacity-40 text-on-surface-variant w-full md:w-auto text-center">Social:</span>
           <a href="#" className="hover:text-primary transition-colors duration-300">Instagram</a>
           <span className="opacity-20 hidden md:inline">—</span>
-          <a href="#" className="hover:text-primary transition-colors duration-300">Linkedin</a>
+          <a href="#" className="hover:text-primary transition-colors duration-300">LinkedIn</a>
         </div>
       </section>
 
