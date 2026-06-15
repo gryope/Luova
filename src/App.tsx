@@ -1324,12 +1324,12 @@ const showDock =
         <AboutPage onBack={handleHome} />
       ) : isFeaturedVisible ? (
         <FeaturedPage 
-          onBack={() => onBack={handleHome}} 
-          onSelectCompany={(c) => {
-            setSelectedFeaturedCompany(c);
-            setIsFeaturedVisible(false);
-          }} 
-        />
+  onBack={handleHome}
+  onSelectCompany={(c) => {
+    setSelectedFeaturedCompany(c);
+    setIsFeaturedVisible(false);
+  }}
+/>
       ) : selectedJob ? (
   <JobDetail
     job={selectedJob}
