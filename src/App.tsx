@@ -401,6 +401,62 @@ whyFeatured:
   mission:
     "Transforming raw materials into sustainable textile fibres without compromising performance."
 },
+  {
+  name: "AVANTO",
+
+  location: "Helsinki, FI",
+
+  description:
+    "Designing architecture rooted in landscape, culture and everyday rituals.",
+
+  lead:
+    "Avanto is a Finnish architecture practice whose work explores the relationship between people, nature and the built environment. From remote cabins and saunas to public landmarks, the studio creates spaces that feel deeply connected to place.",
+
+  body: [
+    "Founded in 2004 by architects Ville Hara and Anu Puustinen, Avanto has developed a body of work that combines contemporary architecture with a distinctly Finnish understanding of landscape, materiality and atmosphere.",
+
+    "Rather than pursuing architecture as an object, the studio often approaches design as an experience. Their projects are shaped by light, weather, movement and the rituals that take place within them, creating buildings that feel both restrained and emotionally resonant.",
+
+    "Perhaps best known internationally for Löyly, the public sauna and restaurant on Helsinki's waterfront, Avanto has consistently demonstrated how architecture can express cultural identity without relying on nostalgia. Their work feels contemporary while remaining deeply rooted in the Nordic environment."
+  ],
+
+  whyFeatured:
+    "Avanto demonstrates how architecture can transform local culture, landscape and tradition into experiences that feel timeless rather than fashionable.",
+
+  image: "/Luova/images/companies/Avanto-featurepage.jpg",
+
+  mainImage: "/Luova/images/companies/Avanto-Main-Image.jpg",
+
+  thumbnailImage: "/Luova/images/companies/Avanto-Thumbnail-Image.jpg",
+
+  tags: [
+    "Architecture",
+    "Built Environment",
+    "Nordic Design"
+  ],
+
+  website: "avan.to",
+
+  founded: "2004",
+
+  teamSize: "10–50",
+
+  status: "• Private",
+
+  category: "Architecture",
+
+  year: "2026",
+
+  figureTitle: "Architecture & Place",
+
+  addedToLuova: "June 2026",
+
+  fullDescription:
+    "A Finnish architecture practice creating buildings, spaces and experiences rooted in landscape, culture and human behaviour.",
+
+  mission:
+    "Designing places that strengthen the connection between people, nature and everyday life."
+  }
 ];
 const HIRING_COMPANIES: HiringCompany[] = [
     {
