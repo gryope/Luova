@@ -369,7 +369,7 @@ whyFeatured:
 
   image: "/Luova/images/companies/Spinnova-featurepage.jpg",
 
-  mainImage: "/Luova/images/companies/Spinnova-Creative-Main-Image.jpg",
+  mainImage: "/Luova/images/companies/Spinnova Creative-Main-Image.jpg",
 
   thumbnailImage: "/Luova/images/companies/Spinnova-Thumbnail-Image.jpg",
 
