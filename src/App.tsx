@@ -345,6 +345,62 @@ mission:
 whyFeatured:
 "IVALO works where organisational decisions meet human behaviour.",
 },
+{
+  name: "SPINNOVA",
+
+  location: "Jyväskylä, FI",
+
+  description:
+    "Reinventing textile materials through wood-based fibre innovation.",
+
+  lead:
+    "Spinnova is a Finnish materials technology company developing a new approach to textile fibre production. Using wood pulp and waste streams as raw materials, the company creates fibres without the chemical-intensive processes typically associated with conventional textile manufacturing.",
+
+  body: [
+    "Founded from research at VTT Technical Research Centre of Finland, Spinnova has developed a proprietary technology that transforms cellulose into textile fibre using a mechanical process designed to minimise environmental impact.",
+
+    "Its work sits at the intersection of material science, sustainability and industrial innovation. Rather than focusing solely on fashion, the company addresses broader questions about how future materials can be produced with fewer resources and less environmental burden.",
+
+    "As pressure grows on the global textile industry to reduce emissions, water consumption and waste, Spinnova represents a new generation of Nordic companies attempting to rethink the foundations of manufacturing itself."
+  ],
+
+  whyFeatured:
+    "Spinnova demonstrates how deep technology and material innovation can reshape one of the world's most resource-intensive industries.",
+
+  image: "/Luova/images/companies/Spinnova-featurepage.jpg",
+
+  mainImage: "/Luova/images/companies/Spinnova-Creative-Main-Image.jpg",
+
+  thumbnailImage: "/Luova/images/companies/Spinnova-Thumbnail-Image.jpg",
+
+  tags: [
+    "Materials Innovation",
+    "Textile Technology",
+    "Sustainability"
+  ],
+
+  website: "spinnova.com",
+
+  founded: "2014",
+
+  teamSize: "51–200",
+
+  status: "• Public",
+
+  category: "Materials Technology",
+
+  year: "2026",
+
+  figureTitle: "Material Innovation",
+
+  addedToLuova: "June 2026",
+
+  fullDescription:
+    "Spinnova is a Finnish materials technology company developing wood-based textile fibres through a low-impact manufacturing process.",
+
+  mission:
+    "Transforming raw materials into sustainable textile fibres without compromising performance."
+},
 ];
 const HIRING_COMPANIES: HiringCompany[] = [
     {
