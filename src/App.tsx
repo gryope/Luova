@@ -456,7 +456,7 @@ whyFeatured:
 
   mission:
     "Designing places that strengthen the connection between people, nature and everyday life."
-  }
+  },
   {
   name: "VELI STUDIO",
 
