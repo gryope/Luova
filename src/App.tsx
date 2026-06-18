@@ -457,7 +457,63 @@ whyFeatured:
   mission:
     "Designing places that strengthen the connection between people, nature and everyday life."
   }
-];
+  {
+  name: "VELI STUDIO",
+
+  location: "Helsinki, FI",
+
+  description:
+    "Building narratives across film, design and contemporary culture.",
+
+  lead:
+    "Veli Studio is a Helsinki-based creative studio working across film, animation, photography, visual identity and creative direction. Through a network of represented artists and long-term collaborators, the studio develops visual narratives that connect commercial commissions with broader cultural and artistic perspectives.",
+
+  body: [
+    "Founded in Helsinki in 2011, Veli Studio operates across film, animation, photography, visual identity and creative direction. Rather than approaching these disciplines separately, the studio treats them as interconnected tools for storytelling.",
+
+    "Its work moves fluidly between commercial commissions, cultural projects and artistic collaborations. Through a network of represented visual artists and international collaborators, Veli develops project-specific visual languages shaped by context, narrative and experimentation.",
+
+    "Occupying a space somewhere between agency, production company and creative collective, the studio reflects a broader shift in contemporary creative practice where disciplinary boundaries continue to dissolve and storytelling extends across multiple mediums."
+  ],
+
+  whyFeatured:
+    "Veli Studio demonstrates how contemporary creative practice increasingly operates beyond traditional disciplines, bringing film, design, photography and art direction into a single creative language.",
+
+  image: "/Luova/images/companies/VeliStudio-featurepage.jpg",
+
+  mainImage: "/Luova/images/companies/VeliStudio-Main-Image.jpg",
+
+  thumbnailImage: "/Luova/images/companies/VeliStudio-Thumbnail-Image.jpg",
+
+  tags: [
+    "Film",
+    "Creative Direction",
+    "Visual Identity"
+  ],
+
+  website: "veli.studio",
+
+  founded: "2011",
+
+  teamSize: "10–20",
+
+  status: "• Independent",
+
+  category: "Creative Studio",
+
+  year: "2026",
+
+  figureTitle: "Film & Visual Culture",
+
+  addedToLuova: "June 2026",
+
+  fullDescription:
+    "A Helsinki-based creative studio working across film, animation, photography, visual identity and creative direction.",
+
+  mission:
+    "Creating narratives that connect culture, design and visual storytelling."
+},
+  ];
 const HIRING_COMPANIES: HiringCompany[] = [
     {
     name: "AIVEN",
