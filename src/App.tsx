@@ -6,6 +6,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, ArrowRight, Menu, X, Instagram, LinkedIn, Share2, Bookmark } from "lucide-react";
 import { useState, useEffect } from "react";
+import FeaturedCompanyPage from "./FeaturedCompanyPage";
 import {
   FEATURED_COMPANIES,
   FeaturedCompany

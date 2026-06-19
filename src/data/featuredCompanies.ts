@@ -1,5 +1,8 @@
 export interface FeaturedCompany {
+  slug: string;
+
   name: string;
+  
   location: string;
 
   description: string;
