@@ -919,6 +919,19 @@ const formattedJobs: Job[] = rows.map((row: any) => {
 const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
 useState<FeaturedCompany | null>(null);
 
+ useEffect(() => {
+  const slug = window.location.hash.replace("#/", "");
+
+  if (!slug) return;
+
+  const company = FEATURED_COMPANIES.find(
+    c => c.slug === slug
+  );
+
+  if (company) {
+    setSelectedFeaturedCompany(company);
+  }
+}, []); 
 const [selectedHiringCompany, setSelectedHiringCompany] =
 useState<HiringCompany | null>(null);
 const [isAboutVisible, setIsAboutVisible] = useState(false);
