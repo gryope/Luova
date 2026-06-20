@@ -918,8 +918,6 @@ const formattedJobs: Job[] = rows.map((row: any) => {
 
 const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
 useState<FeaturedCompany | null>(null);
-const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
-  useState<FeaturedCompany | null>(null);
 
 useEffect(() => {
   const slug = window.location.hash.replace(/^#\/?/, "");
@@ -1034,25 +1032,17 @@ const showDock =
 
       {isAboutVisible ? (
         <AboutPage onBack={handleHome} />
-      ) : isFeaturedVisible ? (
-        <FeaturedPage 
-  onBack={handleHome}
-  onSelectCompany={(c) => {
-<<<<<<< HEAD
-  window.location.hash = c.slug;
+      } : isFeaturedVisible ? (
+  <FeaturedPage
+    onBack={handleHome}
+    onSelectCompany={(c) => {
+      window.location.hash = c.slug;
 
-  setSelectedFeaturedCompany(c);
-  setIsFeaturedVisible(false);
-}}
-=======
-    window.location.hash = c.slug;
-
-    setSelectedFeaturedCompany(c);
-    setIsFeaturedVisible(false);
-  }}
->>>>>>> 85e964ac17ca3787ee76e5c7ad9b77a2354152dc
-/>
-      ) : selectedJob ? (
+      setSelectedFeaturedCompany(c);
+      setIsFeaturedVisible(false);
+    }}
+  />
+        ) : selectedJob ? (
   <JobDetail
     job={selectedJob}
     onBack={() => setSelectedJob(null)}
@@ -1066,43 +1056,36 @@ const showDock =
   />
 ) : selectedFeaturedCompany ? (
   <FeaturedCompanyPage
-  company={selectedFeaturedCompany}
-<<<<<<< HEAD
-  onBack={() => {
-  window.location.hash = "";
-=======
-onBack={() => {
-  window.location.hash = "";
->>>>>>> 85e964ac17ca3787ee76e5c7ad9b77a2354152dc
+    company={selectedFeaturedCompany}
+    onBack={() => {
+      window.location.hash = "";
 
-  setSelectedFeaturedCompany(null);
-  setIsFeaturedVisible(true);
-}}
-
-  onPrevious={() => {
-    const currentIndex = FEATURED_COMPANIES.findIndex(
-      c => c.name === selectedFeaturedCompany.name
-    );
-
-    if (currentIndex > 0) {
-      setSelectedFeaturedCompany(
-        FEATURED_COMPANIES[currentIndex - 1]
+      setSelectedFeaturedCompany(null);
+      setIsFeaturedVisible(true);
+    }}
+    onPrevious={() => {
+      const currentIndex = FEATURED_COMPANIES.findIndex(
+        c => c.name === selectedFeaturedCompany.name
       );
-    }
-  }}
 
-  onNext={() => {
-    const currentIndex = FEATURED_COMPANIES.findIndex(
-      c => c.name === selectedFeaturedCompany.name
-    );
-
-    if (currentIndex < FEATURED_COMPANIES.length - 1) {
-      setSelectedFeaturedCompany(
-        FEATURED_COMPANIES[currentIndex + 1]
+      if (currentIndex > 0) {
+        setSelectedFeaturedCompany(
+          FEATURED_COMPANIES[currentIndex - 1]
+        );
+      }
+    }}
+    onNext={() => {
+      const currentIndex = FEATURED_COMPANIES.findIndex(
+        c => c.name === selectedFeaturedCompany.name
       );
-    }
-  }}
-/>
+
+      if (currentIndex < FEATURED_COMPANIES.length - 1) {
+        setSelectedFeaturedCompany(
+          FEATURED_COMPANIES[currentIndex + 1]
+        );
+      }
+    }}
+  />
 ) : (
         <main className="flex-grow pt-32 md:pt-48 pb-16 md:pb-32">
           {/* Hero Section */}
