@@ -918,6 +918,14 @@ const formattedJobs: Job[] = rows.map((row: any) => {
 
 const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
   useState<FeaturedCompany | null>(null);
+  const [selectedHiringCompany, setSelectedHiringCompany] =
+  useState<HiringCompany | null>(null);
+
+const [isAboutVisible, setIsAboutVisible] = useState(false);
+
+const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
+
+const [currentPage, setCurrentPage] = useState(1);
 
 useEffect(() => {
   const slug = window.location.hash.replace(/^#\/?/, "");
@@ -969,6 +977,8 @@ const handleHome = () => {
   setSelectedJob(null);
   setSelectedHiringCompany(null);
   setSelectedFeaturedCompany(null);
+  const [selectedHiringCompany, setSelectedHiringCompany] =
+  useState<HiringCompany | null>(null);
   setIsAboutVisible(false);
   setIsFeaturedVisible(false);
   setCurrentPage(1);
