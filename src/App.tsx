@@ -918,8 +918,11 @@ const formattedJobs: Job[] = rows.map((row: any) => {
 
 const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
 useState<FeaturedCompany | null>(null);
+const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
+  useState<FeaturedCompany | null>(null);
+
 useEffect(() => {
-  const slug = window.location.hash.replace("#", "");
+  const slug = window.location.hash.replace(/^#\/?/, "");
 
   if (!slug) return;
 
@@ -931,19 +934,6 @@ useEffect(() => {
     setSelectedFeaturedCompany(company);
   }
 }, []);
- useEffect(() => {
-  const slug = window.location.hash.replace("#/", "");
-
-  if (!slug) return;
-
-  const company = FEATURED_COMPANIES.find(
-    c => c.slug === slug
-  );
-
-  if (company) {
-    setSelectedFeaturedCompany(company);
-  }
-}, []); 
 const [selectedHiringCompany, setSelectedHiringCompany] =
 useState<HiringCompany | null>(null);
 const [isAboutVisible, setIsAboutVisible] = useState(false);
@@ -1048,11 +1038,19 @@ const showDock =
         <FeaturedPage 
   onBack={handleHome}
   onSelectCompany={(c) => {
+<<<<<<< HEAD
+  window.location.hash = c.slug;
+
+  setSelectedFeaturedCompany(c);
+  setIsFeaturedVisible(false);
+}}
+=======
     window.location.hash = c.slug;
 
     setSelectedFeaturedCompany(c);
     setIsFeaturedVisible(false);
   }}
+>>>>>>> 85e964ac17ca3787ee76e5c7ad9b77a2354152dc
 />
       ) : selectedJob ? (
   <JobDetail
@@ -1069,8 +1067,13 @@ const showDock =
 ) : selectedFeaturedCompany ? (
   <FeaturedCompanyPage
   company={selectedFeaturedCompany}
+<<<<<<< HEAD
+  onBack={() => {
+  window.location.hash = "";
+=======
 onBack={() => {
   window.location.hash = "";
+>>>>>>> 85e964ac17ca3787ee76e5c7ad9b77a2354152dc
 
   setSelectedFeaturedCompany(null);
   setIsFeaturedVisible(true);
