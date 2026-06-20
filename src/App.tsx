@@ -937,7 +937,6 @@ useEffect(() => {
   const company = FEATURED_COMPANIES.find(
     c => c.slug === slug
   );
-
   alert("company = " + (company?.name || "NOT FOUND"));
 
   if (company) {
@@ -977,8 +976,7 @@ const handleHome = () => {
   setSelectedJob(null);
   setSelectedHiringCompany(null);
   setSelectedFeaturedCompany(null);
-  const [selectedHiringCompany, setSelectedHiringCompany] =
-  useState<HiringCompany | null>(null);
+  
   setIsAboutVisible(false);
   setIsFeaturedVisible(false);
   setCurrentPage(1);
