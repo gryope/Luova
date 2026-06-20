@@ -930,8 +930,7 @@ const [currentPage, setCurrentPage] = useState(1);
 useEffect(() => {
   const slug = window.location.hash.replace(/^#\/?/, "");
 
-  alert("HELLO FROM DEPLOY");
-
+alert("slug = " + slug);
   if (!slug) return;
 
   const company = FEATURED_COMPANIES.find(
