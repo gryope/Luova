@@ -919,17 +919,26 @@ const formattedJobs: Job[] = rows.map((row: any) => {
 const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
   useState<FeaturedCompany | null>(null);
   useEffect(() => {
-  const slug = window.location.hash.replace(/^#\/?/, "");
+  const loadCompany = () => {
+    const slug = window.location.hash.replace(/^#\/?/, "");
 
-  if (!slug) return;
+    const company = FEATURED_COMPANIES.find(
+      c => c.slug === slug
+    );
 
-  const company = FEATURED_COMPANIES.find(
-    c => c.slug === slug
-  );
+    setSelectedFeaturedCompany(company || null);
+  };
 
-  if (company) {
-    setSelectedFeaturedCompany(company);
-  }
+  loadCompany();
+
+  window.addEventListener("hashchange", loadCompany);
+
+  return () => {
+    window.removeEventListener(
+      "hashchange",
+      loadCompany
+    );
+  };
 }, []);
   const [selectedHiringCompany, setSelectedHiringCompany] =
   useState<HiringCompany | null>(null);
@@ -963,6 +972,7 @@ const visibleJobs = jobs.slice(
 );
 
 const handleHome = () => {
+  window.location.hash = "";
   window.scrollTo({
     top: 0,
     left: 0,
@@ -1024,14 +1034,7 @@ const showDock =
   !selectedHiringCompany &&
   !selectedFeaturedCompany &&
   !isAboutVisible;
-  
-  console.log({
-  selectedFeaturedCompany,
-  isFeaturedVisible,
-  isAboutVisible,
-  selectedJob,
-  selectedHiringCompany
-});
+
   return (
 <div className="min-h-screen flex flex-col font-sans overflow-x-hidden">
         <Header onHome={handleHome} onAbout={handleAbout} onFeatured={handleFeatured} activePage={activePage} />
@@ -1062,36 +1065,40 @@ const showDock =
   />
 ) : selectedFeaturedCompany ? (
   <FeaturedCompanyPage
-    company={selectedFeaturedCompany}
-    onBack={() => {
-      window.location.hash = "";
+  company={selectedFeaturedCompany}
+  onBack={() => {
+    window.location.hash = "";
 
-      setSelectedFeaturedCompany(null);
-      setIsFeaturedVisible(true);
-    }}
-    onPrevious={() => {
-      const currentIndex = FEATURED_COMPANIES.findIndex(
-        c => c.name === selectedFeaturedCompany.name
-      );
+    setSelectedFeaturedCompany(null);
+    setIsFeaturedVisible(true);
+  }}
 
-      if (currentIndex > 0) {
-        setSelectedFeaturedCompany(
-          FEATURED_COMPANIES[currentIndex - 1]
-        );
-      }
-    }}
-    onNext={() => {
-      const currentIndex = FEATURED_COMPANIES.findIndex(
-        c => c.name === selectedFeaturedCompany.name
-      );
+  onPrevious={() => {
+    const currentIndex = FEATURED_COMPANIES.findIndex(
+      c => c.name === selectedFeaturedCompany.name
+    );
 
-      if (currentIndex < FEATURED_COMPANIES.length - 1) {
-        setSelectedFeaturedCompany(
-          FEATURED_COMPANIES[currentIndex + 1]
-        );
-      }
-    }}
-  />
+    if (currentIndex > 0) {
+      const company =
+        FEATURED_COMPANIES[currentIndex - 1];
+
+      window.location.hash = company.slug;
+    }
+  }}
+
+  onNext={() => {
+    const currentIndex = FEATURED_COMPANIES.findIndex(
+      c => c.name === selectedFeaturedCompany.name
+    );
+
+    if (currentIndex < FEATURED_COMPANIES.length - 1) {
+      const company =
+        FEATURED_COMPANIES[currentIndex + 1];
+
+      window.location.hash = company.slug;
+    }
+  }}
+/>
 ) : (
         <main className="flex-grow pt-32 md:pt-48 pb-16 md:pb-32">
           {/* Hero Section */}
