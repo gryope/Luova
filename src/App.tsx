@@ -1031,8 +1031,8 @@ const showDock =
         <Header onHome={handleHome} onAbout={handleAbout} onFeatured={handleFeatured} activePage={activePage} />
 
       {isAboutVisible ? (
-        <AboutPage onBack={handleHome} />
-      } : isFeaturedVisible ? (
+  <AboutPage onBack={handleHome} />
+) : isFeaturedVisible ? (
   <FeaturedPage
     onBack={handleHome}
     onSelectCompany={(c) => {
