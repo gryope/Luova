@@ -915,7 +915,14 @@ const formattedJobs: Job[] = rows.map((row: any) => {
 
     fetchJobs();
   }, []);
+ const [selectedHiringCompany, setSelectedHiringCompany] =
+  useState<HiringCompany | null>(null);
 
+const [isAboutVisible, setIsAboutVisible] = useState(false);
+
+const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
+
+const [currentPage, setCurrentPage] = useState(1);
 const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
   useState<FeaturedCompany | null>(null);
   useEffect(() => {
@@ -926,7 +933,17 @@ const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
       c => c.slug === slug
     );
 
-    setSelectedFeaturedCompany(company || null);
+    if (company) {
+      setSelectedJob(null);
+      setSelectedHiringCompany(null);
+
+      setIsAboutVisible(false);
+      setIsFeaturedVisible(false);
+
+      setSelectedFeaturedCompany(company);
+    } else {
+      setSelectedFeaturedCompany(null);
+    }
   };
 
   loadCompany();
@@ -940,14 +957,6 @@ const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
     );
   };
 }, []);
-  const [selectedHiringCompany, setSelectedHiringCompany] =
-  useState<HiringCompany | null>(null);
-
-const [isAboutVisible, setIsAboutVisible] = useState(false);
-
-const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
-
-const [currentPage, setCurrentPage] = useState(1);
 
 useEffect(() => {
   window.scrollTo({
@@ -989,7 +998,8 @@ const handleHome = () => {
 };
 
 const handleAbout = () => {
-  window.scrollTo({
+    window.location.hash = "";
+ window.scrollTo({
     top: 0,
     left: 0,
 behavior: "auto"
@@ -1004,6 +1014,8 @@ behavior: "auto"
 };
 
 const handleFeatured = () => {
+    window.location.hash = "";
+
   window.scrollTo({
     top: 0,
     left: 0,
