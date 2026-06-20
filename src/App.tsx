@@ -1,4 +1,4 @@
-/**
+o/**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -918,7 +918,19 @@ const formattedJobs: Job[] = rows.map((row: any) => {
 
 const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
 useState<FeaturedCompany | null>(null);
+useEffect(() => {
+  const slug = window.location.hash.replace("#", "");
 
+  if (!slug) return;
+
+  const company = FEATURED_COMPANIES.find(
+    c => c.slug === slug
+  );
+
+  if (company) {
+    setSelectedFeaturedCompany(company);
+  }
+}, []);
  useEffect(() => {
   const slug = window.location.hash.replace("#/", "");
 
@@ -1036,6 +1048,8 @@ const showDock =
         <FeaturedPage 
   onBack={handleHome}
   onSelectCompany={(c) => {
+    window.location.hash = c.slug;
+
     setSelectedFeaturedCompany(c);
     setIsFeaturedVisible(false);
   }}
@@ -1055,10 +1069,12 @@ const showDock =
 ) : selectedFeaturedCompany ? (
   <FeaturedCompanyPage
   company={selectedFeaturedCompany}
-  onBack={() => {
-    setSelectedFeaturedCompany(null);
-    setIsFeaturedVisible(true);
-  }}
+onBack={() => {
+  window.location.hash = "";
+
+  setSelectedFeaturedCompany(null);
+  setIsFeaturedVisible(true);
+}}
 
   onPrevious={() => {
     const currentIndex = FEATURED_COMPANIES.findIndex(
