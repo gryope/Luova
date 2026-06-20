@@ -918,6 +918,25 @@ const formattedJobs: Job[] = rows.map((row: any) => {
 
 const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
   useState<FeaturedCompany | null>(null);
+  useEffect(() => {
+  const slug = window.location.hash.replace(/^#\/?/, "");
+
+  if (!slug) return;
+
+  const company = FEATURED_COMPANIES.find(
+    c => c.slug === slug
+  );
+
+  if (company) {
+    setSelectedFeaturedCompany(company);
+  }
+}, []);
+useEffect(() => {
+  alert(
+    "selectedFeaturedCompany = " +
+    (selectedFeaturedCompany?.name || "NULL")
+  );
+}, [selectedFeaturedCompany]);
   const [selectedHiringCompany, setSelectedHiringCompany] =
   useState<HiringCompany | null>(null);
 
@@ -926,10 +945,6 @@ const [isAboutVisible, setIsAboutVisible] = useState(false);
 const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
 
 const [currentPage, setCurrentPage] = useState(1);
-
-useEffect(() => {
-  alert("HASH = " + window.location.hash);
-}, []);
 
 useEffect(() => {
   window.scrollTo({
@@ -1026,8 +1041,7 @@ const showDock =
   <FeaturedPage
     onBack={handleHome}
     onSelectCompany={(c) => {
-      window.location.hash = c.slug;
-
+window.location.hash = "#" + c.slug;
       setSelectedFeaturedCompany(c);
       setIsFeaturedVisible(false);
     }}
