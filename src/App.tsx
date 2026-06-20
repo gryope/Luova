@@ -931,12 +931,6 @@ const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
     setSelectedFeaturedCompany(company);
   }
 }, []);
-useEffect(() => {
-  alert(
-    "selectedFeaturedCompany = " +
-    (selectedFeaturedCompany?.name || "NULL")
-  );
-}, [selectedFeaturedCompany]);
   const [selectedHiringCompany, setSelectedHiringCompany] =
   useState<HiringCompany | null>(null);
 
@@ -1030,7 +1024,14 @@ const showDock =
   !selectedHiringCompany &&
   !selectedFeaturedCompany &&
   !isAboutVisible;
-
+  
+  console.log({
+  selectedFeaturedCompany,
+  isFeaturedVisible,
+  isAboutVisible,
+  selectedJob,
+  selectedHiringCompany
+});
   return (
 <div className="min-h-screen flex flex-col font-sans overflow-x-hidden">
         <Header onHome={handleHome} onAbout={handleAbout} onFeatured={handleFeatured} activePage={activePage} />
@@ -1041,10 +1042,11 @@ const showDock =
   <FeaturedPage
     onBack={handleHome}
     onSelectCompany={(c) => {
-window.location.hash = "#" + c.slug;
-      setSelectedFeaturedCompany(c);
-      setIsFeaturedVisible(false);
-    }}
+  window.location.hash = c.slug;
+
+  setSelectedFeaturedCompany(c);
+  setIsFeaturedVisible(false);
+}}
   />
         ) : selectedJob ? (
   <JobDetail
