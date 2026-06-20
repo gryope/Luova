@@ -928,19 +928,7 @@ const [isFeaturedVisible, setIsFeaturedVisible] = useState(false);
 const [currentPage, setCurrentPage] = useState(1);
 
 useEffect(() => {
-  const slug = window.location.hash.replace(/^#\/?/, "");
-
-alert("slug = " + slug);
-  if (!slug) return;
-
-  const company = FEATURED_COMPANIES.find(
-    c => c.slug === slug
-  );
-  alert("company = " + (company?.name || "NOT FOUND"));
-
-  if (company) {
-    setSelectedFeaturedCompany(company);
-  }
+  alert("HASH = " + window.location.hash);
 }, []);
 
 useEffect(() => {
