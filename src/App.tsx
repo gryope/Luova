@@ -930,7 +930,7 @@ const [currentPage, setCurrentPage] = useState(1);
 useEffect(() => {
   const slug = window.location.hash.replace(/^#\/?/, "");
 
-  alert("slug = " + slug);
+  alert("HELLO FROM DEPLOY");
 
   if (!slug) return;
 
