@@ -917,7 +917,7 @@ const formattedJobs: Job[] = rows.map((row: any) => {
   }, []);
 
 const [selectedFeaturedCompany, setSelectedFeaturedCompany] =
-useState<FeaturedCompany | null>(null);
+  useState<FeaturedCompany | null>(null);
 
 useEffect(() => {
   const slug = window.location.hash.replace(/^#\/?/, "");
@@ -936,6 +936,13 @@ useEffect(() => {
     setSelectedFeaturedCompany(company);
   }
 }, []);
+
+useEffect(() => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "auto"
+  });
 }, [
   selectedJob,
   selectedFeaturedCompany,
@@ -943,15 +950,10 @@ useEffect(() => {
   isAboutVisible,
   isFeaturedVisible
 ]);
-
 const JOBS_PER_PAGE = 4;
 const totalPages = Math.ceil(
   jobs.length / JOBS_PER_PAGE
 );
-
-
-
-
 const visibleJobs = jobs.slice(
   (currentPage - 1) * JOBS_PER_PAGE,
   currentPage * JOBS_PER_PAGE
